@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Franck Yeboue | System Analyst · Data Analyst · Application Support</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--nv:#0f2137;--sl:#1e3a5f;--ac:#2b6cb0;--al:#3182ce;--gd:#b7791f;--gl:#d69e2e;--tx:#1a202c;--tm:#2d3748;--ts:#4a5568;--mu:#718096;--bd:#e2e8f0;--bg:#fafbfc;--wh:#ffffff;--tn:#f7fafc;--rd:8px}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;font-size:15px;line-height:1.7;color:var(--tx);background:var(--bg);-webkit-font-smoothing:antialiased}
+nav{background:#fff;border-bottom:1px solid var(--bd);padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.nb{font-family:Georgia,serif;font-size:16px;color:var(--nv);font-weight:700}
+.nl{display:flex;gap:20px;list-style:none;align-items:center}
+.nb2{background:none;border:none;cursor:pointer;font-size:11.5px;font-weight:500;color:var(--ts);letter-spacing:.05em;text-transform:uppercase;padding:0;font-family:inherit;transition:color .2s}
+.nb2:hover{color:var(--al)}
+.lang-btn{background:var(--nv);border:none;cursor:pointer;font-size:11px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;font-family:inherit;transition:all .2s;margin-left:8px}
+.lang-btn:hover{background:var(--ac)}
+.sec{padding:64px 40px 48px;max-width:960px;margin:0 auto}
+.sl{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);margin-bottom:8px}
+.st{font-family:Georgia,serif;font-size:26px;color:var(--nv);margin-bottom:32px;line-height:1.2}
+hr.div{border:none;border-top:1px solid var(--bd);max-width:960px;margin:0 auto}
+.btr-wrap{display:flex;justify-content:flex-end;padding:0 40px 32px;max-width:960px;margin:0 auto}
+.btr{background:none;border:1px solid var(--bd);border-radius:20px;padding:7px 18px;font-size:11.5px;font-weight:600;color:var(--mu);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all .2s}
+.btr:hover{border-color:var(--ac);color:var(--ac);background:#ebf4ff}
+#hero{background:linear-gradient(155deg,#0f2137 0%,#1e3a5f 60%,#1a3a6b 100%);color:#fff;padding:64px 40px 72px;position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;top:-60px;right:-60px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(49,130,206,.16) 0%,transparent 70%);pointer-events:none}
+.hi{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hl{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gl);border:1px solid rgba(214,158,46,.4);padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.hn{font-family:Georgia,serif;font-size:clamp(36px,5.5vw,56px);line-height:1.08;color:#fff;margin-bottom:6px}
+.hsub{font-family:Georgia,serif;font-size:clamp(15px,2vw,20px);color:rgba(255,255,255,.5);font-style:italic;margin-bottom:20px}
+.hd{font-size:15px;font-weight:300;color:rgba(255,255,255,.76);line-height:1.8;max-width:680px;margin-bottom:26px}
+.hd strong{color:rgba(255,255,255,.95);font-weight:500}
+.htags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.ht{font-size:12px;font-weight:500;padding:5px 13px;border-radius:20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.88)}
+.ht.cert{background:rgba(183,121,31,.22);border-color:rgba(214,158,46,.5);color:#f6e05e}
+.hcta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;padding:10px 22px;border-radius:var(--rd);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;border:none;font-family:inherit}
+.bp{background:var(--gd);color:#fff}.bp:hover{background:var(--gl);transform:translateY(-1px)}
+.ba{background:var(--ac);color:#fff}.ba:hover{background:var(--al);transform:translateY(-1px)}
+.bt{background:#0f6e56;color:#fff}.bt:hover{background:#1d9e75;transform:translateY(-1px)}
+#about{background:var(--wh)}
+.ag{display:grid;grid-template-columns:1fr 270px;gap:52px;align-items:start}
+.at p{color:var(--tm);font-size:15px;line-height:1.85;margin-bottom:14px}
+.as{display:flex;flex-direction:column;gap:14px}
+.sc{background:var(--tn);border:1px solid var(--bd);border-radius:var(--rd);padding:16px 18px}
+.sn{font-family:Georgia,serif;font-size:28px;color:var(--nv);line-height:1;margin-bottom:4px}
+.sk{font-size:11px;font-weight:500;color:var(--mu);text-transform:uppercase;letter-spacing:.07em}
+#skills{background:var(--tn)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skc{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rd);padding:20px 18px;transition:border-color .2s,box-shadow .2s}
+.skc:hover{border-color:var(--ac);box-shadow:0 4px 14px rgba(43,108,176,.08)}
+.ski{width:32px;height:32px;background:#ebf4ff;border-radius:7px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:15px}
+.skt{font-weight:600;font-size:13px;color:var(--nv);margin-bottom:8px}
+.stags{display:flex;flex-wrap:wrap;gap:5px}
+.stag{font-size:11px;padding:3px 8px;border-radius:20px;background:var(--tn);border:1px solid var(--bd);color:var(--ts);font-weight:500}
+#certifications{background:var(--wh)}
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.cc{background:linear-gradient(135deg,#0f2137 0%,#1e3a5f 100%);border-radius:10px;padding:24px;color:#fff;position:relative;overflow:hidden}
+.cc::before{content:'';position:absolute;top:-28px;right:-28px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.04)}
+.cb{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gl);border:1px solid rgba(214,158,46,.5);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.ct{font-family:Georgia,serif;font-size:18px;line-height:1.25;margin-bottom:8px;color:#fff}
+.cd{font-size:13px;color:rgba(255,255,255,.62);line-height:1.6}
+#experience{background:var(--tn)}
+.el{display:flex;flex-direction:column;gap:12px}
+.ec{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rd);overflow:hidden;transition:border-color .2s}
+.ec:hover{border-color:#b8cfea}
+.eh{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:20px 24px;cursor:pointer;user-select:none}
+.ecmp{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ac);margin-bottom:3px}
+.etl{font-family:Georgia,serif;font-size:18px;color:var(--nv);line-height:1.2;margin-bottom:4px}
+.em{font-size:13px;color:var(--mu)}
+.etg{width:24px;height:24px;border-radius:50%;background:var(--tn);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;transition:all .2s;font-size:13px;color:var(--mu)}
+.ec.open .etg{background:var(--ac);border-color:var(--ac);color:#fff;transform:rotate(45deg)}
+.eb{display:none;padding:0 24px 24px}
+.ec.open .eb{display:block}
+.edv{height:1px;background:var(--bd);margin-bottom:18px}
+.ebl{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.ebl li{font-size:14px;color:var(--tm);padding-left:16px;position:relative;line-height:1.65}
+.ebl li::before{content:'→';position:absolute;left:0;color:var(--al);font-size:11px;top:4px}
+.esk{display:flex;flex-wrap:wrap;gap:5px;padding-top:12px;border-top:1px solid var(--bd)}
+.est{font-size:11px;padding:3px 9px;border-radius:20px;background:#ebf4ff;border:1px solid #bee3f8;color:var(--ac);font-weight:500}
+.edu-list{display:flex;flex-direction:column;gap:14px}
+.edu-card{background:var(--tn);border:1px solid var(--bd);border-radius:var(--rd);padding:22px 24px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.edu-degree{font-family:Georgia,serif;font-size:18px;color:var(--nv);margin-bottom:5px}
+.edu-school{font-size:13px;font-weight:600;color:var(--ac);letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+.edu-note{font-size:13.5px;color:var(--ts);line-height:1.6}
+.edu-year{font-family:Georgia,serif;font-size:22px;color:var(--mu);flex-shrink:0;padding-top:2px}
+#tools{background:var(--wh)}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tgr{background:var(--tn);border:1px solid var(--bd);border-radius:var(--rd);padding:14px 14px 12px}
+.tgt{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:8px;padding-bottom:7px;border-bottom:1px solid var(--bd)}
+.ti{font-size:13px;color:var(--tm);padding:3px 0}
+.ti::before{content:'· ';color:var(--al);font-weight:700}
+#ai{background:var(--tn)}
+.aig{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.aic{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rd);padding:22px 22px 18px}
+.ait{font-weight:600;font-size:14px;color:var(--nv);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.ait span.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--al)}
+.ail{list-style:none;display:flex;flex-direction:column;gap:7px}
+.ail li{font-size:13.5px;color:var(--ts);padding-left:14px;position:relative}
+.ail li::before{content:'▸';position:absolute;left:0;color:var(--ac);font-size:10px;top:4px}
+.pj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pj-card{background:var(--tn);border:1px solid var(--bd);border-radius:var(--rd);padding:22px 20px 18px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,box-shadow .2s}
+.pj-card:hover{border-color:var(--ac);box-shadow:0 4px 14px rgba(43,108,176,.08)}
+.pj-top{display:flex;align-items:center;gap:12px}
+.pj-icon{width:36px;height:36px;background:#ebf4ff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.pj-tool{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}
+.pj-type{font-size:12px;color:var(--mu);margin-top:2px}
+.pj-title{font-family:Georgia,serif;font-size:16px;color:var(--nv);line-height:1.3}
+.pj-desc{font-size:13.5px;color:var(--ts);line-height:1.7;flex:1}
+.pj-tags{display:flex;flex-wrap:wrap;gap:5px}
+.pj-tag{font-size:11px;padding:3px 9px;border-radius:20px;background:#fff;border:1px solid var(--bd);color:var(--ts);font-weight:500}
+.pj-link-row{display:flex;align-items:center;gap:10px;padding-top:10px;border-top:1px solid var(--bd);margin-top:auto}
+.pj-url{font-size:12px;color:var(--ac);font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pj-copy{background:none;border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--mu);cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap}
+.pj-copy:hover{border-color:var(--ac);color:var(--ac)}
+.pj-copy.copied{background:var(--ac);border-color:var(--ac);color:#fff}
+#contact{background:var(--nv);color:#fff}
+#contact .sec{max-width:680px;text-align:center}
+.csub{color:rgba(255,255,255,.62);font-size:15px;margin-bottom:28px;line-height:1.7}
+.cbtns{display:flex;gap:11px;justify-content:center;flex-wrap:wrap}
+.bct{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;padding:10px 22px;border-radius:var(--rd);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;font-family:inherit;display:inline-flex;align-items:center;gap:7px}
+.bct:hover{background:rgba(255,255,255,.18);transform:translateY(-1px)}
+.bctg{background:var(--gd);border-color:var(--gd)}.bctg:hover{background:var(--gl)}
+.ccards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px;text-align:left}
+.ccard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--rd);padding:16px 18px}
+.ccl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#f6d860;margin-bottom:5px}
+.ccv{font-size:15px;color:#fff;word-break:break-all}
+.cpb{margin-top:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .2s;display:inline-block}
+.cpb:hover{background:rgba(255,255,255,.22)}
+.cpb.copied{background:var(--gd);border-color:var(--gl)}
+footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:18px 40px;font-size:12px}
+@media(max-width:768px){nav{padding:0 16px}.nl{display:none}.sec{padding:44px 20px 32px}.btr-wrap{padding:0 20px 20px}#hero{padding:48px 20px 56px}.ag{grid-template-columns:1fr;gap:28px}.as{flex-direction:row;flex-wrap:wrap}.sc{flex:1;min-width:100px}.sg{grid-template-columns:1fr 1fr}.cg{grid-template-columns:1fr}.tg{grid-template-columns:1fr 1fr}.aig{grid-template-columns:1fr}.ccards{grid-template-columns:1fr}.pj-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.sg{grid-template-columns:1fr}.tg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nb">Franck Yeboue</div>
+  <ul class="nl">
+    <li><button class="nb2" onclick="go('about')" data-en="About" data-fr="À Propos">About</button></li>
+    <li><button class="nb2" onclick="go('skills')" data-en="Skills" data-fr="Compétences">Skills</button></li>
+    <li><button class="nb2" onclick="go('certifications')" data-en="Certifications" data-fr="Certifications">Certifications</button></li>
+    <li><button class="nb2" onclick="go('experience')" data-en="Experience" data-fr="Expérience">Experience</button></li>
+    <li><button class="nb2" onclick="go('education')" data-en="Education" data-fr="Formation">Education</button></li>
+    <li><button class="nb2" onclick="go('tools')" data-en="Tools" data-fr="Outils">Tools</button></li>
+    <li><button class="nb2" onclick="go('ai')" data-en="AI &amp; Automation" data-fr="IA &amp; Automatisation">AI &amp; Automation</button></li>
+    <li><button class="nb2" onclick="go('projects')" data-en="Projects" data-fr="Projets">Projects</button></li>
+    <li><button class="nb2" onclick="go('contact')" data-en="Contact" data-fr="Contact">Contact</button></li>
+    <li><button class="lang-btn" onclick="toggleLang()" id="langBtn">FR</button></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hi">
+    <div class="hl" data-en="Available for New Opportunities" data-fr="Disponible pour de Nouvelles Opportunités">Available for New Opportunities</div>
+    <h1 class="hn">Franck Yeboue</h1>
+    <p class="hsub" data-en="System Analyst &amp; Data Analyst" data-fr="Analyste Systèmes &amp; Analyste de Données">System Analyst &amp; Data Analyst</p>
+    <p class="hd">
+      <strong data-en="IT Troubleshooting · Application Support · Incident Management" data-fr="Dépannage IT · Support Applicatif · Gestion des Incidents">IT Troubleshooting · Application Support · Incident Management</strong><br>
+      <span data-en="Enterprise technical professional with experience across production support, operational analytics, and BI development. Skilled in translating complex system behavior into clear, actionable insights for business and technical stakeholders." data-fr="Professionnel technique avec expérience dans le support de production, l'analytique opérationnelle et le développement BI. Expert dans la transformation de comportements systèmes complexes en informations claires et exploitables.">Enterprise technical professional with experience across production support, operational analytics, and BI development. Skilled in translating complex system behavior into clear, actionable insights for business and technical stakeholders.</span>
+    </p>
+    <div class="htags">
+      <span class="ht cert">☁ AWS Certified Cloud Practitioner</span>
+      <span class="ht cert">⚙ Terraform Associate</span>
+      <span class="ht">SQL · Power BI</span>
+      <span class="ht" data-en="Incident Management" data-fr="Gestion des Incidents">Incident Management</span>
+      <span class="ht" data-en="Root Cause Analysis" data-fr="Analyse Causes Racines">Root Cause Analysis</span>
+      <span class="ht" data-en="System Monitoring" data-fr="Surveillance Systèmes">System Monitoring</span>
+      <span class="ht" data-en="Data Validation" data-fr="Validation des Données">Data Validation</span>
+      <span class="ht">OpenAI · Gemini · Claude</span>
+    </div>
+    <div class="hcta">
+      <button class="btn ba" onclick="go('experience')" data-en="View Experience" data-fr="Voir l'Expérience">View Experience</button>
+      <button class="btn bt" onclick="go('projects')" data-en="View Projects" data-fr="Voir les Projets">View Projects</button>
+      <button class="btn bp" onclick="go('contact')" data-en="Get in Touch" data-fr="Me Contacter">Get in Touch</button>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:#fff">
+  <div class="sec">
+    <div class="sl" data-en="Professional Summary" data-fr="Résumé Professionnel">Professional Summary</div>
+    <h2 class="st" data-en="About" data-fr="À Propos">About</h2>
+    <div class="ag">
+      <div class="at">
+        <p data-en="Technical professional with a strong background in application support, enterprise monitoring, incident management, and operational analytics. Experienced in high-availability environments where system reliability, data accuracy, and rapid issue resolution directly impact business performance." data-fr="Professionnel technique avec une solide expérience dans le support applicatif, la surveillance d'entreprise, la gestion des incidents et l'analytique opérationnelle. Expérimenté dans des environnements haute disponibilité où la fiabilité des systèmes et la résolution rapide des problèmes impactent directement les performances.">Technical professional with a strong background in application support, enterprise monitoring, incident management, and operational analytics. Experienced in high-availability environments where system reliability, data accuracy, and rapid issue resolution directly impact business performance.</p>
+        <p data-en="Advancing from production support into BI development and systems analysis, I bring a practical blend of operations discipline, technical troubleshooting, and analytics capability. Currently open to System Analyst, Data Analyst, and IT Application Support roles where I can apply my enterprise background alongside continued investment in cloud infrastructure (AWS, Terraform) and AI-enabled productivity tooling." data-fr="En évoluant du support de production vers le développement BI et l'analyse de systèmes, j'apporte une combinaison pratique de discipline opérationnelle, de dépannage technique et de capacités analytiques. Actuellement ouvert à des postes d'Analyste Systèmes, Analyste de Données et Support Applicatif IT.">Advancing from production support into BI development and systems analysis, I bring a practical blend of operations discipline, technical troubleshooting, and analytics capability. Currently open to System Analyst, Data Analyst, and IT Application Support roles where I can apply my enterprise background alongside continued investment in cloud infrastructure (AWS, Terraform) and AI-enabled productivity tooling.</p>
+      </div>
+      <div class="as">
+        <div class="sc"><div class="sn">9+</div><div class="sk" data-en="Years Enterprise Experience" data-fr="Années d'Expérience">Years Enterprise Experience</div></div>
+        <div class="sc"><div class="sn">2</div><div class="sk" data-en="Industry Certifications" data-fr="Certifications Professionnelles">Industry Certifications</div></div>
+        <div class="sc"><div class="sn">3</div><div class="sk" data-en="Domains: Support · Analytics · Systems" data-fr="Domaines: Support · Analytique · Systèmes">Domains: Support · Analytics · Systems</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="skills" style="background:#f7fafc">
+  <div class="sec">
+    <div class="sl" data-en="Core Competencies" data-fr="Compétences Clés">Core Competencies</div>
+    <h2 class="st" data-en="Skills &amp; Expertise" data-fr="Compétences &amp; Expertise">Skills &amp; Expertise</h2>
+    <div class="sg">
+      <div class="skc"><div class="ski">🔍</div><div class="skt" data-en="System &amp; Data Analysis" data-fr="Analyse Systèmes &amp; Données">System &amp; Data Analysis</div><div class="stags"><span class="stag" data-en="System Analyst" data-fr="Analyste Systèmes">System Analyst</span><span class="stag" data-en="Data Analysis" data-fr="Analyse de Données">Data Analysis</span><span class="stag" data-en="Data Validation" data-fr="Validation des Données">Data Validation</span><span class="stag" data-en="Reporting Accuracy" data-fr="Précision des Rapports">Reporting Accuracy</span><span class="stag" data-en="Process Analysis" data-fr="Analyse des Processus">Process Analysis</span></div></div>
+      <div class="skc"><div class="ski">🛠</div><div class="skt" data-en="Application Support &amp; Troubleshooting" data-fr="Support Applicatif &amp; Dépannage">Application Support &amp; Troubleshooting</div><div class="stags"><span class="stag" data-en="IT Troubleshooting" data-fr="Dépannage IT">IT Troubleshooting</span><span class="stag" data-en="Application Support" data-fr="Support Applicatif">Application Support</span><span class="stag" data-en="Production Support" data-fr="Support Production">Production Support</span><span class="stag" data-en="First-Line Triage" data-fr="Triage 1ère Ligne">First-Line Triage</span><span class="stag" data-en="Root Cause Analysis" data-fr="Analyse Causes Racines">Root Cause Analysis</span></div></div>
+      <div class="skc"><div class="ski">🚨</div><div class="skt" data-en="Incident &amp; Operations Management" data-fr="Gestion Incidents &amp; Opérations">Incident &amp; Operations Management</div><div class="stags"><span class="stag" data-en="Incident Management" data-fr="Gestion des Incidents">Incident Management</span><span class="stag" data-en="System Monitoring" data-fr="Surveillance Systèmes">System Monitoring</span><span class="stag" data-en="Escalation Handling" data-fr="Gestion des Escalades">Escalation Handling</span><span class="stag" data-en="SLA Adherence" data-fr="Respect des SLA">SLA Adherence</span><span class="stag" data-en="Ticket Management" data-fr="Gestion des Tickets">Ticket Management</span></div></div>
+      <div class="skc"><div class="ski">📊</div><div class="skt" data-en="Analytics &amp; Reporting" data-fr="Analytique &amp; Reporting">Analytics &amp; Reporting</div><div class="stags"><span class="stag">SQL</span><span class="stag">Power BI</span><span class="stag" data-en="Operational Analytics" data-fr="Analytique Opérationnelle">Operational Analytics</span><span class="stag" data-en="Reporting Automation" data-fr="Automatisation Reporting">Reporting Automation</span><span class="stag" data-en="BI Development" data-fr="Développement BI">BI Development</span></div></div>
+      <div class="skc"><div class="ski">☁</div><div class="skt" data-en="Cloud &amp; Infrastructure" data-fr="Cloud &amp; Infrastructure">Cloud &amp; Infrastructure</div><div class="stags"><span class="stag">AWS</span><span class="stag">Terraform</span><span class="stag" data-en="Cloud Fundamentals" data-fr="Fondamentaux Cloud">Cloud Fundamentals</span><span class="stag" data-en="Infrastructure as Code" data-fr="Infrastructure as Code">Infrastructure as Code</span></div></div>
+      <div class="skc"><div class="ski">🤝</div><div class="skt" data-en="Collaboration &amp; Communication" data-fr="Collaboration &amp; Communication">Collaboration &amp; Communication</div><div class="stags"><span class="stag" data-en="Stakeholder Communication" data-fr="Communication Parties Prenantes">Stakeholder Communication</span><span class="stag" data-en="Cross-Functional Teams" data-fr="Équipes Transversales">Cross-Functional Teams</span><span class="stag" data-en="Technical Documentation" data-fr="Documentation Technique">Technical Documentation</span><span class="stag" data-en="Business Requirements" data-fr="Exigences Métier">Business Requirements</span></div></div>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="certifications" style="background:#fff">
+  <div class="sec">
+    <div class="sl" data-en="Credentials" data-fr="Accréditations">Credentials</div>
+    <h2 class="st" data-en="Certifications" data-fr="Certifications">Certifications</h2>
+    <div class="cg">
+      <div class="cc"><div class="cb">Amazon Web Services</div><div class="ct">AWS Certified Cloud Practitioner</div><div class="cd" data-en="Validates foundational understanding of AWS Cloud concepts, services, pricing, architecture, security, and support. Demonstrates cloud literacy for enterprise IT roles." data-fr="Valide la compréhension fondamentale des concepts AWS Cloud, des services, de la tarification, de l'architecture et de la sécurité. Démontre la maîtrise du cloud pour les rôles IT en entreprise.">Validates foundational understanding of AWS Cloud concepts, services, pricing, architecture, security, and support. Demonstrates cloud literacy for enterprise IT roles.</div></div>
+      <div class="cc"><div class="cb">HashiCorp</div><div class="ct">Terraform Associate</div><div class="cd" data-en="Validates proficiency with infrastructure-as-code principles and HashiCorp Terraform for provisioning and managing cloud resources in enterprise environments." data-fr="Valide la maîtrise des principes d'infrastructure en tant que code et de HashiCorp Terraform pour le provisionnement et la gestion des ressources cloud.">Validates proficiency with infrastructure-as-code principles and HashiCorp Terraform for provisioning and managing cloud resources in enterprise environments.</div></div>
+    </div>
+    <div style="margin-top:22px;display:flex;align-items:center;gap:14px;padding:16px 20px;background:#f7fafc;border:1px solid var(--bd);border-radius:var(--rd);">
+      <div style="font-size:20px;">🏅</div>
+      <div style="flex:1">
+        <div style="font-size:12px;font-weight:700;color:var(--nv);margin-bottom:2px;" data-en="Verified Digital Badges" data-fr="Badges Numériques Vérifiés">Verified Digital Badges</div>
+        <div style="font-size:13px;color:var(--ts);" data-en="View all verified certifications on Credly — credly.com/users/franck-yeboue/badges" data-fr="Voir toutes les certifications vérifiées sur Credly — credly.com/users/franck-yeboue/badges">View all verified certifications on Credly — credly.com/users/franck-yeboue/badges</div>
+      </div>
+      <button class="pj-copy" onclick="cpText('https://www.credly.com/users/franck-yeboue/badges',this)" data-en="Copy Link" data-fr="Copier" style="white-space:nowrap">Copy Link</button>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="experience" style="background:#f7fafc">
+  <div class="sec">
+    <div class="sl" data-en="Professional History" data-fr="Parcours Professionnel">Professional History</div>
+    <h2 class="st" data-en="Experience" data-fr="Expérience">Experience</h2>
+    <div class="el">
+
+      <div class="ec open" id="exp-1">
+        <div class="eh" onclick="tog('exp-1')">
+          <div><div class="ecmp">Lumen Technologies</div><div class="etl" data-en="Sr. Business Analyst / BI Developer" data-fr="Analyste Métier Senior / Développeur BI">Sr. Business Analyst / BI Developer</div><div class="em" data-en="2022 – Present · Enterprise Reporting &amp; Operational Systems" data-fr="2022 – Présent · Reporting d'Entreprise &amp; Systèmes Opérationnels">2022 – Present · Enterprise Reporting &amp; Operational Systems</div></div>
+          <div class="etg">+</div>
+        </div>
+        <div class="eb">
+          <div class="edv"></div>
+          <ul class="ebl">
+            <li data-en="Supported enterprise reporting and operational systems, ensuring data accuracy and reliable outputs across business-critical workflows." data-fr="Soutenu les systèmes de reporting d'entreprise en assurant la précision des données et des résultats fiables dans les flux de travail critiques.">Supported enterprise reporting and operational systems, ensuring data accuracy and reliable outputs across business-critical workflows.</li>
+            <li data-en="Monitored data flows and validated reporting logic to identify discrepancies, improving reporting confidence and system reliability." data-fr="Surveillé les flux de données et validé la logique de reporting pour identifier les écarts, améliorant la fiabilité des rapports et des systèmes.">Monitored data flows and validated reporting logic to identify discrepancies, improving reporting confidence and system reliability.</li>
+            <li data-en="Partnered with business and technical teams to troubleshoot data issues, document root causes, and implement durable fixes." data-fr="Collaboré avec les équipes métier et techniques pour résoudre les problèmes de données, documenter les causes racines et implémenter des correctifs durables.">Partnered with business and technical teams to troubleshoot data issues, document root causes, and implement durable fixes.</li>
+            <li data-en="Automated recurring reporting and support workflows, reducing manual effort and improving consistency of operational outputs." data-fr="Automatisé les workflows de reporting récurrents, réduisant les efforts manuels et améliorant la cohérence des résultats opérationnels.">Automated recurring reporting and support workflows, reducing manual effort and improving consistency of operational outputs.</li>
+            <li data-en="Translated complex business requirements into scalable analytics and reporting solutions using SQL and Power BI." data-fr="Traduit des exigences métier complexes en solutions analytiques et de reporting évolutives avec SQL et Power BI.">Translated complex business requirements into scalable analytics and reporting solutions using SQL and Power BI.</li>
+            <li data-en="Developed dashboards and operational reports that enabled stakeholders to monitor performance and make data-informed decisions." data-fr="Développé des tableaux de bord et rapports opérationnels permettant aux parties prenantes de suivre les performances et prendre des décisions basées sur les données.">Developed dashboards and operational reports that enabled stakeholders to monitor performance and make data-informed decisions.</li>
+            <li data-en="Identified reporting gaps and data quality issues proactively, coordinating cross-functionally before business impact occurred." data-fr="Identifié proactivement les lacunes de reporting et problèmes de qualité des données, en coordonnant de manière transversale avant tout impact sur l'activité.">Identified reporting gaps and data quality issues proactively, coordinating cross-functionally before business impact occurred.</li>
+          </ul>
+          <div class="esk"><span class="est">Data Validation</span><span class="est">Reporting Automation</span><span class="est">SQL</span><span class="est">Power BI</span><span class="est">Operational Analytics</span><span class="est">System Reliability</span><span class="est">Troubleshooting</span></div>
+        </div>
+      </div>
+
+      <div class="ec" id="exp-2">
+        <div class="eh" onclick="tog('exp-2')">
+          <div><div class="ecmp">JPMorgan Chase</div><div class="etl" data-en="Application Support Team Lead" data-fr="Chef d'Équipe Support Applicatif">Application Support Team Lead</div><div class="em" data-en="2019 – 2022 · High-Availability Enterprise Applications" data-fr="2019 – 2022 · Applications d'Entreprise Haute Disponibilité">2019 – 2022 · High-Availability Enterprise Applications</div></div>
+          <div class="etg">+</div>
+        </div>
+        <div class="eb">
+          <div class="edv"></div>
+          <ul class="ebl">
+            <li data-en="Led monitoring and support activities for ATM and enterprise applications in a high-availability, mission-critical environment." data-fr="Dirigé les activités de surveillance et support pour les applications ATM et d'entreprise dans un environnement mission-critique haute disponibilité.">Led monitoring and support activities for ATM and enterprise applications in a high-availability, mission-critical environment.</li>
+            <li data-en="Managed escalated incidents end-to-end, coordinating root cause analysis, resolution, and post-incident documentation." data-fr="Géré les incidents escaladés de bout en bout, coordonnant l'analyse des causes racines, la résolution et la documentation post-incident.">Managed escalated incidents end-to-end, coordinating root cause analysis, resolution, and post-incident documentation.</li>
+            <li data-en="Oversaw ticket prioritization, stakeholder communication, and SLA adherence to maintain service continuity and minimize disruption." data-fr="Supervisé la priorisation des tickets, la communication et le respect des SLA pour maintenir la continuité de service.">Oversaw ticket prioritization, stakeholder communication, and SLA adherence to maintain service continuity and minimize disruption.</li>
+            <li data-en="Identified recurring failure patterns with cross-functional teams, driving permanent fixes to reduce incident frequency." data-fr="Identifié les patterns de défaillances récurrentes avec les équipes transversales, pilotant des correctifs permanents.">Identified recurring failure patterns with cross-functional teams, driving permanent fixes to reduce incident frequency.</li>
+            <li data-en="Developed and maintained runbooks and support documentation, ensuring consistent execution and faster mean time to resolution." data-fr="Développé et maintenu des runbooks et documentations de support, assurant une exécution cohérente et un temps de résolution plus rapide.">Developed and maintained runbooks and support documentation, ensuring consistent execution and faster mean time to resolution.</li>
+            <li data-en="Improved support workflows through process standardization, tooling improvements, and team coaching." data-fr="Amélioré les workflows de support par la standardisation des processus, l'amélioration des outils et le coaching d'équipe.">Improved support workflows through process standardization, tooling improvements, and team coaching.</li>
+          </ul>
+          <div class="esk"><span class="est">Incident Management</span><span class="est">Root Cause Analysis</span><span class="est">Application Support</span><span class="est">Team Leadership</span><span class="est">System Monitoring</span><span class="est">SLA Management</span></div>
+        </div>
+      </div>
+
+      <div class="ec" id="exp-3">
+        <div class="eh" onclick="tog('exp-3')">
+          <div><div class="ecmp">JPMorgan Chase</div><div class="etl" data-en="ATM Monitoring Specialist / Application Support Analyst" data-fr="Spécialiste Surveillance ATM / Analyste Support Applicatif">ATM Monitoring Specialist / Application Support Analyst</div><div class="em" data-en="2016 – 2019 · Real-Time Transaction Monitoring" data-fr="2016 – 2019 · Surveillance des Transactions en Temps Réel">2016 – 2019 · Real-Time Transaction Monitoring</div></div>
+          <div class="etg">+</div>
+        </div>
+        <div class="eb">
+          <div class="edv"></div>
+          <ul class="ebl">
+            <li data-en="Monitored ATM and transaction-processing environments in real time, identifying anomalies early to minimize disruption and customer impact." data-fr="Surveillé les environnements ATM en temps réel, identifiant les anomalies tôt pour minimiser les perturbations et l'impact client.">Monitored ATM and transaction-processing environments in real time, identifying anomalies early to minimize disruption and customer impact.</li>
+            <li data-en="Validated transaction data and investigated exceptions, escalating confirmed issues with thorough documentation to reduce resolution time." data-fr="Validé les données de transactions et investigué les exceptions, escaladant les problèmes confirmés avec une documentation complète.">Validated transaction data and investigated exceptions, escalating confirmed issues with thorough documentation to reduce resolution time.</li>
+            <li data-en="Performed first-line troubleshooting across application issues, managing tickets and escalations within defined SLAs." data-fr="Effectué le dépannage de première ligne sur les problèmes applicatifs, gérant les tickets et escalades dans les SLA définis.">Performed first-line troubleshooting across application issues, managing tickets and escalations within defined SLAs.</li>
+            <li data-en="Maintained detailed support logs and resolution steps, contributing to a knowledge base that improved team response speed." data-fr="Maintenu des journaux de support détaillés et des étapes de résolution, contribuant à une base de connaissances améliorant la rapidité de réponse.">Maintained detailed support logs and resolution steps, contributing to a knowledge base that improved team response speed.</li>
+            <li data-en="Collaborated with upstream and downstream teams to trace data flow issues and confirm resolution effectiveness." data-fr="Collaboré avec les équipes en amont et aval pour tracer les problèmes de flux de données et confirmer l'efficacité des résolutions.">Collaborated with upstream and downstream teams to trace data flow issues and confirm resolution effectiveness.</li>
+          </ul>
+          <div class="esk"><span class="est">Real-Time Monitoring</span><span class="est">IT Troubleshooting</span><span class="est">Ticket Management</span><span class="est">Transaction Validation</span><span class="est">Production Support</span></div>
+        </div>
+      </div>
+
+      <div class="ec" id="exp-4">
+        <div class="eh" onclick="tog('exp-4')">
+          <div><div class="ecmp">Nationwide Children's Hospital</div><div class="etl" data-en="Systems Analyst Intern" data-fr="Stagiaire Analyste Systèmes">Systems Analyst Intern</div><div class="em" data-en="2015 – 2016 · Systems &amp; Process Support" data-fr="2015 – 2016 · Support Systèmes &amp; Processus">2015 – 2016 · Systems &amp; Process Support</div></div>
+          <div class="etg">+</div>
+        </div>
+        <div class="eb">
+          <div class="edv"></div>
+          <ul class="ebl">
+            <li data-en="Supported system monitoring, functional testing, and issue tracking across clinical and operational systems in a regulated healthcare environment." data-fr="Soutenu la surveillance des systèmes, les tests fonctionnels et le suivi des problèmes dans un environnement de santé réglementé.">Supported system monitoring, functional testing, and issue tracking across clinical and operational systems in a regulated healthcare environment.</li>
+            <li data-en="Assisted with validation activities and documentation, ensuring systems met defined requirements before deployment or change." data-fr="Assisté dans les activités de validation et de documentation, garantissant que les systèmes répondaient aux exigences définies avant déploiement.">Assisted with validation activities and documentation, ensuring systems met defined requirements before deployment or change.</li>
+            <li data-en="Collaborated with analysts and technical teams to trace and document issues, contributing to process improvement." data-fr="Collaboré avec les analystes et équipes techniques pour tracer et documenter les problèmes, contribuant à l'amélioration des processus.">Collaborated with analysts and technical teams to trace and document issues, contributing to process improvement.</li>
+            <li data-en="Built strong foundations in system analysis, process support, and technical documentation that informed subsequent enterprise roles." data-fr="Construit de solides bases en analyse de systèmes, support de processus et documentation technique pour les rôles d'entreprise suivants.">Built strong foundations in system analysis, process support, and technical documentation that informed subsequent enterprise roles.</li>
+          </ul>
+          <div class="esk"><span class="est">System Testing</span><span class="est">Documentation</span><span class="est">Monitoring Support</span><span class="est">Technical Analysis</span><span class="est">Process Support</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="education" style="background:#fff">
+  <div class="sec">
+    <div class="sl" data-en="Academic Background" data-fr="Parcours Académique">Academic Background</div>
+    <h2 class="st" data-en="Education" data-fr="Formation">Education</h2>
+    <div class="edu-list">
+      <div class="edu-card">
+        <div class="edu-left">
+          <div class="edu-degree" data-en="Bachelor of Science — Information Technology" data-fr="Licence — Technologies de l'Information">Bachelor of Science — Information Technology</div>
+          <div class="edu-school">Franklin University · Columbus, OH</div>
+          <div class="edu-note" data-en="Coursework in systems analysis, database management, networking, and IT project management" data-fr="Cours en analyse de systèmes, gestion de bases de données, réseaux et gestion de projets IT">Coursework in systems analysis, database management, networking, and IT project management</div>
+        </div>
+        <div class="edu-year">2014</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-left">
+          <div class="edu-degree" data-en="Master of Science — Marketing Communication" data-fr="Master — Communication Marketing">Master of Science — Marketing Communication</div>
+          <div class="edu-school">ESTEM · Casablanca, Maroc</div>
+          <div class="edu-note" data-en="Graduate studies in marketing strategy, communication, and business development" data-fr="Études supérieures en stratégie marketing, communication et développement commercial">Graduate studies in marketing strategy, communication, and business development</div>
+        </div>
+        <div class="edu-year">2006</div>
+      </div>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="tools" style="background:#fff">
+  <div class="sec">
+    <div class="sl" data-en="Technical Toolkit" data-fr="Boîte à Outils Technique">Technical Toolkit</div>
+    <h2 class="st" data-en="Tools &amp; Technologies" data-fr="Outils &amp; Technologies">Tools &amp; Technologies</h2>
+    <div class="tg">
+      <div class="tgr"><div class="tgt" data-en="Data &amp; Analytics" data-fr="Données &amp; Analytique">Data &amp; Analytics</div><div class="ti">SQL</div><div class="ti">Power BI</div><div class="ti" data-en="Excel (Advanced)" data-fr="Excel (Avancé)">Excel (Advanced)</div><div class="ti" data-en="Data Validation" data-fr="Validation des Données">Data Validation</div><div class="ti" data-en="Reporting Automation" data-fr="Automatisation Reporting">Reporting Automation</div></div>
+      <div class="tgr"><div class="tgt" data-en="Cloud &amp; Infrastructure" data-fr="Cloud &amp; Infrastructure">Cloud &amp; Infrastructure</div><div class="ti" data-en="AWS (Certified)" data-fr="AWS (Certifié)">AWS (Certified)</div><div class="ti" data-en="Terraform (Certified)" data-fr="Terraform (Certifié)">Terraform (Certified)</div><div class="ti" data-en="Cloud Architecture" data-fr="Architecture Cloud">Cloud Architecture</div><div class="ti" data-en="Infrastructure as Code" data-fr="Infrastructure as Code">Infrastructure as Code</div></div>
+      <div class="tgr"><div class="tgt" data-en="Support &amp; Operations" data-fr="Support &amp; Opérations">Support &amp; Operations</div><div class="ti">ServiceNow / ITSM</div><div class="ti" data-en="Incident Tracking" data-fr="Suivi des Incidents">Incident Tracking</div><div class="ti" data-en="System Monitoring" data-fr="Surveillance Systèmes">System Monitoring</div><div class="ti" data-en="Runbook Management" data-fr="Gestion des Runbooks">Runbook Management</div><div class="ti" data-en="Root Cause Analysis" data-fr="Analyse Causes Racines">Root Cause Analysis</div></div>
+      <div class="tgr"><div class="tgt" data-en="AI Productivity" data-fr="Productivité IA">AI Productivity</div><div class="ti">OpenAI (ChatGPT)</div><div class="ti">Google Gemini</div><div class="ti">Anthropic Claude</div><div class="ti" data-en="Prompt Engineering" data-fr="Ingénierie des Prompts">Prompt Engineering</div><div class="ti" data-en="Workflow Automation" data-fr="Automatisation des Workflows">Workflow Automation</div></div>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="ai" style="background:#f7fafc">
+  <div class="sec">
+    <div class="sl" data-en="Modern Productivity" data-fr="Productivité Moderne">Modern Productivity</div>
+    <h2 class="st" data-en="AI-Enabled Work" data-fr="Travail Assisté par IA">AI-Enabled Work</h2>
+    <div class="aig">
+      <div class="aic">
+        <div class="ait"><span class="dot"></span><span data-en="How I Use AI Tools" data-fr="Comment j'utilise les Outils IA">How I Use AI Tools</span></div>
+        <ul class="ail">
+          <li data-en="Accelerate data analysis and pattern identification using OpenAI, Gemini, and Claude" data-fr="Accélérer l'analyse de données et l'identification de patterns avec OpenAI, Gemini et Claude">Accelerate data analysis and pattern identification using OpenAI, Gemini, and Claude</li>
+          <li data-en="Generate, review, and improve technical documentation with AI assistance" data-fr="Générer, réviser et améliorer la documentation technique avec l'assistance de l'IA">Generate, review, and improve technical documentation with AI assistance</li>
+          <li data-en="Support troubleshooting workflows by using AI for rapid research and hypothesis generation" data-fr="Soutenir les workflows de dépannage en utilisant l'IA pour la recherche rapide et la génération d'hypothèses">Support troubleshooting workflows by using AI for rapid research and hypothesis generation</li>
+          <li data-en="Draft and refine communications, reports, and stakeholder updates more efficiently" data-fr="Rédiger et affiner les communications, rapports et mises à jour pour les parties prenantes plus efficacement">Draft and refine communications, reports, and stakeholder updates more efficiently</li>
+          <li data-en="Automate repetitive research and summarization tasks to focus time on higher-value analysis" data-fr="Automatiser les tâches de recherche et de résumé répétitives pour se concentrer sur des analyses à plus haute valeur ajoutée">Automate repetitive research and summarization tasks to focus time on higher-value analysis</li>
+        </ul>
+      </div>
+      <div class="aic">
+        <div class="ait"><span class="dot"></span><span data-en="Business Impact" data-fr="Impact Métier">Business Impact</span></div>
+        <ul class="ail">
+          <li data-en="Faster documentation cycles for incident reports and support runbooks" data-fr="Cycles de documentation plus rapides pour les rapports d'incidents et les runbooks de support">Faster documentation cycles for incident reports and support runbooks</li>
+          <li data-en="Reduced time spent on manual research during root cause analysis" data-fr="Réduction du temps consacré à la recherche manuelle lors de l'analyse des causes racines">Reduced time spent on manual research during root cause analysis</li>
+          <li data-en="More consistent technical writing across deliverables and stakeholder communications" data-fr="Rédaction technique plus cohérente dans les livrables et communications aux parties prenantes">More consistent technical writing across deliverables and stakeholder communications</li>
+          <li data-en="Improved workflow efficiency by automating structured but repetitive analytical tasks" data-fr="Amélioration de l'efficacité des workflows en automatisant les tâches analytiques structurées mais répétitives">Improved workflow efficiency by automating structured but repetitive analytical tasks</li>
+          <li data-en="Continuous learning: AI tools support ongoing technical skill development and certification preparation" data-fr="Apprentissage continu: les outils IA soutiennent le développement des compétences techniques et la préparation aux certifications">Continuous learning: AI tools support ongoing technical skill development and certification preparation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<hr class="div">
+
+<section id="projects" style="background:#fff">
+  <div class="sec">
+    <div class="sl" data-en="Work Samples" data-fr="Exemples de Travaux">Work Samples</div>
+    <h2 class="st" data-en="Projects &amp; Portfolio" data-fr="Projets &amp; Portfolio">Projects &amp; Portfolio</h2>
+    <div class="pj-grid">
+      <div class="pj-card">
+        <div class="pj-top"><div class="pj-icon">📊</div><div class="pj-meta"><div class="pj-tool">Excel</div><div class="pj-type" data-en="Interactive Dashboard" data-fr="Tableau de Bord Interactif">Interactive Dashboard</div></div></div>
+        <div class="pj-title" data-en="Coffee Sales Dashboard" data-fr="Tableau de Bord Ventes de Café">Coffee Sales Dashboard</div>
+        <div class="pj-desc" data-en="Designed an interactive Excel model with slicers and auto-refresh to slice KPIs by product, region, and channel. Enabled rapid what-if views for category managers to compare mix and margin on demand." data-fr="Conçu un modèle Excel interactif avec des segments et actualisation automatique pour analyser les KPIs par produit, région et canal. Permis des vues d'analyse rapides pour les responsables de catégorie.">Designed an interactive Excel model with slicers and auto-refresh to slice KPIs by product, region, and channel. Enabled rapid what-if views for category managers to compare mix and margin on demand.</div>
+        <div class="pj-tags"><span class="pj-tag">Excel</span><span class="pj-tag">Slicers</span><span class="pj-tag">KPI Analysis</span><span class="pj-tag">Sales Analytics</span></div>
+        <div class="pj-link-row"><span class="pj-url">bit.ly/3I3K6Us</span><button class="pj-copy" onclick="cpText('https://bit.ly/3I3K6Us',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
+      </div>
+      <div class="pj-card">
+        <div class="pj-top"><div class="pj-icon">✈️</div><div class="pj-meta"><div class="pj-tool">Tableau</div><div class="pj-type" data-en="Executive Dashboard" data-fr="Tableau de Bord Exécutif">Executive Dashboard</div></div></div>
+        <div class="pj-title" data-en="United Airways Performance Review" data-fr="Analyse de Performance United Airways">United Airways Performance Review</div>
+        <div class="pj-desc" data-en="Built an exec-level Tableau dashboard with drilldowns for route performance, on-time rate, and sentiment analysis. Highlighted trends and outliers with simple filters for quick decision support." data-fr="Construit un tableau de bord Tableau de niveau exécutif avec des analyses détaillées pour la performance des routes, le taux de ponctualité et l'analyse de sentiment.">Built an exec-level Tableau dashboard with drilldowns for route performance, on-time rate, and sentiment analysis. Highlighted trends and outliers with simple filters for quick decision support.</div>
+        <div class="pj-tags"><span class="pj-tag">Tableau</span><span class="pj-tag">Drilldowns</span><span class="pj-tag">Sentiment Analysis</span><span class="pj-tag">Operations</span></div>
+        <div class="pj-link-row"><span class="pj-url">bit.ly/46xZt0D</span><button class="pj-copy" onclick="cpText('https://bit.ly/46xZt0D',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
+      </div>
+      <div class="pj-card">
+        <div class="pj-top"><div class="pj-icon">🌐</div><div class="pj-meta"><div class="pj-tool">HTML · CSS · JS</div><div class="pj-type" data-en="Interactive Resume Website" data-fr="Site CV Interactif">Interactive Resume Website</div></div></div>
+        <div class="pj-title" data-en="Personal Resume Website" data-fr="Site CV Personnel">Personal Resume Website</div>
+        <div class="pj-desc" data-en="Designed and built this professional resume website from scratch — fully responsive, with smooth scroll navigation, expandable experience cards, and a contact reveal panel. No frameworks used." data-fr="Conçu et développé ce site CV professionnel de zéro — entièrement responsive, avec navigation fluide, fiches d'expérience dépliables et panneau de contact. Sans framework.">Designed and built this professional resume website from scratch — fully responsive, with smooth scroll navigation, expandable experience cards, and a contact reveal panel. No frameworks used.</div>
+        <div class="pj-tags"><span class="pj-tag">HTML / CSS</span><span class="pj-tag">JavaScript</span><span class="pj-tag" data-en="Responsive Design" data-fr="Design Responsive">Responsive Design</span><span class="pj-tag">UI/UX</span></div>
+        <div class="pj-link-row"><span class="pj-url" data-en="This page" data-fr="Cette page">This page</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="↑ Back to top" data-fr="↑ Haut de page">↑ Back to top</button></div>
+</section>
+
+<section id="contact" style="background:#0f2137">
+  <div class="sec">
+    <div class="sl" style="color:#d69e2e" data-en="Let's Connect" data-fr="Prenons Contact">Let's Connect</div>
+    <h2 class="st" style="color:#fff" data-en="Open to Opportunities" data-fr="Ouvert aux Opportunités">Open to Opportunities</h2>
+    <p class="csub"><span data-en="Currently exploring System Analyst, Data Analyst, and IT Application Support roles." data-fr="À la recherche de postes d'Analyste Systèmes, Analyste de Données et Support Applicatif IT.">Currently exploring System Analyst, Data Analyst, and IT Application Support roles.</span><br><span data-en="Click below to view my contact details." data-fr="Cliquez ci-dessous pour voir mes coordonnées.">Click below to view my contact details.</span></p>
+    <div class="cbtns" id="ctrig"><button class="bct bctg" onclick="showC()" data-en="✉ Show Contact Info" data-fr="✉ Afficher les Coordonnées">✉ Show Contact Info</button></div>
+    <div id="cpanel" style="display:none">
+      <div class="ccards">
+        <div class="ccard"><div class="ccl" data-en="Email" data-fr="E-mail">Email</div><div class="ccv" id="em"></div><button class="cpb" onclick="cp('em',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl" data-en="Phone" data-fr="Téléphone">Phone</div><div class="ccv" id="ph"></div><button class="cpb" onclick="cp('ph',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl">LinkedIn</div><div class="ccv" id="li">linkedin.com/in/franck-y</div><button class="cpb" onclick="cp('li',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl" data-en="Credly Badges" data-fr="Badges Credly">Credly Badges</div><div class="ccv" id="cr">credly.com/users/franck-yeboue/badges</div><button class="cpb" onclick="cp('cr',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl" data-en="Location" data-fr="Localisation">Location</div><div class="ccv" data-en="United States · Open to Remote" data-fr="États-Unis · Ouvert au Télétravail">United States · Open to Remote</div></div>
+      </div>
+      <div class="cbtns" style="margin-top:20px">
+        <button class="bct" onclick="window.print()" data-en="⬇ Print / Save Resume" data-fr="⬇ Imprimer / Sauvegarder le CV">⬇ Print / Save Resume</button>
+        <button class="bct" onclick="hideC()" style="opacity:.55" data-en="Hide Info" data-fr="Masquer">Hide Info</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer-text">© 2025 Franck Yeboue · System Analyst · Data Analyst · Application Support</footer>
+
+<script>
+var lang='en';
+function goTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function go(id){var e=document.getElementById(id);if(!e)return;var n=document.querySelector('nav').offsetHeight;window.scrollTo({top:e.getBoundingClientRect().top+window.pageYOffset-n-8,behavior:'smooth'});}
+function tog(id){document.getElementById(id).classList.toggle('open');}
+function showC(){
+  document.getElementById('ctrig').style.display='none';
+  var p=document.getElementById('cpanel');p.style.display='block';
+  var em=document.getElementById('em');if(!em.textContent.trim()){em.textContent=['franck','@','yeboue','.com'].join('');}
+  var ph=document.getElementById('ph');if(!ph.textContent.trim()){ph.textContent=['+1 (614) ','372','-','9443'].join('');}
+}
+function hideC(){document.getElementById('cpanel').style.display='none';document.getElementById('ctrig').style.display='flex';}
+function cp(id,btn){var t=document.getElementById(id).innerText.trim();if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){fl(btn);});}else{var x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');document.body.removeChild(x);fl(btn);}}
+function cpText(text,btn){if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){fl(btn);});}else{var x=document.createElement('textarea');x.value=text;document.body.appendChild(x);x.select();document.execCommand('copy');document.body.removeChild(x);fl(btn);}}
+function fl(btn){var copied=lang==='fr'?'Copié!':'Copied!';btn.textContent=copied;btn.classList.add('copied');setTimeout(function(){var orig=btn.getAttribute('data-'+lang);btn.textContent=orig||'Copy';btn.classList.remove('copied');},2200);}
+function toggleLang(){
+  lang=lang==='en'?'fr':'en';
+  document.getElementById('langBtn').textContent=lang==='en'?'FR':'EN';
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    var val=el.getAttribute('data-'+lang);
+    if(val!==null){el.innerHTML=val;}
+  });
+  document.getElementById('footer-text').textContent=lang==='fr'
+    ?'© 2025 Franck Yeboue · Analyste Systèmes · Analyste de Données · Support Applicatif'
+    :'© 2025 Franck Yeboue · System Analyst · Data Analyst · Application Support';
+}
+if('IntersectionObserver' in window){
+  var ob=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.07});
+  document.querySelectorAll('.skc,.cc,.tgr,.aic,.pj-card,.edu-card').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(12px)';el.style.transition='opacity .4s ease,transform .4s ease';ob.observe(el);});
+}
+</script>
+
+</body>
+</html>
