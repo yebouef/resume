@@ -2,7 +2,7 @@
 
 **Business Analyst · BI Developer · Application Support · AI & Automation Implementer**
 
-Columbus, OH (open to remote) · franck@yeboue.com · +1 (614) 372-9443
+Columbus, OH · Open to remote and international mobility · franck@yeboue.com · +1 (614) 372-9443
 LinkedIn: linkedin.com/in/franck-y · Credly: credly.com/users/franck-yeboue/badges
 
 ---
@@ -31,7 +31,7 @@ Business analyst, BI developer, and founder of Prince Tech LLC with ten years of
 - Wrote optimized SQL queries with joins, CTEs, and window functions to clean reporting data and validate outputs against source-of-truth systems.
 - Fixed upstream data feed discrepancies at the root cause rather than patching the report, working directly with engineering owners.
 - Automated recurring Excel reports into refreshable Power BI views, cutting about 8 hours per week of manual prep and giving stakeholders fresher numbers.
-- Designed the data model and validation logic for the AICO Membership Portal on Supabase/PostgreSQL, covering 80+ member records, monthly dues, and event cost-sharing.
+- Designed the data model and validation logic for the AICO Membership Portal (Association des Ivoiriens à Columbus, Ohio) on Supabase/PostgreSQL, covering 80+ member records, monthly dues, and event cost-sharing.
 - Built executive Tableau and Excel dashboards covering route performance, on-time rate, sentiment analysis, and KPI breakdowns by product, region, and channel.
 - Wrote DAX measures and Power BI data models that let non-technical stakeholders slice the same dataset across product, time, and geography without asking for one-off reports.
 
@@ -122,13 +122,20 @@ Business analyst, BI developer, and founder of Prince Tech LLC with ten years of
 
 ---
 
+## Languages
+
+- **French** — Native
+- **English** — Fluent (primary working language for the past ten years)
+
+---
+
 ## Selected Projects
 
 - **Prince Tech LLC** — Founded an Ohio LLC building websites, internal tools, AI workflows, and data integrations for small businesses; designed and shipped princetechllc.com (Next.js, bilingual EN/FR) positioning four service lanes with a 24-hour response SLA and project-or-retainer engagements.
 - **La Passion Kolorée** — Production catering website at lapassionkoloree.com built end-to-end on Cloudflare Pages with a Supabase backend (Auth, Postgres, edge functions) and Resend transactional email; includes multi-cart checkout, customer order tracking by name and email, and a browser-based admin UI so the non-technical operator runs the business without a developer.
 - **Hub E-Pharma Editorial Studio** — Next.js content-automation MVP built for an e-pharmacy initiative in Côte d'Ivoire that generates a full content pack — article, LinkedIn long, Facebook short, newsletter, carousel outline, e-pharmacy variant, and email draft — from a date plus lead-time rules, with OpenAI Responses API generation, Google Calendar integration, a custom 2026–2030 editorial calendar, Sentry instrumentation, and Playwright tests.
 - **Hub E-Pharma Content & Strategy** — Wrote editorial process docs, LinkedIn publication frameworks, monthly content plans, and reusable templates for HEP, including infographic and carousel briefs covering connected health and pharmacist prequalification topics.
-- **AICO Membership Portal** — Production community portal live at portal.aicocolumbus.org on Cloudflare Pages with a Supabase backend serving 80+ members; covers RLS policies, audit logging, multi-beneficiary payments, recurring dues, special-event cost-sharing, expense tracking, raffles, and Resend email notifications with bilingual EN/FR support.
+- **AICO Membership Portal (Association des Ivoiriens à Columbus, Ohio)** — Production community portal live at portal.aicocolumbus.org on Cloudflare Pages with a Supabase backend serving 80+ members; covers RLS policies, audit logging, multi-beneficiary payments, recurring dues, special-event cost-sharing, expense tracking, raffles, and Resend email notifications with bilingual EN/FR support.
 - **AICO Ticket Sales System** — Live ticket-sales app at tickets.aicocolumbus.org on Firebase Firestore with role-based seller logins, real-time revenue and inventory dashboard, multi-category line items, and CSV export, used in production at a community event.
 - **Daily Job Search AI Agent** — Scheduled Claude agent that runs every morning at 6:30 AM, queries Indeed, ZipRecruiter, and Dice against a structured profile, scores each posting 0–100+ for fit with reasoning, and reports matches with what fits, what's missing, and how to bridge gaps.
 - **AI Investment Assistant** — Python/Streamlit paper-trading dashboard pulling market data from Yahoo Finance, calculating moving averages and RSI, scoring signals with plain-language explanations, and journaling simulated trades to SQLite.
