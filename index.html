@@ -210,7 +210,7 @@ footer{background:#14100E;color:rgba(255,255,255,.3);text-align:center;padding:1
 .cb-fab.hide{display:none}
 .cb-fab .cb-pulse{width:8px;height:8px;border-radius:50%;background:var(--gl);flex-shrink:0;animation:cbPulse 2.4s ease-in-out infinite}
 @keyframes cbPulse{0%,100%{opacity:1}50%{opacity:.35}}
-.cb-panel{position:fixed;right:22px;bottom:22px;z-index:81;width:376px;max-width:calc(100vw - 28px);height:540px;max-height:calc(100vh - 110px);background:var(--wh);border:1px solid var(--bd);border-radius:14px;box-shadow:0 20px 56px rgba(31,26,23,.26);display:none;flex-direction:column;overflow:hidden}
+.cb-panel{position:fixed;right:22px;bottom:22px;z-index:81;width:376px;max-width:calc(100vw - 28px);height:580px;max-height:calc(100vh - 104px);background:var(--wh);border:1px solid var(--bd);border-radius:14px;box-shadow:0 20px 56px rgba(31,26,23,.26);display:none;flex-direction:column;overflow:hidden}
 .cb-panel.open{display:flex}
 .cb-head{background:var(--nv);color:#fff;padding:13px 15px;display:flex;align-items:center;gap:11px;flex-shrink:0}
 .cb-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--gd));display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0}
@@ -221,7 +221,7 @@ footer{background:#14100E;color:rgba(255,255,255,.3);text-align:center;padding:1
 .cb-x{background:none;border:none;color:rgba(255,255,255,.65);font-size:22px;line-height:1;cursor:pointer;padding:2px 5px;border-radius:5px;transition:color .18s,background .18s}
 .cb-x:hover{color:#fff;background:rgba(255,255,255,.13)}
 .cb-x:focus-visible{outline:2px solid var(--gl);outline-offset:1px}
-.cb-body{flex:1;overflow-y:auto;padding:15px;background:var(--tn);display:flex;flex-direction:column;gap:11px}
+.cb-body{position:relative;flex:1;overflow-y:auto;padding:15px;background:var(--tn);display:flex;flex-direction:column;gap:11px}
 .cb-msg{max-width:87%;padding:10px 13px;border-radius:12px;font-size:13.4px;line-height:1.62;word-wrap:break-word}
 .cb-msg strong{font-weight:600}
 .cb-msg.bot{background:var(--wh);border:1px solid var(--bd);color:var(--tm);align-self:flex-start;border-bottom-left-radius:4px}
@@ -229,7 +229,7 @@ footer{background:#14100E;color:rgba(255,255,255,.3);text-align:center;padding:1
 .cb-msg ul{margin:7px 0 0;padding-left:17px}
 .cb-msg li{margin-bottom:4px}
 .cb-note{font-size:11.5px;color:var(--mu);text-align:center;padding:2px 8px;line-height:1.5}
-.cb-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 15px 11px;background:var(--tn);flex-shrink:0}
+.cb-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 15px 11px;background:var(--tn);flex-shrink:0;max-height:76px;overflow-y:auto}
 .cb-chip{font-family:inherit;font-size:11.5px;padding:5px 11px;border-radius:99px;border:1px solid var(--bd);background:var(--wh);color:var(--ac);cursor:pointer;transition:border-color .18s,background .18s}
 .cb-chip:hover{border-color:var(--ac);background:#F3EAEC}
 .cb-chip:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
@@ -1581,7 +1581,27 @@ var CB_KB = [
 
 {tags:["remote", "onsite", "hybrid", "relocate", "commute", "work from home", "in office"], strong:["remote", "onsite", "hybrid", "relocate"],
  en:"Franck is based in <strong>Columbus, Ohio</strong> and is open to onsite roles in the Columbus area as well as remote and hybrid arrangements. He's a U.S. citizen with no notice period, so there are no logistical obstacles to starting.",
- fr:"Franck est basé à <strong>Columbus, Ohio</strong> et ouvert aux postes sur site dans la région ainsi qu'aux formules à distance et hybrides. Citoyen américain et sans préavis à effectuer, aucun obstacle logistique au démarrage."}
+ fr:"Franck est basé à <strong>Columbus, Ohio</strong> et ouvert aux postes sur site dans la région ainsi qu'aux formules à distance et hybrides. Citoyen américain et sans préavis à effectuer, aucun obstacle logistique au démarrage."},
+
+{tags:["hobbies", "hobby", "interests", "outside work", "personal", "free time", "fun", "what does he do for fun", "personality", "tell me something personal"], strong:["hobbies", "hobby", "interests"],
+ en:"Outside work, Franck is a recreational <strong>drone pilot</strong> and shoots with a professional camera — the two hobbies feed each other. He has travelled to <strong>15 countries across 3 continents</strong>, he's a regular at the cinema, and he has been skydiving twice.",
+ fr:"En dehors du travail, Franck est <strong>pilote de drone</strong> amateur et photographie avec un appareil professionnel — les deux passions se nourrissent l'une l'autre. Il a voyagé dans <strong>15 pays sur 3 continents</strong>, va régulièrement au cinéma, et a fait du parachutisme à deux reprises."},
+
+{tags:["travel", "travelled", "traveled", "countries", "continents", "been abroad", "international", "world"], strong:["travel", "travelled", "countries", "continents"],
+ en:"<strong>15 countries across 3 continents</strong> so far. He studied in Casablanca, works professionally in both English and French, and is based in Columbus, Ohio. That range is part of why he's comfortable working with people across regions and languages rather than only within one office culture.",
+ fr:"<strong>15 pays sur 3 continents</strong> à ce jour. Il a étudié à Casablanca, travaille professionnellement en anglais et en français, et vit à Columbus, Ohio. Cette expérience explique son aisance à travailler avec des interlocuteurs de régions et de langues différentes."},
+
+{tags:["photography", "photo", "photos", "camera", "drone", "aerial", "dslr", "pictures", "shooting"], strong:["photography", "camera", "drone", "aerial"],
+ en:"Franck shoots with a <strong>professional camera</strong> and flies drones recreationally, so he works both from the ground and from the air. It's a hobby rather than a business, but it runs on the same instincts as his analytical work — framing what matters, cutting what doesn't, and being patient about getting the detail right.",
+ fr:"Franck photographie avec un <strong>appareil professionnel</strong> et pilote des drones en loisir, travaillant ainsi au sol comme dans les airs. C'est une passion, pas une activité commerciale, mais elle repose sur les mêmes réflexes que son travail analytique : cadrer l'essentiel, écarter le reste, et prendre le temps du détail."},
+
+{tags:["movies", "movie", "film", "films", "cinema", "watch"], strong:["movies", "cinema", "film"],
+ en:"Franck is a regular at the cinema — going to see films is one of the ways he switches off. If you want a conversation starter that isn't about SQL, that's a reliable one.",
+ fr:"Franck est un habitué du cinéma — aller voir des films est l'une de ses façons de décrocher. Un bon sujet de conversation si vous cherchez autre chose que du SQL."},
+
+{tags:["skydiving", "skydive", "parachute", "fun fact", "adventurous", "surprising", "bucket list", "risk taker"], strong:["skydiving", "skydive", "parachute", "adventurous"],
+ en:"He has been <strong>skydiving twice</strong>. He also flies drones, shoots photography, and has travelled to 15 countries across 3 continents — and in 2025 he responded to a layoff by founding a company and shipping six products, which tells you something about the same instinct in a professional setting.",
+ fr:"Il a fait du <strong>parachutisme à deux reprises</strong>. Il pilote aussi des drones, pratique la photographie et a visité 15 pays sur 3 continents — et en 2025, il a répondu à un licenciement en fondant une entreprise et en livrant six produits, ce qui traduit le même état d'esprit sur le plan professionnel."}
 ];
 
 var CB_FALLBACK = {
@@ -1593,11 +1613,11 @@ var CB_UI = {
   en:{fab:'Ask about my work',title:'Franck\'s Assistant',stat:'Answers about my experience',ph:'Ask a question…',
       greet:'Hi — I\'m Franck\'s assistant. Ask me about his experience, skills, certifications, or projects.',
       note:'Answers are pre-written by Franck, so nothing here is invented.',
-      chips:['What\'s his experience?','Power BI and SQL?','HR analytics / HRIS?','What has he built?','How do I contact him?']},
+      chips:['What\'s his experience?','Power BI and SQL?','HR analytics / HRIS?','What has he built?','How do I contact him?','Outside of work?']},
   fr:{fab:'Poser une question',title:'Assistant de Franck',stat:'Réponses sur mon expérience',ph:'Posez une question…',
       greet:'Bonjour — je suis l\'assistant de Franck. Posez-moi vos questions sur son expérience, ses compétences, ses certifications ou ses projets.',
       note:'Les réponses sont rédigées à l\'avance par Franck — rien n\'est inventé.',
-      chips:['Quelle est son expérience ?','Power BI et SQL ?','Analytique RH / HRIS ?','Qu\'a-t-il construit ?','Comment le contacter ?']}
+      chips:['Quelle est son expérience ?','Power BI et SQL ?','Analytique RH / HRIS ?','Qu\'a-t-il construit ?','Comment le contacter ?','En dehors du travail ?']}
 };
 
 
@@ -1654,19 +1674,39 @@ function cbLocalAnswer(text){
 
 function cbUI(){ return CB_UI[lang] || CB_UI.en; }
 
-function cbAdd(html, who){
+function cbAdd(html, who, defer){
   var b = document.getElementById('cbBody');
+  if(!b) return null;
   var d = document.createElement('div');
   d.className = 'cb-msg ' + who;
   if(who === 'me'){ d.textContent = html; } else { d.innerHTML = html; }
   b.appendChild(d);
-  b.scrollTop = b.scrollHeight;
+  if(!defer) cbScroll(d, who);
+  return d;
 }
 
-function cbChips(){
+/* Position the view AFTER the chips have rendered — they resize the
+   message area, so scrolling before they exist cuts off the answer.
+   For a bot reply, put the START of the answer at the top so long
+   replies are read from the beginning rather than the end. */
+function cbScroll(el, who){
+  var b = document.getElementById('cbBody');
+  if(!b) return;
+  var max = (b.scrollHeight || 0) - (b.clientHeight || 0);
+  if(who === 'bot' && el && typeof el.offsetTop === 'number'){
+    b.scrollTop = Math.max(0, Math.min(el.offsetTop - 8, max));
+  }else{
+    b.scrollTop = b.scrollHeight || 0;
+  }
+}
+
+function cbChips(limit){
   var wrap = document.getElementById('cbChips');
+  if(!wrap) return;
   wrap.innerHTML = '';
-  cbUI().chips.forEach(function(c){
+  var list = cbUI().chips;
+  if(limit) list = list.slice(0, limit);
+  list.forEach(function(c){
     var btn = document.createElement('button');
     btn.className = 'cb-chip';
     btn.textContent = c;
@@ -1719,8 +1759,13 @@ function cbAsk(text){
   cbRoute(text).then(function(answer){
     setTimeout(function(){
       if(t.parentNode) t.parentNode.removeChild(t);
-      cbAdd(answer, 'bot');
-      cbChips();
+      var el = cbAdd(answer, 'bot', true);   // hold the scroll
+      cbChips(3);                            // fewer follow-ups: they cost vertical space
+      if(window.requestAnimationFrame){      // let layout settle, then position
+        window.requestAnimationFrame(function(){ cbScroll(el, 'bot'); });
+      }else{
+        cbScroll(el, 'bot');
+      }
     }, 430);
   });
 }
