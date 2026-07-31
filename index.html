@@ -275,11 +275,16 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 .htags .ht.cert{font-weight:500}
 .htags .ht.lens-dim{opacity:1}
 .htags .ht.lens-hot{border-color:var(--ac);color:var(--ac);background:#F3EAEC;font-weight:500}
-.htags .ht.lens-hot::before{content:'✓ ';font-weight:700}
 
 /* Experience cards marked by a rule, not a hue */
 .ec{border-left:3px solid var(--bd)}
 .ec.open{border-left-color:var(--ac)}
+
+/* School links sit on a light section */
+.edu-school a{color:var(--ac);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:rgba(122,62,82,.35)}
+.edu-school a:hover{text-decoration-color:currentColor}
+.edu-school a:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:2px}
 
 /* Links inside contact cards */
 .ccard a{color:inherit;text-decoration:underline;text-underline-offset:3px;
@@ -355,9 +360,9 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <span id="heroDesc">Nine-plus years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital.</span>
     </p>
     <div class="htags">
-      <span class="ht cert" data-lens="builder,systems">☁ AWS Certified Cloud Practitioner</span>
-      <span class="ht cert" data-lens="builder">⚙ Terraform Associate</span>
-      <span class="ht founder" data-lens="builder">🏢 Prince Tech LLC — Founder</span>
+      <span class="ht cert" data-lens="builder,systems">AWS Certified Cloud Practitioner</span>
+      <span class="ht cert" data-lens="builder">Terraform Associate</span>
+      <span class="ht founder" data-lens="builder">Prince Tech LLC — Founder</span>
       <span class="ht" data-lens="builder">Next.js · Firebase · Supabase</span>
       <span class="ht" data-lens="data,systems">SQL · Oracle SQL</span>
       <span class="ht" data-lens="data">Power BI</span>
@@ -586,7 +591,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="edu-card">
         <div class="edu-left">
           <div class="edu-degree" data-en="Bachelor of Science — Information Technology" data-fr="Licence — Technologies de l'Information">Bachelor of Science — Information Technology</div>
-          <div class="edu-school">Franklin University · Columbus, OH</div>
+          <div class="edu-school"><a href="https://www.franklin.edu" target="_blank" rel="noopener noreferrer">Franklin University</a> · Columbus, OH</div>
           <div class="edu-note" data-en="Systems analysis, database management, networking, IT project management" data-fr="Analyse de systèmes, gestion de bases de données, réseaux, gestion de projets IT">Systems analysis, database management, networking, IT project management</div>
         </div>
         <div class="edu-year">2014</div>
@@ -594,7 +599,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="edu-card">
         <div class="edu-left">
           <div class="edu-degree" data-en="Master of Science — Marketing Communication" data-fr="Master — Communication Marketing">Master of Science — Marketing Communication</div>
-          <div class="edu-school">ESTEM · Casablanca, Morocco</div>
+          <div class="edu-school"><a href="https://www.estem.ma" target="_blank" rel="noopener noreferrer">ESTEM</a> · Casablanca, Morocco</div>
           <div class="edu-note" data-en="Marketing strategy, communication, and business development" data-fr="Stratégie marketing, communication et développement commercial">Marketing strategy, communication, and business development</div>
         </div>
         <div class="edu-year">2006</div>
@@ -750,9 +755,9 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="ccards">
         <div class="ccard"><div class="ccl" data-en="Email" data-fr="E-mail">Email</div><div class="ccv" id="em"></div><button class="cpb" onclick="cp('em',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
         <div class="ccard"><div class="ccl" data-en="Phone" data-fr="Téléphone">Phone</div><div class="ccv" id="ph"></div><button class="cpb" onclick="cp('ph',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
-        <div class="ccard"><div class="ccl">LinkedIn</div><div class="ccv" id="li">linkedin.com/in/franck-y</div><button class="cpb" onclick="cp('li',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
-        <div class="ccard"><div class="ccl">GitHub</div><div class="ccv" id="gh"><a href="https://github.com/yebouef" target="_blank" rel="noopener noreferrer">github.com/yebouef</a></div><button class="cpb" onclick="cpText('https://github.com/yebouef',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
-        <div class="ccard"><div class="ccl" data-en="Credly Badges" data-fr="Badges Credly">Credly Badges</div><div class="ccv" id="cr">credly.com/users/franck-yeboue/badges</div><button class="cpb" onclick="cp('cr',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl">LinkedIn</div><div class="ccv" id="li"><a href="https://www.linkedin.com/in/franck-y" target="_blank" rel="noopener noreferrer">linkedin.com/in/franck-y</a></div><button class="cpb" onclick="cpText('https://www.linkedin.com/in/franck-y',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl">GitHub</div><div class="ccv" id="gh"><a href="https://www.github.com/yebouef" target="_blank" rel="noopener noreferrer">github.com/yebouef</a></div><button class="cpb" onclick="cpText('https://www.github.com/yebouef',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
+        <div class="ccard"><div class="ccl" data-en="Credly Badges" data-fr="Badges Credly">Credly Badges</div><div class="ccv" id="cr"><a href="https://www.credly.com/users/franck-yeboue/badges" target="_blank" rel="noopener noreferrer">credly.com/users/franck-yeboue/badges</a></div><button class="cpb" onclick="cpText('https://www.credly.com/users/franck-yeboue/badges',this)" data-en="Copy" data-fr="Copier">Copy</button></div>
         <div class="ccard"><div class="ccl" data-en="Location" data-fr="Localisation">Location</div><div class="ccv" data-en="Columbus, OH · Open to Remote &amp; Hybrid" data-fr="Columbus, OH · Ouvert au Télétravail &amp; Hybride">Columbus, OH · Open to Remote &amp; Hybrid</div></div>
         <div class="ccard"><div class="ccl" data-en="Company" data-fr="Entreprise">Company</div><div class="ccv">Prince Tech LLC</div></div>
       </div>
