@@ -187,6 +187,79 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
   .ccards{grid-template-columns:1fr}.pj-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){.sg{grid-template-columns:1fr}.tg{grid-template-columns:1fr}}
+
+/* ═══ LENS SWITCHER ═══ */
+.lens-bar{position:sticky;top:56px;z-index:49;background:var(--wh);border-bottom:1px solid var(--bd);padding:9px 32px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 1px 3px rgba(15,33,55,.05)}
+.lens-lab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);font-weight:700;white-space:nowrap}
+.lens-opts{display:flex;gap:7px;flex-wrap:wrap}
+.lens-btn{font-family:inherit;font-size:12.5px;font-weight:500;padding:5px 14px;border-radius:99px;border:1px solid var(--bd);background:var(--tn);color:var(--ts);cursor:pointer;transition:border-color .18s,color .18s,background .18s}
+.lens-btn:hover{border-color:var(--ac);color:var(--ac)}
+.lens-btn:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.lens-btn.on{background:var(--nv);border-color:var(--nv);color:#fff}
+.lens-share{margin-left:auto;font-size:11.5px;color:var(--mu);background:none;border:1px solid transparent;font-family:inherit;cursor:pointer;padding:5px 11px;border-radius:6px;transition:color .18s,background .18s}
+.lens-share:hover{color:var(--ac);background:var(--tn)}
+.lens-share:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.htags .ht{transition:opacity .3s ease,border-color .3s ease,color .3s ease,background .3s ease}
+.htags .ht.lens-dim{opacity:.3}
+.htags .ht.lens-hot{border-color:var(--gl);color:var(--gl)}
+.pj-card{transition:opacity .3s ease}
+.pj-card.lens-off{opacity:.5}
+
+/* ═══ CHAT ASSISTANT ═══ */
+.cb-fab{position:fixed;right:22px;bottom:22px;z-index:80;height:52px;padding:0 20px 0 17px;border-radius:99px;border:none;background:var(--nv);color:#fff;cursor:pointer;box-shadow:0 6px 22px rgba(15,33,55,.3);display:flex;align-items:center;gap:9px;font-family:inherit;font-size:14px;font-weight:500;transition:transform .2s ease,background .2s ease}
+.cb-fab:hover{transform:translateY(-2px);background:var(--ac)}
+.cb-fab:focus-visible{outline:2px solid var(--gl);outline-offset:3px}
+.cb-fab.hide{display:none}
+.cb-fab .cb-pulse{width:8px;height:8px;border-radius:50%;background:var(--gl);flex-shrink:0;animation:cbPulse 2.4s ease-in-out infinite}
+@keyframes cbPulse{0%,100%{opacity:1}50%{opacity:.35}}
+.cb-panel{position:fixed;right:22px;bottom:22px;z-index:81;width:376px;max-width:calc(100vw - 28px);height:540px;max-height:calc(100vh - 110px);background:var(--wh);border:1px solid var(--bd);border-radius:14px;box-shadow:0 20px 56px rgba(15,33,55,.26);display:none;flex-direction:column;overflow:hidden}
+.cb-panel.open{display:flex}
+.cb-head{background:var(--nv);color:#fff;padding:13px 15px;display:flex;align-items:center;gap:11px;flex-shrink:0}
+.cb-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--gd));display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0}
+.cb-hmeta{flex:1;min-width:0}
+.cb-hname{font-size:13.5px;font-weight:600;line-height:1.3}
+.cb-hstat{font-size:11px;color:rgba(255,255,255,.62);display:flex;align-items:center;gap:5px;margin-top:1px}
+.cb-hstat::before{content:'';width:6px;height:6px;border-radius:50%;background:#48bb78}
+.cb-x{background:none;border:none;color:rgba(255,255,255,.65);font-size:22px;line-height:1;cursor:pointer;padding:2px 5px;border-radius:5px;transition:color .18s,background .18s}
+.cb-x:hover{color:#fff;background:rgba(255,255,255,.13)}
+.cb-x:focus-visible{outline:2px solid var(--gl);outline-offset:1px}
+.cb-body{flex:1;overflow-y:auto;padding:15px;background:var(--tn);display:flex;flex-direction:column;gap:11px}
+.cb-msg{max-width:87%;padding:10px 13px;border-radius:12px;font-size:13.4px;line-height:1.62;word-wrap:break-word}
+.cb-msg strong{font-weight:600}
+.cb-msg.bot{background:var(--wh);border:1px solid var(--bd);color:var(--tm);align-self:flex-start;border-bottom-left-radius:4px}
+.cb-msg.me{background:var(--nv);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.cb-msg ul{margin:7px 0 0;padding-left:17px}
+.cb-msg li{margin-bottom:4px}
+.cb-note{font-size:11.5px;color:var(--mu);text-align:center;padding:2px 8px;line-height:1.5}
+.cb-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 15px 11px;background:var(--tn);flex-shrink:0}
+.cb-chip{font-family:inherit;font-size:11.5px;padding:5px 11px;border-radius:99px;border:1px solid var(--bd);background:var(--wh);color:var(--ac);cursor:pointer;transition:border-color .18s,background .18s}
+.cb-chip:hover{border-color:var(--ac);background:#ebf4ff}
+.cb-chip:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+.cb-foot{display:flex;gap:8px;padding:11px;border-top:1px solid var(--bd);background:var(--wh);flex-shrink:0}
+.cb-in{flex:1;font-family:inherit;font-size:13.4px;padding:9px 13px;border:1px solid var(--bd);border-radius:99px;outline:none;color:var(--tx);background:var(--tn);transition:border-color .18s,background .18s}
+.cb-in:focus{border-color:var(--ac);background:var(--wh)}
+.cb-send{width:38px;height:38px;border-radius:50%;border:none;background:var(--nv);color:#fff;cursor:pointer;flex-shrink:0;font-size:15px;transition:background .18s}
+.cb-send:hover{background:var(--ac)}
+.cb-send:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.cb-typing{display:flex;gap:4px;align-items:center;padding:12px 14px;background:var(--wh);border:1px solid var(--bd);border-radius:12px;border-bottom-left-radius:4px;align-self:flex-start}
+.cb-typing span{width:6px;height:6px;border-radius:50%;background:var(--mu);animation:cbBounce 1.3s infinite}
+.cb-typing span:nth-child(2){animation-delay:.16s}
+.cb-typing span:nth-child(3){animation-delay:.32s}
+@keyframes cbBounce{0%,60%,100%{opacity:.28;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
+
+@media(max-width:640px){
+  .lens-bar{padding:9px 16px;gap:9px}
+  .lens-lab{display:none}
+  .lens-share{margin-left:0;width:100%;text-align:left;padding-left:0}
+  .cb-panel{right:8px;left:8px;bottom:8px;width:auto;max-width:none;height:calc(100vh - 90px)}
+  .cb-fab{right:14px;bottom:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .cb-fab .cb-pulse,.cb-typing span{animation:none}
+  .cb-fab:hover{transform:none}
+  *{scroll-behavior:auto!important}
+}
+
 </style>
 </head>
 <body>
@@ -208,27 +281,43 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
   </ul>
 </nav>
 
+<!-- LENS SWITCHER -->
+<div class="lens-bar" role="group" aria-label="Choose profile focus">
+  <span class="lens-lab" id="lensLab">View as</span>
+  <div class="lens-opts">
+    <button class="lens-btn on" data-lensid="all" onclick="setLens('all')">Full Profile</button>
+    <button class="lens-btn" data-lensid="data" onclick="setLens('data')">Data &amp; BI</button>
+    <button class="lens-btn" data-lensid="systems" onclick="setLens('systems')">Systems &amp; Business Analysis</button>
+    <button class="lens-btn" data-lensid="builder" onclick="setLens('builder')">Developer &amp; AI</button>
+  </div>
+  <button class="lens-share" id="lensShare" onclick="copyLensLink(this)">Copy link to this view</button>
+</div>
+
+
 <!-- HERO -->
 <section id="hero">
   <div class="hi">
     <div class="hl" data-en="Open to New Opportunities" data-fr="Ouvert aux Nouvelles Opportunités">Open to New Opportunities</div>
     <h1 class="hn">Franck Yeboue</h1>
-    <p class="hsub" data-en="System Analyst · Data Analyst · Web Developer · Founder" data-fr="Analyste Systèmes · Analyste de Données · Développeur Web · Fondateur">System Analyst · Data Analyst · Web Developer · Founder</p>
+    <p class="hsub" id="heroSub">Systems &amp; Data Analyst · Developer · Founder</p>
     <p class="hd">
-      <strong data-en="IT Troubleshooting · Application Support · Incident Management · Prince Tech LLC" data-fr="Dépannage IT · Support Applicatif · Gestion des Incidents · Prince Tech LLC">IT Troubleshooting · Application Support · Incident Management · Prince Tech LLC</strong><br>
-      <span data-en="Nine-plus years in enterprise tech across JPMorgan Chase and Lumen Technologies. After a company-wide RIF in 2025, I turned the pivot into purpose — founding Prince Tech LLC to build the web solutions I always wanted to create." data-fr="Plus de neuf ans dans la technologie d'entreprise chez JPMorgan Chase et Lumen Technologies. Après un licenciement collectif en 2025, j'ai transformé ce tournant en opportunité — en fondant Prince Tech LLC pour construire les solutions web que j'ai toujours voulu créer.">Nine-plus years in enterprise tech across JPMorgan Chase and Lumen Technologies. After a company-wide RIF in 2025, I turned the pivot into purpose — founding Prince Tech LLC to build the web solutions I always wanted to create.</span>
+      <strong id="heroStrong">Business Analysis · Data &amp; Reporting · Application Support · Web &amp; AI Development</strong><br>
+      <span id="heroDesc">Nine-plus years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital.</span>
     </p>
     <div class="htags">
-      <span class="ht cert">☁ AWS Certified Cloud Practitioner</span>
-      <span class="ht cert">⚙ Terraform Associate</span>
-      <span class="ht founder">🏢 Prince Tech LLC — Founder</span>
-      <span class="ht">Next.js · Firebase · Supabase</span>
-      <span class="ht">SQL · Power BI</span>
-      <span class="ht">Splunk</span>
-      <span class="ht">Java</span>
-      <span class="ht" data-en="Incident Management" data-fr="Gestion des Incidents">Incident Management</span>
-      <span class="ht" data-en="Web Development" data-fr="Développement Web">Web Development</span>
-      <span class="ht">OpenAI · Gemini · Claude</span>
+      <span class="ht cert" data-lens="builder,systems">☁ AWS Certified Cloud Practitioner</span>
+      <span class="ht cert" data-lens="builder">⚙ Terraform Associate</span>
+      <span class="ht founder" data-lens="builder">🏢 Prince Tech LLC — Founder</span>
+      <span class="ht" data-lens="builder">Next.js · Firebase · Supabase</span>
+      <span class="ht" data-lens="data,systems">SQL · Oracle SQL</span>
+      <span class="ht" data-lens="data">Power BI</span>
+      <span class="ht" data-lens="data">Microsoft Fabric</span>
+      <span class="ht" data-lens="data,systems">Splunk</span>
+      <span class="ht" data-lens="builder,systems">Java</span>
+      <span class="ht" data-lens="systems" data-en="Incident Management" data-fr="Gestion des Incidents">Incident Management</span>
+      <span class="ht" data-lens="systems" data-en="Requirements &amp; Process Analysis" data-fr="Besoins &amp; Analyse de Processus">Requirements &amp; Process Analysis</span>
+      <span class="ht" data-lens="builder" data-en="Web Development" data-fr="Développement Web">Web Development</span>
+      <span class="ht" data-lens="builder">OpenAI · Gemini · Claude</span>
     </div>
     <div class="hcta">
       <button class="btn ba" onclick="go('experience')" data-en="View Experience" data-fr="Voir l'Expérience">View Experience</button>
@@ -528,7 +617,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
     <h2 class="st" data-en="Projects &amp; Portfolio" data-fr="Projets &amp; Portfolio">Projects &amp; Portfolio</h2>
     <div class="pj-grid">
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">🎟️</div><div class="pj-meta"><div class="pj-tool">HTML · CSS · JS · Firebase</div><div class="pj-type" data-en="Full-Stack Web Application" data-fr="Application Web Full-Stack">Full-Stack Web Application</div></div></div>
         <div class="pj-title" data-en="AICO Ticket Sales System" data-fr="Système de Vente de Billets AICO">AICO Ticket Sales System</div>
         <div class="pj-desc" data-en="Built a real-time ticket sales management app used in a live event environment. Features role-based login (admin vs sellers), a live dashboard tracking revenue, inventory, and outstanding balances, multi-category ticket line items, CSV export, and bilingual EN/FR support. Powered by Firebase Firestore for real-time data sync across all users." data-fr="Développé une application de gestion des ventes de billets en temps réel pour un événement communautaire. Connexion par rôle, tableau de bord en direct, export CSV et support bilingue EN/FR. Propulsé par Firebase Firestore.">Built a real-time ticket sales management app used in a live event environment. Features role-based login (admin vs sellers), a live dashboard tracking revenue, inventory, and outstanding balances, multi-category ticket line items, CSV export, and bilingual EN/FR support. Powered by Firebase Firestore for real-time data sync across all users.</div>
@@ -536,7 +625,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">github.com/yebouef</span><button class="pj-copy" onclick="cpText('https://github.com/yebouef',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder,systems">
         <div class="pj-top"><div class="pj-icon">👥</div><div class="pj-meta"><div class="pj-tool">JavaScript · Supabase · PostgreSQL</div><div class="pj-type" data-en="Full-Stack Member Management System" data-fr="Système de Gestion des Membres">Full-Stack Member Management System</div></div></div>
         <div class="pj-title" data-en="AICO Membership Portal" data-fr="Portail des Membres AICO">AICO Membership Portal</div>
         <div class="pj-desc" data-en="Full-stack community membership portal backed by Supabase (PostgreSQL). Manages 80+ members, monthly dues tracking with month-by-month coverage visualization, special events with cost-sharing logic, expense tracking, non-member contacts pipeline, full audit log, and role-based access (admin, finance, member) with real-time sync and bilingual EN/FR support." data-fr="Portail de gestion des membres propulsé par Supabase (PostgreSQL). Gère plus de 80 membres, cotisations mensuelles, événements spéciaux avec partage des coûts, dépenses, journal d'audit complet et accès par rôle avec synchronisation en temps réel.">Full-stack community membership portal backed by Supabase (PostgreSQL). Manages 80+ members, monthly dues tracking with month-by-month coverage visualization, special events with cost-sharing logic, expense tracking, non-member contacts pipeline, full audit log, and role-based access (admin, finance, member) with real-time sync and bilingual EN/FR support.</div>
@@ -544,7 +633,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">github.com/yebouef</span><button class="pj-copy" onclick="cpText('https://github.com/yebouef',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">🤖</div><div class="pj-meta"><div class="pj-tool">Next.js · AI Agents · Automation</div><div class="pj-type" data-en="SaaS Product · Prince Tech LLC" data-fr="Produit SaaS · Prince Tech LLC">SaaS Product · Prince Tech LLC</div></div></div>
         <div class="pj-title" data-en="Operai — AI Automation for Small Businesses" data-fr="Operai — Automatisation IA pour PME">Operai — AI Automation for Small Businesses</div>
         <div class="pj-desc" data-en="Built and launched a live AI automation product that identifies repetitive business workflows and deploys AI agents to handle them — email triage, invoice processing, meeting scheduling, lead qualification, document organization, and follow-up sequences. Full marketing site, contact flow, and discovery process. Live at operai.princetechllc.com." data-fr="Construit et lancé un produit d'automatisation IA qui identifie les workflows répétitifs et déploie des agents IA pour les traiter — triage d'emails, traitement de factures, planification de réunions, qualification de leads. Site marketing complet et processus de découverte. En ligne sur operai.princetechllc.com.">Built and launched a live AI automation product that identifies repetitive business workflows and deploys AI agents to handle them — email triage, invoice processing, meeting scheduling, lead qualification, document organization, and follow-up sequences. Full marketing site, contact flow, and discovery process. Live at operai.princetechllc.com.</div>
@@ -552,7 +641,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">operai.princetechllc.com</span><button class="pj-copy" onclick="cpText('https://operai.princetechllc.com',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">📄</div><div class="pj-meta"><div class="pj-tool">Next.js · AI · Paid Product</div><div class="pj-type" data-en="Commercial Product · Prince Tech LLC" data-fr="Produit Commercial · Prince Tech LLC">Commercial Product · Prince Tech LLC</div></div></div>
         <div class="pj-title" data-en="Prince IQ — AI Resume Optimizer" data-fr="Prince IQ — Optimiseur de CV par IA">Prince IQ — AI Resume Optimizer</div>
         <div class="pj-desc" data-en="Built and launched a paid AI-powered resume optimization tool — invitation-only access, starting at $5.99. Features ATS scoring, recruiter analysis, strategic resume rewrite, and cover letter generation. Includes access code system, bilingual EN/FR support, and a full pricing and consultation flow." data-fr="Construit et lancé un outil payant d'optimisation de CV par IA — accès sur invitation, à partir de 9,99$. Comprend le scoring ATS, l'analyse recruteur, la réécriture stratégique du CV et la génération de lettre de motivation. Bilingue EN/FR.">Built and launched a paid AI-powered resume optimization tool — invitation-only access, starting at $9.99. Features ATS scoring, recruiter analysis, strategic resume rewrite, and cover letter generation. Includes access code system, bilingual EN/FR support, and a full pricing and consultation flow.</div>
@@ -560,7 +649,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">iq.princetechllc.com</span><button class="pj-copy" onclick="cpText('https://iq.princetechllc.com',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">⚽</div><div class="pj-meta"><div class="pj-tool">Next.js · PWA · EdTech</div><div class="pj-type" data-en="Consumer App · Prince Tech LLC" data-fr="Application Grand Public · Prince Tech LLC">Consumer App · Prince Tech LLC</div></div></div>
         <div class="pj-title" data-en="French Quest Arena — Learn French Through Games" data-fr="French Quest Arena — Apprendre le Français par le Jeu">French Quest Arena — Learn French Through Games</div>
         <div class="pj-desc" data-en="Built a gamified French-learning app for kids ages 6–14, combining soccer, basketball, and stories with a real classroom curriculum. Full PWA with offline support, installable on mobile, bilingual interface, and age-appropriate game mechanics. Live at learn-french.princetechllc.com." data-fr="Construit une application d'apprentissage du français par le jeu pour les enfants de 6 à 14 ans, combinant football, basketball et histoires avec un vrai programme scolaire. PWA complet avec support hors ligne, installable sur mobile et interface bilingue.">Built a gamified French-learning app for kids ages 6–14, combining soccer, basketball, and stories with a real classroom curriculum. Full PWA with offline support, installable on mobile, bilingual interface, and age-appropriate game mechanics. Live at learn-french.princetechllc.com.</div>
@@ -568,7 +657,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">learn-french.princetechllc.com</span><button class="pj-copy" onclick="cpText('https://learn-french.princetechllc.com',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">🏢</div><div class="pj-meta"><div class="pj-tool">Next.js · Bilingual · SEO</div><div class="pj-type" data-en="Company Website · Prince Tech LLC" data-fr="Site de l'Entreprise · Prince Tech LLC">Company Website · Prince Tech LLC</div></div></div>
         <div class="pj-title" data-en="Prince Tech LLC — Company Website" data-fr="Prince Tech LLC — Site de l'Entreprise">Prince Tech LLC — Company Website</div>
         <div class="pj-desc" data-en="Designed and built the full Prince Tech LLC marketing site — bilingual EN/FR, SEO-optimized with structured metadata, multiple product pages (Operai, Prince IQ, French Quest Arena, Data Intelligence), contact form, and a clean minimal design consistent across all sub-products. Live at princetechllc.com." data-fr="Conçu et construit le site marketing complet de Prince Tech LLC — bilingue EN/FR, optimisé SEO avec métadonnées structurées, plusieurs pages produits, formulaire de contact et design minimal cohérent. En ligne sur princetechllc.com.">Designed and built the full Prince Tech LLC marketing site — bilingual EN/FR, SEO-optimized with structured metadata, multiple product pages (Operai, Prince IQ, French Quest Arena, Data Intelligence), contact form, and a clean minimal design consistent across all sub-products. Live at princetechllc.com.</div>
@@ -576,7 +665,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">princetechllc.com</span><button class="pj-copy" onclick="cpText('https://princetechllc.com',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="data">
         <div class="pj-top"><div class="pj-icon">📊</div><div class="pj-meta"><div class="pj-tool">Excel</div><div class="pj-type" data-en="Interactive Dashboard" data-fr="Tableau de Bord Interactif">Interactive Dashboard</div></div></div>
         <div class="pj-title" data-en="Coffee Sales Dashboard" data-fr="Tableau de Bord Ventes de Café">Coffee Sales Dashboard</div>
         <div class="pj-desc" data-en="Interactive Excel model with slicers and auto-refresh to slice KPIs by product, region, and channel. Enabled rapid what-if views for category managers to compare mix and margin on demand." data-fr="Modèle Excel interactif avec segments et actualisation automatique pour analyser les KPIs par produit, région et canal.">Interactive Excel model with slicers and auto-refresh to slice KPIs by product, region, and channel. Enabled rapid what-if views for category managers to compare mix and margin on demand.</div>
@@ -584,7 +673,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">bit.ly/3I3K6Us</span><button class="pj-copy" onclick="cpText('https://bit.ly/3I3K6Us',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="data,systems">
         <div class="pj-top"><div class="pj-icon">✈️</div><div class="pj-meta"><div class="pj-tool">Tableau</div><div class="pj-type" data-en="Executive Dashboard" data-fr="Tableau de Bord Exécutif">Executive Dashboard</div></div></div>
         <div class="pj-title" data-en="United Airways Performance Review" data-fr="Analyse de Performance United Airways">United Airways Performance Review</div>
         <div class="pj-desc" data-en="Exec-level Tableau dashboard with drilldowns for route performance, on-time rate, and sentiment analysis. Simple filters designed for quick operational decision support." data-fr="Tableau de bord Tableau de niveau exécutif avec des analyses détaillées pour la performance des routes, le taux de ponctualité et l'analyse de sentiment.">Exec-level Tableau dashboard with drilldowns for route performance, on-time rate, and sentiment analysis. Simple filters designed for quick operational decision support.</div>
@@ -592,7 +681,7 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
         <div class="pj-link-row"><span class="pj-url">bit.ly/46xZt0D</span><button class="pj-copy" onclick="cpText('https://bit.ly/46xZt0D',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card">
+      <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">🌐</div><div class="pj-meta"><div class="pj-tool">HTML · CSS · JS</div><div class="pj-type" data-en="Portfolio Website" data-fr="Site Portfolio">Portfolio Website</div></div></div>
         <div class="pj-title" data-en="This Resume Website" data-fr="Ce Site CV">This Resume Website</div>
         <div class="pj-desc" data-en="Designed and built from scratch — fully responsive, bilingual EN/FR toggle, smooth scroll navigation, expandable experience cards, protected contact info, and no frameworks. The first project I shipped after founding Prince Tech LLC." data-fr="Conçu et développé de zéro — entièrement responsive, toggle bilingue EN/FR, navigation fluide, fiches d'expérience dépliables, infos de contact protégées, sans framework. Le premier projet livré après la fondation de Prince Tech LLC.">Designed and built from scratch — fully responsive, bilingual EN/FR toggle, smooth scroll navigation, expandable experience cards, protected contact info, and no frameworks. The first project I shipped after founding Prince Tech LLC.</div>
@@ -631,6 +720,29 @@ footer{background:#0a1929;color:rgba(255,255,255,.3);text-align:center;padding:1
 
 <footer id="footer-text">© 2025 Franck Yeboue · Prince Tech LLC · System Analyst · Data Analyst · Web Developer</footer>
 
+
+<!-- CHAT ASSISTANT -->
+<button class="cb-fab" id="cbFab" onclick="cbOpen()" aria-label="Open assistant">
+  <span class="cb-pulse"></span><span id="cbFabTxt">Ask about my work</span>
+</button>
+
+<div class="cb-panel" id="cbPanel" role="dialog" aria-label="Resume assistant">
+  <div class="cb-head">
+    <div class="cb-av">FY</div>
+    <div class="cb-hmeta">
+      <div class="cb-hname" id="cbTitle">Franck's Assistant</div>
+      <div class="cb-hstat" id="cbStat">Answers about my experience</div>
+    </div>
+    <button class="cb-x" onclick="cbClose()" aria-label="Close">&times;</button>
+  </div>
+  <div class="cb-body" id="cbBody"></div>
+  <div class="cb-chips" id="cbChips"></div>
+  <div class="cb-foot">
+    <input class="cb-in" id="cbIn" autocomplete="off" onkeydown="if(event.key==='Enter')cbSend()">
+    <button class="cb-send" onclick="cbSend()" aria-label="Send">&#10148;</button>
+  </div>
+</div>
+
 <script>
 var lang='en';
 function goTop(){window.scrollTo({top:0,behavior:'smooth'});}
@@ -661,6 +773,442 @@ if('IntersectionObserver' in window){
   var ob=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.07});
   document.querySelectorAll('.skc,.cc,.tgr,.aic,.pj-card,.edu-card,.story-card').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(12px)';el.style.transition='opacity .4s ease,transform .4s ease';ob.observe(el);});
 }
+
+/* ═════════════════════════════════════════════════════════════
+   LENS SWITCHER
+   Re-frames the hero for a specific audience. The choice is saved
+   to localStorage AND written to the URL (?lens=data), so you can
+   send a targeted link with each job application.
+   ═════════════════════════════════════════════════════════════ */
+
+var LENS_COPY = {
+  all: {
+    en: {sub:'Systems &amp; Data Analyst · Developer · Founder',
+         strong:'Business Analysis · Data &amp; Reporting · Application Support · Web &amp; AI Development',
+         desc:'Nine-plus years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children\'s Hospital — and now building them end to end through Prince Tech LLC. Equally comfortable in the requirements conversation, the SQL query, and the deployment.'},
+    fr: {sub:'Analyste Systèmes &amp; Données · Développeur · Fondateur',
+         strong:'Analyse Métier · Données &amp; Reporting · Support Applicatif · Développement Web &amp; IA',
+         desc:'Plus de neuf ans à transformer des problèmes métier en systèmes opérationnels chez JPMorgan Chase, Lumen Technologies et Nationwide Children\'s Hospital — et aujourd\'hui à les construire de bout en bout via Prince Tech LLC. À l\'aise autant dans le recueil des besoins que dans la requête SQL et le déploiement.'}
+  },
+  data: {
+    en: {sub:'Data &amp; Business Intelligence Analyst',
+         strong:'Power BI · SQL · Reporting Automation · Data Integration',
+         desc:'Nine-plus years building reporting that decision-makers actually use — SQL pipelines, Power BI dashboards, and automated reporting across enterprise environments at Lumen Technologies, JPMorgan Chase, and Nationwide Children\'s Hospital. Strong on data quality, stakeholder requirements, and turning messy sources into a single trusted view.'},
+    fr: {sub:'Analyste Données &amp; Business Intelligence',
+         strong:'Power BI · SQL · Automatisation du Reporting · Intégration de Données',
+         desc:'Plus de neuf ans à construire des rapports réellement utilisés par les décideurs — pipelines SQL, tableaux de bord Power BI et reporting automatisé en environnement d\'entreprise chez Lumen Technologies, JPMorgan Chase et Nationwide Children\'s Hospital.'}
+  },
+  systems: {
+    en: {sub:'Business &amp; Systems Analyst',
+         strong:'Requirements Gathering · Process Analysis · Application Support · Incident Management',
+         desc:'Nine-plus years translating between business teams and technical systems — gathering requirements, documenting processes, supporting enterprise applications, and driving incidents to resolution across banking, telecom, and healthcare. The person who makes sure what gets built is what was actually needed.'},
+    fr: {sub:'Analyste Métier &amp; Systèmes',
+         strong:'Recueil des Besoins · Analyse de Processus · Support Applicatif · Gestion des Incidents',
+         desc:'Plus de neuf ans à faire le lien entre les équipes métier et les systèmes techniques — recueil des besoins, documentation des processus, support applicatif et résolution d\'incidents dans la banque, les télécoms et la santé.'}
+  },
+  builder: {
+    en: {sub:'Developer · AI &amp; Automation · Founder',
+         strong:'Next.js · Supabase · Firebase · AWS · Terraform · AI Workflow Automation',
+         desc:'Founder of Prince Tech LLC, shipping production web applications with real databases, authentication, and live data — plus AI-powered tools built on Claude, OpenAI, and Gemini. Nine-plus years of enterprise discipline behind every build, not weekend-project code.'},
+    fr: {sub:'Développeur · IA &amp; Automatisation · Fondateur',
+         strong:'Next.js · Supabase · Firebase · AWS · Terraform · Automatisation IA',
+         desc:'Fondateur de Prince Tech LLC, je livre des applications web en production avec bases de données réelles, authentification et données en direct — ainsi que des outils IA basés sur Claude, OpenAI et Gemini.'}
+  }
+};
+
+var LENS_LABELS = {
+  en:{lab:'View as',all:'Full Profile',data:'Data &amp; BI',systems:'Systems &amp; Business Analysis',builder:'Developer &amp; AI',share:'Copy link to this view',copied:'Link copied'},
+  fr:{lab:'Afficher en',all:'Profil Complet',data:'Données &amp; BI',systems:'Analyse Métier &amp; Systèmes',builder:'Développeur &amp; IA',share:'Copier le lien de cette vue',copied:'Lien copié'}
+};
+
+var curLens = 'all';
+
+function setLens(id, skipPush){
+  curLens = LENS_COPY[id] ? id : 'all';
+  try{ localStorage.setItem('fy_lens', curLens); }catch(e){}
+  if(!skipPush && window.history && window.history.replaceState){
+    try{
+      var u = new URL(window.location.href);
+      if(curLens === 'all'){ u.searchParams.delete('lens'); } else { u.searchParams.set('lens', curLens); }
+      window.history.replaceState(null, '', u.toString());
+    }catch(e){}
+  }
+  applyLens();
+}
+
+function applyLens(){
+  var L = (LENS_COPY[curLens] && LENS_COPY[curLens][lang]) || LENS_COPY[curLens].en;
+
+  var s = document.getElementById('heroSub');   if(s) s.innerHTML = L.sub;
+  var g = document.getElementById('heroStrong');if(g) g.innerHTML = L.strong;
+  var d = document.getElementById('heroDesc');  if(d) d.innerHTML = L.desc;
+
+  var lb = LENS_LABELS[lang] || LENS_LABELS.en;
+  var ll = document.getElementById('lensLab'); if(ll) ll.innerHTML = lb.lab;
+  var ls = document.getElementById('lensShare'); if(ls) ls.innerHTML = lb.share;
+  document.querySelectorAll('.lens-btn').forEach(function(b){
+    var id = b.getAttribute('data-lensid');
+    b.innerHTML = lb[id] || id;
+    b.classList.toggle('on', id === curLens);
+  });
+
+  // Hero skill tags: highlight what matters for this lens, fade the rest
+  document.querySelectorAll('.htags .ht').forEach(function(t){
+    var tags = (t.getAttribute('data-lens') || '').split(',');
+    var hit = curLens === 'all' || tags.indexOf(curLens) > -1;
+    t.classList.toggle('lens-dim', !hit);
+    t.classList.toggle('lens-hot', hit && curLens !== 'all');
+  });
+
+  // Projects: matching ones move to the front. If nothing matches this
+  // lens, leave every card untouched rather than fading the whole grid.
+  var cards = document.querySelectorAll('.pj-card');
+  var anyMatch = false;
+  cards.forEach(function(c){
+    if((c.getAttribute('data-lens') || '').split(',').indexOf(curLens) > -1) anyMatch = true;
+  });
+  cards.forEach(function(c){
+    var hit = curLens === 'all' || !anyMatch ||
+              (c.getAttribute('data-lens') || '').split(',').indexOf(curLens) > -1;
+    c.style.order = hit ? '0' : '1';
+    c.classList.toggle('lens-off', !hit && curLens !== 'all' && anyMatch);
+  });
+}
+
+function copyLensLink(btn){
+  var lb = LENS_LABELS[lang] || LENS_LABELS.en;
+  var url = window.location.href;
+  var done = function(){
+    btn.innerHTML = lb.copied;
+    setTimeout(function(){ btn.innerHTML = lb.share; }, 2000);
+  };
+  if(navigator.clipboard){ navigator.clipboard.writeText(url).then(done, done); }
+  else{
+    var x=document.createElement('textarea'); x.value=url; document.body.appendChild(x);
+    x.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(x); done();
+  }
+}
+
+
+/* ═════════════════════════════════════════════════════════════
+   CHAT ASSISTANT — ANSWER BANK
+   ─────────────────────────────────────────────────────────────
+   EDIT YOUR ANSWERS HERE. Each entry has:
+     tags   : words/phrases a visitor might type. Multi-word phrases
+              score higher than single words. Add as many as you like.
+     strong : (optional) decisive words — product names, employers,
+              anything distinctive. One of these beats any generic
+              phrase, so "tell me about UKG" reaches the UKG answer
+              instead of the generic intro.
+     en     : the English answer.  fr : the French answer.
+   Basic HTML (<strong>, <ul>, <li>, <br>) is allowed.
+   Entries marked  // VERIFY  contain details you should confirm.
+   ═════════════════════════════════════════════════════════════ */
+
+var CB_KB = [
+{tags:['hi','hello','hey','bonjour','salut','yo'],
+ en:'Hi — I\'m Franck\'s assistant. I can answer questions about his experience, skills, certifications, or projects. What would you like to know?',
+ fr:'Bonjour — je suis l\'assistant de Franck. Je peux répondre à vos questions sur son expérience, ses compétences, ses certifications ou ses projets. Que souhaitez-vous savoir ?'},
+
+{tags:['who is','tell me about him','tell me about franck','about franck','summary','overview','profile','qui est'],
+ strong:['bio'],
+ en:'<strong>Franck Yeboue</strong> is a Columbus, Ohio–based analyst and developer with 9+ years of enterprise technology experience. He has worked across banking (JPMorgan Chase), telecom (Lumen Technologies), and healthcare (Nationwide Children\'s Hospital), covering business analysis, BI and reporting, and application support. In 2025 he founded <strong>Prince Tech LLC</strong>, a technology consulting firm building web applications and AI workflow automation.',
+ fr:'<strong>Franck Yeboue</strong> est analyste et développeur basé à Columbus, Ohio, avec plus de 9 ans d\'expérience en technologie d\'entreprise — chez JPMorgan Chase, Lumen Technologies et Nationwide Children\'s Hospital. En 2025, il a fondé <strong>Prince Tech LLC</strong>, société de conseil technologique spécialisée en applications web et automatisation IA.'},
+
+{tags:['how many years','years of experience','experience level','how long','senior','combien annees','experience'],
+ strong:['tenure'],
+  en:'Nine-plus years in enterprise technology. That spans three large, regulated environments — a global bank, a national telecom carrier, and a pediatric hospital system — plus two years running his own consulting firm. The through-line is the same in all of them: understand the business need, get to the right data, and make the system do what it should.',
+ fr:'Plus de neuf ans en technologie d\'entreprise, répartis sur trois environnements réglementés — une banque mondiale, un opérateur télécom national et un système hospitalier pédiatrique — en plus de sa propre société de conseil.'},
+
+{tags:['jpmorgan','jp morgan','chase','bank','banking','banque'],
+ strong:['jpmorgan','chase'],
+  en:'At <strong>JPMorgan Chase</strong>, Franck worked in application support and analysis within a highly regulated banking environment — monitoring, incident triage, ticket management, and escalations, keeping operations inside SLA. The discipline that environment demands (documentation, change control, audit readiness) still shapes how he works today.',
+ fr:'Chez <strong>JPMorgan Chase</strong>, Franck a travaillé en support applicatif et analyse dans un environnement bancaire hautement réglementé — supervision, triage des incidents, gestion des tickets et escalades, dans le respect des SLA.'},
+
+{tags:['lumen','telecom','centurylink','telecommunications'],
+ strong:['lumen','centurylink'],
+  en:'At <strong>Lumen Technologies</strong>, Franck worked on enterprise-wide reporting spanning multiple business units and data sources. He built and maintained SQL pipelines and Power BI dashboards used daily by finance and operations teams, ran ad-hoc data investigations, tracked down discrepancies, and coordinated with engineering when fixes needed system-level changes. He also worked with Oracle SQL and Microsoft Fabric there.',
+ fr:'Chez <strong>Lumen Technologies</strong>, Franck a travaillé sur du reporting à l\'échelle de l\'entreprise couvrant plusieurs unités et sources de données — pipelines SQL et tableaux de bord Power BI utilisés quotidiennement par les équipes finance et opérations, avec Oracle SQL et Microsoft Fabric.'},
+
+{tags:['nationwide','childrens','hospital','healthcare','health care','sante','hopital'],
+ strong:['nationwide'],
+  en:'At <strong>Nationwide Children\'s Hospital</strong>, Franck worked in a healthcare technology environment — the kind of setting where data accuracy and system uptime carry real consequences. It added regulated-industry experience on top of his banking and telecom background.',
+ fr:'Chez <strong>Nationwide Children\'s Hospital</strong>, Franck a évolué dans un environnement technologique de santé, où l\'exactitude des données et la disponibilité des systèmes ont des conséquences réelles.'},
+
+{tags:['power bi','powerbi','dashboard','dashboards','reporting','reports','tableau de bord','bi','visualization'],
+ strong:['powerbi','dashboard','dashboards'],
+  en:'Power BI is one of Franck\'s core tools — roughly nine years of building dashboards and reporting. His work at Lumen involved enterprise reporting used daily by finance and operations, plus the SQL pipelines feeding it. He focuses less on making charts look good and more on making sure the numbers are trustworthy and the report answers the question someone actually asked.',
+ fr:'Power BI est l\'un des outils principaux de Franck — environ neuf ans de création de tableaux de bord et de reporting, notamment chez Lumen pour les équipes finance et opérations, avec les pipelines SQL associés.'},
+
+{tags:['sql','database','databases','queries','query','postgres','oracle','base de donnees'],
+ strong:['sql','postgres','oracle'],
+  en:'Strong SQL background — writing and maintaining queries and pipelines that feed production reporting, including Oracle SQL at Lumen. He also works with PostgreSQL through Supabase on his own applications, so he handles both the analyst side (querying, investigating discrepancies) and the builder side (schema design, access rules).',
+ fr:'Solide expérience SQL — requêtes et pipelines alimentant du reporting en production, dont Oracle SQL chez Lumen, ainsi que PostgreSQL via Supabase sur ses propres applications.'},
+
+{tags:['hr analytics','hris','human resources','ukg','workday','people analytics','hr','payroll','rh'],
+ strong:['ukg','hris','workday','payroll'],
+  en:'Franck is actively targeting HR analytics and HRIS analyst roles, and here\'s the honest picture: he brings 9+ years of business analysis, Power BI reporting, SQL, and enterprise application support — the analytical core of an HRIS role — plus experience producing leadership-ready workforce reporting such as absence-impact analysis. What he has <em>not</em> done is direct administration of UKG as a system owner. He learns platforms quickly and would rather tell you that up front than discover it in week two.',
+ fr:'Franck vise activement des postes en analytique RH et HRIS. Honnêtement : il apporte plus de 9 ans d\'analyse métier, de reporting Power BI, de SQL et de support applicatif — le cœur analytique d\'un poste HRIS — mais il n\'a pas administré UKG directement en tant que propriétaire système. Il préfère le dire clairement dès le départ.'},
+
+{tags:['certification','certifications','certified','aws','terraform','cloud','hashicorp','certifie'],
+ strong:['aws','terraform','hashicorp'],
+  en:'Two active certifications:<ul><li><strong>AWS Certified Cloud Practitioner</strong></li><li><strong>HashiCorp Terraform Associate</strong></li></ul>Both are backed by hands-on work — his GitHub has infrastructure-as-code projects including automated DevOps infrastructure, a four-tier cloud architecture, and Terraform Cloud configuration.',
+ fr:'Deux certifications actives : <strong>AWS Certified Cloud Practitioner</strong> et <strong>HashiCorp Terraform Associate</strong>, appuyées par des projets concrets d\'infrastructure as code sur son GitHub.'},
+
+{tags:['education','degree','school','university','college','studied','formation','diplome','etudes'],
+ strong:['degree','university','franklin','estem'],
+  en:'<ul><li><strong>BS, Information Technology</strong> — Franklin University</li><li><strong>MS, Marketing Communication</strong> — ESTEM Casablanca</li></ul>The combination is unusual and useful: the technical grounding to build systems, plus the communication training to explain them to people who don\'t work in technology.',
+ fr:'<ul><li><strong>Licence en Technologies de l\'Information</strong> — Franklin University</li><li><strong>Master en Communication Marketing</strong> — ESTEM Casablanca</li></ul>'},
+
+{tags:['prince tech','princetech','company','consulting','llc','business','entreprise','founder','fondateur'],
+ strong:['princetech'],
+  en:'<strong>Prince Tech LLC</strong> is Franck\'s technology consulting firm, founded in 2025 in Columbus, Ohio. It offers web development, AI workflow automation, internal tools and dashboards, and data integrations — mostly for small businesses, nonprofits, and community organizations. Real applications with databases, authentication, and live data, not templates.',
+ fr:'<strong>Prince Tech LLC</strong> est la société de conseil technologique de Franck, fondée en 2025 à Columbus, Ohio — développement web, automatisation IA, outils internes et tableaux de bord, intégrations de données.'},
+
+{tags:['project','projects','portfolio','built','build','what has he built','projets','realisations'],
+ en:'Several, and they\'re real systems in use — not tutorials:<ul><li><strong>AICO Ticket Sales System</strong> — live ticketing for a community event</li><li><strong>AICO Membership Portal</strong> — 80+ members, dues tracking, role-based access, Supabase backend</li><li><strong>Operai</strong> — AI automation for small businesses</li><li><strong>Prince IQ</strong> — AI resume optimizer</li><li><strong>French Quest Arena</strong> — learn French through games</li><li><strong>Coffee Sales Dashboard</strong> and <strong>United Airways Performance Review</strong> — analytics work</li></ul>Scroll to the Projects section for details on each.',
+ fr:'Plusieurs, et ce sont de vrais systèmes en usage : <strong>AICO Ticket Sales</strong>, <strong>AICO Membership Portal</strong> (80+ membres, Supabase), <strong>Operai</strong>, <strong>Prince IQ</strong>, <strong>French Quest Arena</strong>, ainsi que des travaux analytiques. Voir la section Projets.'},
+
+{tags:['aico','ivorian','community','diaspora','ivoirien','association'],
+ strong:['aico'],
+  en:'<strong>AICO</strong> is the Association des Ivoiriens à Columbus Ohio. Franck built two production systems for it: a real-time ticket sales platform for a live event, and a full membership portal handling 80+ members, monthly dues tracking, special events with cost-sharing logic, expense tracking, a complete audit log, and role-based access — all on Supabase with bilingual EN/FR support.',
+ fr:'<strong>AICO</strong> est l\'Association des Ivoiriens à Columbus Ohio. Franck y a construit une plateforme de billetterie en temps réel et un portail d\'adhésion complet gérant plus de 80 membres, cotisations, événements, dépenses, journal d\'audit et accès par rôle sur Supabase.'},
+
+{tags:['ai','artificial intelligence','automation','claude','openai','gpt','gemini','chatbot','machine learning','ia','intelligence artificielle'],
+ strong:['claude','openai','gemini','operai','loopcraft'],
+  en:'AI is a working part of Franck\'s practice, not a buzzword on the resume. He builds workflow automation and AI-powered tools using Claude, OpenAI, and Gemini — including <strong>Operai</strong> (AI automation for small businesses), <strong>Prince IQ</strong> (an AI resume optimizer), and <strong>LoopCraft</strong> (a structured AI prompt-building tool). This chat assistant is another example — he built it into this page himself.',
+ fr:'L\'IA fait partie de la pratique quotidienne de Franck : automatisation de workflows et outils IA avec Claude, OpenAI et Gemini — dont <strong>Operai</strong>, <strong>Prince IQ</strong> et <strong>LoopCraft</strong>. Cet assistant en fait partie.'},
+
+{tags:['tech stack','stack','technologies','tools','what does he use','languages','programming','coding','code','developer','outils','technologies'],
+ strong:['stack'],
+  en:'<ul><li><strong>Analytics:</strong> Power BI, SQL (Oracle, PostgreSQL), Excel, Microsoft Fabric</li><li><strong>Web:</strong> HTML, CSS, JavaScript, Next.js, Firebase, Supabase</li><li><strong>Cloud/Infra:</strong> AWS, Terraform</li><li><strong>Enterprise:</strong> Splunk, Java, incident and ticketing platforms</li><li><strong>AI:</strong> Claude, OpenAI, Gemini</li></ul>',
+ fr:'<ul><li><strong>Analytique :</strong> Power BI, SQL (Oracle, PostgreSQL), Excel, Microsoft Fabric</li><li><strong>Web :</strong> HTML, CSS, JavaScript, Next.js, Firebase, Supabase</li><li><strong>Cloud :</strong> AWS, Terraform</li><li><strong>Entreprise :</strong> Splunk, Java</li><li><strong>IA :</strong> Claude, OpenAI, Gemini</li></ul>'},
+
+{tags:['incident','support','troubleshooting','application support','escalation','sla','ticket','helpdesk','depannage'],
+ strong:['splunk','sla','escalation'],
+  en:'Application support and incident management run through most of Franck\'s enterprise career — monitoring, triage, ticket management, escalation, and keeping operations within SLA in banking and telecom environments. He knows when to resolve independently, when to escalate, and how to keep stakeholders informed while it\'s still unresolved.',
+ fr:'Le support applicatif et la gestion des incidents traversent toute la carrière de Franck — supervision, triage, gestion des tickets, escalade et respect des SLA dans la banque et les télécoms.'},
+
+{tags:['french','language','bilingual','languages spoken','francais','bilingue','speak'],
+ strong:['bilingual','bilingue','francais'],
+  en:'Fluent in both <strong>English and French</strong>, and he works professionally in both — including full bilingual documentation and interfaces. This page has an EN/FR toggle in the top navigation, and the applications he builds ship bilingual when the audience needs it.',
+ fr:'Parfaitement bilingue <strong>anglais / français</strong>, et il travaille professionnellement dans les deux langues — documentation et interfaces bilingues incluses.'},
+
+{tags:['location','where','based','columbus','ohio','remote','relocate','relocation','ou habite','onsite','hybrid'],
+ strong:['columbus','ohio','remote','relocate'],
+  en:'Franck is based in <strong>Columbus, Ohio</strong>. He\'s open to roles in the Columbus area as well as remote and hybrid arrangements — the specifics are best discussed directly, so the Contact section is the right next step.',
+ fr:'Franck est basé à <strong>Columbus, Ohio</strong>. Il est ouvert aux postes dans la région de Columbus ainsi qu\'aux formules à distance et hybrides — voir la section Contact.'},
+
+{tags:['available','availability','hiring','looking for','open to','job search','opportunity','opportunities','disponible','recherche'],
+ en:'Yes — Franck is actively open to new opportunities, particularly in HR analytics, HRIS analysis, business systems analysis, and BI/reporting roles. The fastest way to reach him is the Contact section of this page.',
+ fr:'Oui — Franck est activement ouvert à de nouvelles opportunités, notamment en analytique RH, HRIS, analyse de systèmes métier et BI/reporting. Voir la section Contact.'},
+
+{tags:['contact','email','phone','reach','linkedin','get in touch','hire','contacter','joindre'],
+ strong:['linkedin','email','phone'],
+  en:'Head to the <strong>Contact</strong> section at the bottom of this page — click the reveal button and you\'ll get his email, phone, and LinkedIn, each with a copy button. (They\'re hidden behind a click to keep scrapers off them.)',
+ fr:'Rendez-vous dans la section <strong>Contact</strong> en bas de page — cliquez pour révéler son email, téléphone et LinkedIn, chacun avec un bouton de copie.'},
+
+{tags:['why did he leave','rif','laid off','layoff','left lumen','unemployed','gap','licenciement','pourquoi'],
+ strong:['rif','layoff','laid'],
+  en:'In September 2025 Lumen Technologies announced a large-scale reduction in force and Franck\'s role was eliminated along with hundreds of others — a business decision, not a performance one. He used it as a starting point rather than a setback: he founded Prince Tech LLC and started shipping software. The "My Story" section on this page covers it in his own words.',
+ fr:'En septembre 2025, Lumen Technologies a annoncé un plan de réduction d\'effectifs et le poste de Franck a été supprimé parmi des centaines d\'autres — une décision d\'entreprise, non liée à la performance. Il en a fait un point de départ en fondant Prince Tech LLC. Voir la section « Mon Parcours ».'},
+
+{tags:['strength','strengths','why hire','what makes him','different','stand out','best at','good at','atout','forces'],
+ en:'The useful thing about Franck is range with depth. Most analysts can gather requirements or build a dashboard; most developers can ship an app. He does both — which means he can sit with a business team, understand what they actually need, and then go build it without a translation layer in between. Nine years in regulated industries also means he documents his work and thinks about what happens when things break.',
+ fr:'La force de Franck est l\'étendue combinée à la profondeur : il recueille les besoins, construit le reporting et développe l\'application — sans couche de traduction intermédiaire. Neuf ans en industries réglementées signifient aussi documentation rigoureuse et anticipation des pannes.'},
+
+{tags:['this site','this website','this page','how was this built','built this','chatbot','how does this work','ce site'],
+ en:'Franck built this page himself — hand-written HTML, CSS, and JavaScript, no framework. That includes the EN/FR toggle, the expandable experience cards, the lens switcher at the top, and this assistant. The assistant runs entirely in your browser from an answer bank he wrote, which is why it responds instantly and can\'t invent facts about him.',
+ fr:'Franck a construit cette page lui-même — HTML, CSS et JavaScript écrits à la main, sans framework, y compris le sélecteur de langue, les fiches d\'expérience dépliables et cet assistant. L\'assistant fonctionne entièrement dans votre navigateur, à partir d\'une base de réponses qu\'il a rédigée.'}
+];
+
+var CB_FALLBACK = {
+  en:'I don\'t have a prepared answer for that one. I can help with: <strong>experience</strong>, <strong>skills and tools</strong>, <strong>certifications</strong>, <strong>education</strong>, <strong>projects</strong>, <strong>AI work</strong>, or <strong>how to get in touch</strong>. For anything else, reach out through the Contact section — Franck answers directly.',
+  fr:'Je n\'ai pas de réponse préparée à cette question. Je peux vous parler de son <strong>expérience</strong>, ses <strong>compétences</strong>, ses <strong>certifications</strong>, sa <strong>formation</strong>, ses <strong>projets</strong>, son <strong>travail en IA</strong> ou de la <strong>prise de contact</strong>.'
+};
+
+var CB_UI = {
+  en:{fab:'Ask about my work',title:'Franck\'s Assistant',stat:'Answers about my experience',ph:'Ask a question…',
+      greet:'Hi — I\'m Franck\'s assistant. Ask me about his experience, skills, certifications, or projects.',
+      note:'Answers are pre-written by Franck, so nothing here is invented.',
+      chips:['What\'s his experience?','Power BI and SQL?','HR analytics / HRIS?','What has he built?','How do I contact him?']},
+  fr:{fab:'Poser une question',title:'Assistant de Franck',stat:'Réponses sur mon expérience',ph:'Posez une question…',
+      greet:'Bonjour — je suis l\'assistant de Franck. Posez-moi vos questions sur son expérience, ses compétences, ses certifications ou ses projets.',
+      note:'Les réponses sont rédigées à l\'avance par Franck — rien n\'est inventé.',
+      chips:['Quelle est son expérience ?','Power BI et SQL ?','Analytique RH / HRIS ?','Qu\'a-t-il construit ?','Comment le contacter ?']}
+};
+
+
+/* ─────────────────────────────────────────────────────────────
+   ROUTING LAYER — the one place a message is answered.
+   Today it matches keywords locally (free, instant, always
+   factually yours). To switch to a live AI model later, replace
+   ONLY the body of cbRoute() with a fetch() to your own backend
+   endpoint — the API key stays on the server, never in this file.
+   Nothing else in the widget needs to change.
+   ───────────────────────────────────────────────────────────── */
+
+function cbRoute(text){
+  return Promise.resolve(cbLocalAnswer(text));
+
+  /* Live-AI version, once a backend exists:
+  return fetch('https://your-endpoint.vercel.app/api/chat',{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({message:text, lang:lang})
+  }).then(function(r){return r.json();})
+    .then(function(d){return d.reply;})
+    .catch(function(){return CB_FALLBACK[lang];});
+  */
+}
+
+function cbNorm(s){
+  return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function cbLocalAnswer(text){
+  var q = cbNorm(text);
+  var words = q.split(' ').filter(Boolean);
+  var best = null, bestScore = 0;
+  CB_KB.forEach(function(entry){
+    var score = 0;
+    (entry.strong || []).forEach(function(tok){
+      if(words.indexOf(cbNorm(tok)) > -1) score += 10;
+    });
+    entry.tags.forEach(function(tag){
+      var t = cbNorm(tag);
+      if(!t) return;
+      if(t.indexOf(' ') > -1){ if(q.indexOf(t) > -1) score += 4; }
+      else if(words.indexOf(t) > -1){ score += 1; }
+    });
+    if(score > bestScore){ bestScore = score; best = entry; }
+  });
+  if(!best) return CB_FALLBACK[lang] || CB_FALLBACK.en;
+  return best[lang] || best.en;
+}
+
+
+/* ── WIDGET PLUMBING ── */
+
+function cbUI(){ return CB_UI[lang] || CB_UI.en; }
+
+function cbAdd(html, who){
+  var b = document.getElementById('cbBody');
+  var d = document.createElement('div');
+  d.className = 'cb-msg ' + who;
+  if(who === 'me'){ d.textContent = html; } else { d.innerHTML = html; }
+  b.appendChild(d);
+  b.scrollTop = b.scrollHeight;
+}
+
+function cbChips(){
+  var wrap = document.getElementById('cbChips');
+  wrap.innerHTML = '';
+  cbUI().chips.forEach(function(c){
+    var btn = document.createElement('button');
+    btn.className = 'cb-chip';
+    btn.textContent = c;
+    btn.onclick = function(){ cbAsk(c); };
+    wrap.appendChild(btn);
+  });
+}
+
+function cbGreet(){
+  var b = document.getElementById('cbBody');
+  b.innerHTML = '';
+  cbAdd(cbUI().greet, 'bot');
+  var n = document.createElement('div');
+  n.className = 'cb-note';
+  n.textContent = cbUI().note;
+  b.appendChild(n);
+  cbChips();
+}
+
+function cbOpen(){
+  document.getElementById('cbPanel').classList.add('open');
+  document.getElementById('cbFab').classList.add('hide');
+  if(!document.getElementById('cbBody').children.length) cbGreet();
+  setTimeout(function(){ document.getElementById('cbIn').focus(); }, 90);
+}
+
+function cbClose(){
+  document.getElementById('cbPanel').classList.remove('open');
+  document.getElementById('cbFab').classList.remove('hide');
+}
+
+function cbSend(){
+  var i = document.getElementById('cbIn');
+  var v = i.value.trim();
+  if(!v) return;
+  i.value = '';
+  cbAsk(v);
+}
+
+function cbAsk(text){
+  cbAdd(text, 'me');
+  document.getElementById('cbChips').innerHTML = '';
+  var b = document.getElementById('cbBody');
+  var t = document.createElement('div');
+  t.className = 'cb-typing';
+  t.innerHTML = '<span></span><span></span><span></span>';
+  b.appendChild(t);
+  b.scrollTop = b.scrollHeight;
+
+  cbRoute(text).then(function(answer){
+    setTimeout(function(){
+      if(t.parentNode) t.parentNode.removeChild(t);
+      cbAdd(answer, 'bot');
+      cbChips();
+    }, 430);
+  });
+}
+
+function cbApplyLang(){
+  var u = cbUI();
+  var set = function(id, prop, val){
+    var el = document.getElementById(id);
+    if(el) el[prop] = val;
+  };
+  set('cbFabTxt','textContent', u.fab);
+  set('cbTitle','textContent',  u.title);
+  set('cbStat','textContent',   u.stat);
+  set('cbIn','placeholder',     u.ph);
+  var body = document.getElementById('cbBody');
+  if(!body) return;
+  if(body.children.length) cbGreet(); else cbChips();
+}
+
+
+/* ── BOOT: read ?lens= from URL, else saved choice; keep language in sync ── */
+function fyBoot(){
+  var fromUrl = null;
+  try{ fromUrl = new URL(window.location.href).searchParams.get('lens'); }catch(e){}
+  var saved = null;
+  try{ saved = localStorage.getItem('fy_lens'); }catch(e){}
+  curLens = LENS_COPY[fromUrl] ? fromUrl : (LENS_COPY[saved] ? saved : 'all');
+  applyLens();
+  cbApplyLang();
+
+  // Wrap the existing language toggle so lens copy and chat follow it
+  var origToggle = toggleLang;
+  toggleLang = function(){
+    origToggle();
+    applyLens();
+    cbApplyLang();
+  };
+
+  document.addEventListener('keydown', function(e){
+    var p = document.getElementById('cbPanel');
+    if(e.key === 'Escape' && p && p.classList.contains('open')) cbClose();
+  });
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', fyBoot);
+}else{
+  fyBoot();
+}
+
 </script>
 </body>
 </html>
