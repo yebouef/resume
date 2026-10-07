@@ -132,7 +132,7 @@ hr.div{border:none;border-top:1px solid var(--bd);max-width:960px;margin:0 auto}
 
 /* AI */
 #ai{background:var(--tn)}
-.aig{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.aig{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .aic{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rd);padding:22px 22px 18px}
 .ait{font-weight:600;font-size:14px;color:var(--nv);margin-bottom:12px;display:flex;align-items:center;gap:7px}
 .ait span.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--al)}
@@ -321,6 +321,29 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
 @media(max-width:640px){ .sec{padding-top:52px;padding-bottom:52px} body{font-size:15px} }
 
+
+@media print{
+  nav,.lens-bar,.cb-fab,.cb-panel,.btr-wrap,.exp-tools,.hcta,#ctrig{display:none!important}
+  .eb{display:block!important}
+  .ec{break-inside:avoid;border:1px solid #ccc;page-break-inside:avoid}
+  #hero{background:#fff!important;color:#000!important;padding:24px 0!important}
+  #hero .hn,#hero .hsub,#hero .hd,#hero .hl{color:#000!important}
+  .ht{border:1px solid #999!important;background:#fff!important;color:#000!important}
+  #contact{background:#fff!important}
+  #contact .st,#contact .sl,#contact .csub{color:#000!important}
+  #cpanel{display:block!important}
+  .sec{padding:14px 0!important}
+  body{font-size:11pt;background:#fff}
+  a{text-decoration:none;color:#000}
+  #story,.cc,footer{background:#fff!important;color:#000!important}
+  #story .st,#story .sl,#story .story-text p,#story .story-card,#story .story-card h3,
+  #story .sc-sub,#story .story-card ul li,.cc,.cc *,footer,#footer-text{color:#000!important}
+  .cc{border:1px solid #999!important}
+  .cbtns{display:none!important}
+  #contact *{color:#000!important}
+  .ccard{border:1px solid #999!important;background:#fff!important}
+  .cpb{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -489,7 +512,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
             <!-- Astreya -->
       <div class="ec" id="exp-0">
-        <div class="eh" onclick="tog('exp-0')">
+        <div class="eh" role="button" tabindex="0" aria-expanded="false" onclick="tog('exp-0')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('exp-0');}">
           <div><div class="ecmp" style="color:#5E2E3F">Astreya</div><div class="etl" data-en="Project Coordinator 2 (Contract)" data-fr="Coordinateur de Projet 2 (Contrat)">Project Coordinator 2 (Contract)</div><div class="em" data-en="Sep 2026 – Present · Meta infrastructure program · Columbus, OH" data-fr="Sept. 2026 – Présent · Programme d'infrastructure Meta · Columbus, OH">Sep 2026 – Present · Meta infrastructure program · Columbus, OH</div></div>
           <div class="etg">+</div>
         </div>
@@ -509,7 +532,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
 <!-- Prince Tech LLC -->
       <div class="ec" id="exp-1">
-        <div class="eh" onclick="tog('exp-1')">
+        <div class="eh" role="button" tabindex="0" aria-expanded="false" onclick="tog('exp-1')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('exp-1');}">
           <div><div class="ecmp" style="color:#5E2E3F">Prince Tech LLC</div><div class="etl" data-en="CEO &amp; Founder" data-fr="PDG &amp; Fondateur">CEO &amp; Founder</div><div class="em" data-en="2025 – Present · Columbus, OH" data-fr="2025 – Présent · Columbus, OH">2025 – Present · Columbus, OH</div></div>
           <div class="etg">+</div>
         </div>
@@ -531,7 +554,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
       <!-- Lumen -->
       <div class="ec" id="exp-2">
-        <div class="eh" onclick="tog('exp-2')">
+        <div class="eh" role="button" tabindex="0" aria-expanded="false" onclick="tog('exp-2')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('exp-2');}">
           <div><div class="ecmp">Lumen Technologies</div><div class="etl" data-en="Sr. Business Analyst / BI Developer" data-fr="Analyste Métier Senior / Développeur BI">Sr. Business Analyst / BI Developer</div><div class="em" data-en="2022 – Sep 2025 · Enterprise Reporting &amp; Operational Systems" data-fr="2022 – Sep 2025 · Reporting d'Entreprise &amp; Systèmes Opérationnels">2022 – Sep 2025 · Enterprise Reporting &amp; Operational Systems</div></div>
           <div class="etg">+</div>
         </div>
@@ -553,7 +576,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
       <!-- JPMC Lead -->
       <div class="ec" id="exp-3">
-        <div class="eh" onclick="tog('exp-3')">
+        <div class="eh" role="button" tabindex="0" aria-expanded="false" onclick="tog('exp-3')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('exp-3');}">
           <div><div class="ecmp">JPMorgan Chase · 6 yrs 1 mo</div><div class="etl" data-en="Application Support Team Lead (AMG/IMCC)" data-fr="Chef d'Équipe Support Applicatif (AMG/IMCC)">Application Support Team Lead (AMG/IMCC)</div><div class="em" data-en="Jan 2019 – Jan 2022 · Columbus, OH · Hybrid" data-fr="Jan 2019 – Jan 2022 · Columbus, OH · Hybride">Jan 2019 – Jan 2022 · Columbus, OH · Hybrid</div></div>
           <div class="etg">+</div>
         </div>
@@ -574,7 +597,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
       <!-- JPMC ATM -->
       <div class="ec" id="exp-4">
-        <div class="eh" onclick="tog('exp-4')">
+        <div class="eh" role="button" tabindex="0" aria-expanded="false" onclick="tog('exp-4')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('exp-4');}">
           <div><div class="ecmp">JPMorgan Chase</div><div class="etl" data-en="ATM Monitoring / Application Support Analyst (AMG/IMCC)" data-fr="Surveillance ATM / Analyste Support Applicatif (AMG/IMCC)">ATM Monitoring / Application Support Analyst (AMG/IMCC)</div><div class="em" data-en="Jan 2016 – Jan 2019 · Columbus, OH · On-site" data-fr="Jan 2016 – Jan 2019 · Columbus, OH · Sur site">Jan 2016 – Jan 2019 · Columbus, OH · On-site</div></div>
           <div class="etg">+</div>
         </div>
@@ -595,7 +618,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
       <!-- NCH -->
       <div class="ec" id="exp-5">
-        <div class="eh" onclick="tog('exp-5')">
+        <div class="eh" role="button" tabindex="0" aria-expanded="false" onclick="tog('exp-5')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('exp-5');}">
           <div><div class="ecmp">Nationwide Children's Hospital</div><div class="etl" data-en="Systems Analyst Intern" data-fr="Stagiaire Analyste Systèmes">Systems Analyst Intern</div><div class="em" data-en="2015 – 2016 · IT Systems &amp; Process Support" data-fr="2015 – 2016 · Support Systèmes &amp; Processus">2015 – 2016 · IT Systems &amp; Process Support</div></div>
           <div class="etg">+</div>
         </div>
@@ -772,7 +795,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="pj-card" data-lens="builder">
 <div class="pj-top"><div class="pj-icon">◈</div><div class="pj-meta"><div class="pj-tool">JavaScript · Keyword Routing</div><div class="pj-type" data-en="Conversational Assistant" data-fr="Assistant Conversationnel">Conversational Assistant</div></div></div>
 <div class="pj-title" data-en="Resume AI Assistant" data-fr="Assistant IA du CV">Resume AI Assistant</div>
-<div class="pj-desc" data-en="The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 57-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget." data-fr="L’assistant intégré à cette page. Il répond aux questions des recruteurs sur l’expérience, les outils, les certifications et les projets à partir d’une base bilingue de 57 sujets, avec un score par mots-clés pondéré et des jetons décisifs pour les noms propres. Il fonctionne entièrement dans le navigateur : aucune clé d’API exposée, aucun coût par message, et aucune invention possible puisque chaque réponse est rédigée à l’avance. Tout passe par une fonction de routage unique, ce qui permet d’ajouter un modèle en direct derrière un point d’accès serveur sans réécrire le composant.">The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 57-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget.</div>
+<div class="pj-desc" data-en="The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 59-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget." data-fr="L’assistant intégré à cette page. Il répond aux questions des recruteurs sur l’expérience, les outils, les certifications et les projets à partir d’une base bilingue de 59 sujets, avec un score par mots-clés pondéré et des jetons décisifs pour les noms propres. Il fonctionne entièrement dans le navigateur : aucune clé d’API exposée, aucun coût par message, et aucune invention possible puisque chaque réponse est rédigée à l’avance. Tout passe par une fonction de routage unique, ce qui permet d’ajouter un modèle en direct derrière un point d’accès serveur sans réécrire le composant.">The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 59-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget.</div>
 <div class="pj-tags"><span class="pj-tag">JavaScript</span><span class="pj-tag" data-en="Zero API Key Exposure" data-fr="Aucune Clé API Exposée">Zero API Key Exposure</span><span class="pj-tag">Bilingual</span><span class="pj-tag" data-en="Client-Side" data-fr="Côté Client">Client-Side</span></div>
 <div class="pj-link-row"><span class="pj-url">yebouef.github.io/resume</span><button class="pj-copy" onclick="cpText('https://yebouef.github.io/resume',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
 </div>
@@ -829,7 +852,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
   <div class="cb-body" id="cbBody"></div>
   <div class="cb-chips" id="cbChips"></div>
   <div class="cb-foot">
-    <input class="cb-in" id="cbIn" autocomplete="off" onkeydown="if(event.key==='Enter')cbSend()">
+    <input class="cb-in" id="cbIn" aria-label="Ask a question" autocomplete="off" onkeydown="if(event.key==='Enter')cbSend()">
     <button class="cb-send" onclick="cbSend()" aria-label="Send">&#10148;</button>
   </div>
 </div>
@@ -837,8 +860,19 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 <script>
 var lang='en';
 function goTop(){window.scrollTo({top:0,behavior:'smooth'});}
-function go(id){var e=document.getElementById(id);if(!e)return;var n=document.querySelector('nav').offsetHeight;window.scrollTo({top:e.getBoundingClientRect().top+window.pageYOffset-n-8,behavior:'smooth'});}
-function tog(id){document.getElementById(id).classList.toggle('open');}
+function go(id){
+  var el = document.getElementById(id); if(!el) return;
+  var nav = document.querySelector('nav');
+  var bar = document.querySelector('.lens-bar');
+  var off = (nav ? nav.offsetHeight : 0) + (bar ? bar.offsetHeight : 0);
+  window.scrollTo({ top: el.offsetTop - off, behavior: 'smooth' });
+}
+function tog(id){
+  var c=document.getElementById(id); if(!c) return;
+  c.classList.toggle('open');
+  var h=c.querySelector('.eh');
+  if(h) h.setAttribute('aria-expanded', c.classList.contains('open')?'true':'false');
+}
 function showC(){
   document.getElementById('ctrig').style.display='none';
   var p=document.getElementById('cpanel');p.style.display='block';
@@ -871,9 +905,9 @@ if('IntersectionObserver' in window){
      sub / strong / desc : hero lines
      about[3]            : the three About paragraphs
      eye{}               : section eyebrow labels
-     exp[5][]            : experience bullets, one array per role
-                           0 Prince Tech · 1 Lumen · 2 JPMC Lead
-                           3 JPMC ATM     · 4 Nationwide
+     exp[6][]            : experience bullets, one array per role
+                           0 Astreya · 1 Prince Tech · 2 Lumen · 3 JPMC Lead
+                           4 JPMC ATM     · 5 Nationwide
    Facts must stay identical across lenses. Only order and framing change.
    ═════════════════════════════════════════════════════════════ */
 
@@ -1264,13 +1298,13 @@ exp: [
    Zero-based positions into the ORIGINAL page order.
    skills: 0 System&Data · 1 AppSupport · 2 Incident · 3 Analytics · 4 Web · 5 Cloud
    tools:  0 Data&Analytics · 1 Web · 2 Cloud · 3 Support&AI
-   ai1/ai2: bullets in the two AI cards
+   ai1: bullets in the AI card
    ─────────────────────────────────────────────────────────────── */
 var LENS_ORDER = {
-  all:     {skills:[0,1,2,3,4,5], tools:[0,1,2,3], ai1:[0,1,2,3,4]},
-  data:    {skills:[3,0,1,2,5,4], tools:[0,3,2,1], ai1:[0,4,2,1,3]},
-  systems: {skills:[0,2,1,3,5,4], tools:[3,0,2,1], ai1:[1,2,4,0,3]},
-  builder: {skills:[4,5,3,1,0,2], tools:[1,2,3,0], ai1:[4,3,0,2,1]}
+  all:     {skills:[0,1,2,3,4,5], tools:[0,1,2,3], ai1:[0,1,2,3]},
+  data:    {skills:[3,0,1,2,5,4], tools:[0,3,2,1], ai1:[0,2,1,3]},
+  systems: {skills:[0,2,1,3,5,4], tools:[3,0,2,1], ai1:[1,2,0,3]},
+  builder: {skills:[4,5,3,1,0,2], tools:[1,2,3,0], ai1:[3,0,2,1]}
 };
 
 
@@ -1324,12 +1358,12 @@ function lensReorder(id, idx){
 var A11Y = {
   en: {bar:"Choose profile focus", fab:"Open assistant", panel:"Resume assistant",
        close:"Close", send:"Send", langbtn:"Switch to French", share:"Copy a link to this view",
-       expand:"Expand or collapse all roles", copy:"Copy to clipboard",
+       expand:"Expand or collapse all roles", copy:"Copy to clipboard", cbin:"Ask a question",
        title:"Franck Yeboue \u00b7 Business Systems Analyst & BI Developer",
        meta:"Franck Yeboue, business systems analyst and BI developer in Columbus, Ohio. Ten years across banking, telecom and healthcare."},
   fr: {bar:"Choisir le profil \u00e0 afficher", fab:"Ouvrir l'assistant", panel:"Assistant CV",
        close:"Fermer", send:"Envoyer", langbtn:"Passer \u00e0 l'anglais", share:"Copier un lien vers cette vue",
-       expand:"D\u00e9plier ou replier tous les postes", copy:"Copier dans le presse-papiers",
+       expand:"D\u00e9plier ou replier tous les postes", copy:"Copier dans le presse-papiers", cbin:"Posez une question",
        title:"Franck Yeboue \u00b7 Analyste de Syst\u00e8mes M\u00e9tier & D\u00e9veloppeur BI",
        meta:"Franck Yeboue, analyste de syst\u00e8mes m\u00e9tier et d\u00e9veloppeur BI \u00e0 Columbus, Ohio. Dix ans dans la banque, les t\u00e9l\u00e9coms et la sant\u00e9."}
 };
@@ -1339,6 +1373,7 @@ function applyA11y(){
   set('.lens-bar', t.bar); set('#cbFab', t.fab); set('#cbPanel', t.panel);
   set('.cb-x', t.close); set('.cb-send', t.send); set('#langBtn', t.langbtn);
   set('#lensShare', t.share); set('#expAll', t.expand);
+  set('#cbIn', t.cbin);
   document.querySelectorAll('.cpb, .pj-copy').forEach(function(b){ b.setAttribute('aria-label', t.copy); });
   try{
     document.title = t.title;
@@ -1432,7 +1467,11 @@ function expAllLabel(){
 function toggleAllExp(){
   var cards = expCards(), anyClosed = false;
   cards.forEach(function(c){ if(!c.classList.contains('open')) anyClosed = true; });
-  cards.forEach(function(c){ c.classList.toggle('open', anyClosed); });
+  cards.forEach(function(c){
+    c.classList.toggle('open', anyClosed);
+    var h=c.querySelector('.eh');
+    if(h) h.setAttribute('aria-expanded', anyClosed?'true':'false');
+  });
   expAllLabel();
 }
 
@@ -1526,7 +1565,7 @@ var CB_KB = [
   en:'<strong>Prince Tech LLC</strong> is Franck\'s technology consulting firm, founded in 2025 in Columbus, Ohio. It offers web development, AI workflow automation, internal tools and dashboards, and data integrations — mostly for small businesses, nonprofits, and community organizations. Real applications with databases, authentication, and live data, not templates.',
  fr:'<strong>Prince Tech LLC</strong> est la société de conseil technologique de Franck, fondée en 2025 à Columbus, Ohio — développement web, automatisation IA, outils internes et tableaux de bord, intégrations de données.'},
 
-{tags:['project','projects','portfolio','built','build','what has he built','projets','realisations'],
+{tags:['project','projects','portfolio','built','build','what has he built','projets','realisations', "construit", "qu a t il construit", "realisations", "projets", "a construit", "batir"],
  en:'Several, and they\'re real systems in use — not tutorials:<ul><li><strong>AICO Ticket Sales System</strong> — live ticketing for a community event</li><li><strong>AICO Membership Portal</strong> — 80+ members, dues tracking, role-based access, Supabase backend</li><li><strong>Operai</strong> — AI automation for small businesses</li><li><strong>Prince IQ</strong> — AI resume optimizer</li><li><strong>French Quest Arena</strong> — learn French through games</li><li><strong>Coffee Sales Dashboard</strong> and <strong>United Airways Performance Review</strong> — analytics work</li></ul>Scroll to the Projects section for details on each.',
  fr:'Plusieurs, et ce sont de vrais systèmes en usage : <strong>AICO Ticket Sales</strong>, <strong>AICO Membership Portal</strong> (80+ membres, Supabase), <strong>Operai</strong>, <strong>Prince IQ</strong>, <strong>French Quest Arena</strong>, ainsi que des travaux analytiques. Voir la section Projets.'},
 
@@ -1690,7 +1729,7 @@ var CB_KB = [
  en:"Franck is based in <strong>Columbus, Ohio</strong> and is open to onsite roles in the Columbus area as well as remote and hybrid arrangements. He's a U.S. citizen with no notice period, so there are no logistical obstacles to starting.",
  fr:"Franck est basé à <strong>Columbus, Ohio</strong> et ouvert aux postes sur site dans la région ainsi qu'aux formules à distance et hybrides. Citoyen américain et sans préavis à effectuer, aucun obstacle logistique au démarrage."},
 
-{tags:["hobbies", "hobby", "interests", "outside work", "personal", "free time", "fun", "what does he do for fun", "personality", "tell me something personal"], strong:["hobbies", "hobby", "interests"],
+{tags:["hobbies", "hobby", "interests", "outside work", "outside of work", "outside", "personal life", "away from work", "personal", "free time", "fun", "what does he do for fun", "personality", "tell me something personal", "en dehors du travail", "dehors", "travail", "passe-temps", "loisirs", "vie personnelle"], strong:["hobbies", "hobby", "interests"],
  en:"Outside work, Franck is a recreational <strong>drone pilot</strong> and shoots with a professional camera — the two hobbies feed each other. He has travelled to <strong>15 countries across 3 continents</strong>, he's a regular at the cinema, and he has been skydiving twice.",
  fr:"En dehors du travail, Franck est <strong>pilote de drone</strong> amateur et photographie avec un appareil professionnel — les deux passions se nourrissent l'une l'autre. Il a voyagé dans <strong>15 pays sur 3 continents</strong>, va régulièrement au cinéma, et a fait du parachutisme à deux reprises."},
 
@@ -1712,7 +1751,15 @@ var CB_KB = [
 
 {tags:["current role", "currently", "right now", "what is he doing now", "astreya", "data center", "project coordinator", "current job", "present role", "today"], strong:["astreya", "coordinator", "datacenter"],
  en:"Since September 2026 Franck has been a <strong>Project Coordinator 2</strong> on a short-term contract through Astreya, supporting a Meta infrastructure program near Columbus. Two organizations share the campus and each runs its own access management system, so his job is the reconciliation point between them: verifying technician and vendor identity against multiple systems of record, resolving conflicts with the record-owning team, and keeping scheduled infrastructure work on schedule. He also identified inconsistent name formatting between the two systems as a leading cause of failed verifications and proposed a pre-screening check. He continues to run Prince Tech LLC alongside it.",
- fr:"Depuis septembre 2026, Franck est <strong>Project Coordinator 2</strong> en mission courte via Astreya, en appui d'un programme d'infrastructure Meta près de Columbus. Deux organisations partagent le campus, chacune avec son propre système de gestion des accès : son rôle est le point de réconciliation entre les deux — vérification de l'identité des techniciens dans plusieurs systèmes de référence, résolution des conflits avec l'équipe propriétaire, et respect du calendrier des interventions. Il a aussi identifié les formats de noms incohérents comme cause principale d'échecs de vérification et proposé un contrôle en amont. Il poursuit Prince Tech LLC en parallèle."}
+ fr:"Depuis septembre 2026, Franck est <strong>Project Coordinator 2</strong> en mission courte via Astreya, en appui d'un programme d'infrastructure Meta près de Columbus. Deux organisations partagent le campus, chacune avec son propre système de gestion des accès : son rôle est le point de réconciliation entre les deux — vérification de l'identité des techniciens dans plusieurs systèmes de référence, résolution des conflits avec l'équipe propriétaire, et respect du calendrier des interventions. Il a aussi identifié les formats de noms incohérents comme cause principale d'échecs de vérification et proposé un contrôle en amont. Il poursuit Prince Tech LLC en parallèle."},
+
+{tags:["java", "jvm", "programming language"], strong:["java"],
+ en:"Franck uses <strong>Java at a working level</strong> rather than as a development language: at JPMorgan Chase he read application error logs and stack traces to narrow the scope of an issue before escalating it to engineering. He is honest that this is diagnostic reading, not application development. His production code is JavaScript, and his analytical work is SQL.",
+ fr:"Franck utilise <strong>Java à un niveau opérationnel</strong> plutôt que comme langage de développement : chez JPMorgan Chase, il lisait les journaux d'erreurs et les traces d'exécution pour circonscrire un problème avant escalade. Il s'agit de lecture diagnostique, pas de développement applicatif. Son code en production est en JavaScript et son travail analytique en SQL."},
+
+{tags:["atlas", "work assistant", "three agent", "prototype"], strong:["atlas"],
+ en:"<strong>Atlas</strong> is a local-first AI work-assistant prototype Franck is building under Prince Tech LLC, designed around a coordinated three-agent model covering knowledge capture, work planning, and quality review. Local-first means it runs on the user's own machine rather than sending their work to a third-party service.",
+ fr:"<strong>Atlas</strong> est un prototype d'assistant de travail IA en local-first développé par Franck chez Prince Tech LLC, conçu autour d'un modèle à trois agents coordonnés : capture des connaissances, planification du travail et revue qualité. Local-first signifie qu'il s'exécute sur la machine de l'utilisateur plutôt que d'envoyer son travail à un service tiers."}
 ];
 
 var CB_FALLBACK = {
@@ -1926,6 +1973,22 @@ function fyBoot(){
     var p = document.getElementById('cbPanel');
     if(e.key === 'Escape' && p && p.classList.contains('open')) cbClose();
   });
+}
+
+
+/* Email and phone are assembled by showC() to keep them away from
+   scrapers. Printing reveals the contact panel, so fill it first or
+   the printed resume carries blank contact cards. */
+if(window.matchMedia){
+  try{
+    var mq = window.matchMedia('print');
+    var fill = function(m){ if(m.matches) showC(); };
+    if(mq.addEventListener) mq.addEventListener('change', fill);
+    else if(mq.addListener) mq.addListener(fill);
+  }catch(e){}
+}
+if(window.addEventListener){
+  window.addEventListener('beforeprint', function(){ try{ showC(); }catch(e){} });
 }
 
 if(document.readyState === 'loading'){
