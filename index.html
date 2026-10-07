@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Franck Yeboue, business systems analyst and BI developer in Columbus, Ohio.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Franck Yeboue | System Analyst · Data Analyst · Web Developer</title>
+<title>Franck Yeboue · Business Systems Analyst &amp; BI Developer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,0..100,0..1&family=Inter:wght@300;400;500;600;700&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -196,7 +197,9 @@ footer{background:#14100E;color:rgba(255,255,255,.3);text-align:center;padding:1
 .lens-btn:hover{border-color:var(--ac);color:var(--ac)}
 .lens-btn:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
 .lens-btn.on{background:var(--nv);border-color:var(--nv);color:#fff}
-.lens-share{margin-left:auto;font-size:11.5px;color:var(--mu);background:none;border:1px solid transparent;font-family:inherit;cursor:pointer;padding:5px 11px;border-radius:6px;transition:color .18s,background .18s}
+.lens-note{font-size:11px;color:var(--mu);margin-left:auto;padding-left:10px}
+@media(max-width:860px){.lens-note{display:none}}
+.lens-share{font-size:11.5px;color:var(--mu);background:none;border:1px solid transparent;font-family:inherit;cursor:pointer;padding:5px 11px;border-radius:6px;transition:color .18s,background .18s}
 .lens-share:hover{color:var(--ac);background:var(--tn)}
 .lens-share:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
 .htags .ht{transition:opacity .3s ease,border-color .3s ease,color .3s ease,background .3s ease}
@@ -348,7 +351,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
     <button class="lens-btn" data-lensid="systems" onclick="setLens('systems')">Systems &amp; Business Analysis</button>
     <button class="lens-btn" data-lensid="builder" onclick="setLens('builder')">Developer &amp; AI</button>
   </div>
-  <button class="lens-share" id="lensShare" onclick="copyLensLink(this)">Copy link to this view</button>
+  <span class="lens-note" id="lensNote" data-en="Same experience and the same facts, reordered for the role you are hiring for." data-fr="La même expérience et les mêmes faits, réorganisés selon le poste à pourvoir.">Same experience and the same facts, reordered for the role you are hiring for.</span><button class="lens-share" id="lensShare" onclick="copyLensLink(this)">Copy link to this view</button>
 </div>
 
 
@@ -357,10 +360,10 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
   <div class="hi">
     <div class="hl" data-en="Open to New Opportunities" data-fr="Ouvert aux Nouvelles Opportunités">Open to New Opportunities</div>
     <h1 class="hn">Franck Yeboue</h1>
-    <p class="hsub" id="heroSub">Systems &amp; Data Analyst · Developer · CEO &amp; Founder</p>
+    <p class="hsub" id="heroSub">Business Systems Analyst and BI Developer</p>
     <p class="hd">
       <strong id="heroStrong">Business Analysis · Data &amp; Reporting · Application Support · Web &amp; AI Development</strong><br>
-      <span id="heroDesc">Nine-plus years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital.</span>
+      <span id="heroDesc">Ten years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital.</span>
     </p>
     <div class="htags">
       <span class="ht cert" data-lens="builder,systems">AWS Certified Cloud Practitioner</span>
@@ -392,8 +395,8 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
     <h2 class="st" data-en="About" data-fr="À Propos">About</h2>
     <div class="ag">
       <div class="at">
-        <p id="ab-1">Technical professional with nine-plus years of experience in application support, enterprise monitoring, incident management, and operational analytics across JPMorgan Chase and Lumen Technologies. Proven in high-availability production environments where data accuracy, system reliability, and fast resolution directly impact business performance.</p>
-        <p id="ab-2">In September 2025, my position at Lumen was eliminated in a company-wide reduction in force. Rather than simply searching for the next corporate role, I used that moment to act on something I had been building toward for years — I founded Prince Tech LLC, a technology consulting and web development company, and started building real products for real clients.</p>
+        <p id="ab-1">Technical professional with ten years of experience in application support, enterprise monitoring, incident management, and operational analytics across JPMorgan Chase and Lumen Technologies. Proven in high-availability production environments where data accuracy, system reliability, and fast resolution directly impact business performance.</p>
+        <p id="ab-2">In September 2025, my position at Lumen was eliminated in a company-wide reduction in force. Rather than simply searching for the next corporate role, I used that moment to act on something I had been building toward for years — I founded Prince Tech LLC, a technology consulting and web development company, and started building production applications with real users.</p>
         <p id="ab-3">I remain open to returning to a strong enterprise environment in a System Analyst, Data Analyst, or IT Application Support role — and I bring with me everything I built during that time: AWS and Terraform certifications, Splunk expertise, SQL and Power BI depth, and a sharper set of skills from actually shipping software.</p>
       </div>
       <div class="as">
@@ -424,7 +427,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
             <li data-en="Web development and technology consulting for small businesses, nonprofits, and community organizations" data-fr="Développement web et conseil technologique pour les PME, associations et organisations communautaires">Web development and technology consulting for small businesses, nonprofits, and community organizations</li>
             <li data-en="Custom web apps with real databases, authentication, and live data — not templates" data-fr="Applications web personnalisées avec bases de données réelles, authentification et données en direct">Custom web apps with real databases, authentication, and live data — not templates</li>
             <li data-en="Built production systems for the Ivorian diaspora community in Columbus (AICO)" data-fr="Systèmes de production construits pour la diaspora ivoirienne à Columbus (AICO)">Built production systems for the Ivorian diaspora community in Columbus (AICO)</li>
-            <li data-en="Brings 9+ years of enterprise discipline to every project — the same standards as JPMorgan Chase" data-fr="Apporte plus de 9 ans de discipline d'entreprise à chaque projet — les mêmes standards que JPMorgan Chase">Brings 9+ years of enterprise discipline to every project — the same standards as JPMorgan Chase</li>
+            <li data-en="Brings ten years of enterprise discipline to every project — the same standards as JPMorgan Chase" data-fr="Apporte dix ans de discipline d'entreprise à chaque projet — les mêmes standards que JPMorgan Chase">Brings ten years of enterprise discipline to every project — the same standards as JPMorgan Chase</li>
             <li data-en="Tools: HTML · CSS · JavaScript · Firebase · Supabase · SQL · AWS · Terraform" data-fr="Outils: HTML · CSS · JavaScript · Firebase · Supabase · SQL · AWS · Terraform">Tools: HTML · CSS · JavaScript · Firebase · Supabase · SQL · AWS · Terraform</li>
           </ul>
         </div>
@@ -484,15 +487,35 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
     <h2 class="st" data-en="Experience" data-fr="Expérience">Experience</h2>
     <div class="exp-tools"><button class="expall" id="expAll" onclick="toggleAllExp()">Expand all</button></div><div class="el">
 
-      <!-- Prince Tech LLC -->
+            <!-- Astreya -->
       <div class="ec" id="exp-0">
         <div class="eh" onclick="tog('exp-0')">
-          <div><div class="ecmp" style="color:#5E2E3F">Prince Tech LLC</div><div class="etl" data-en="CEO &amp; Founder" data-fr="PDG &amp; Fondateur">CEO &amp; Founder</div><div class="em" data-en="2025 – Present · Columbus, OH" data-fr="2025 – Présent · Columbus, OH">2025 – Present · Columbus, OH</div></div>
+          <div><div class="ecmp" style="color:#5E2E3F">Astreya</div><div class="etl" data-en="Project Coordinator 2 (Contract)" data-fr="Coordinateur de Projet 2 (Contrat)">Project Coordinator 2 (Contract)</div><div class="em" data-en="Sep 2026 – Present · Meta infrastructure program · Columbus, OH" data-fr="Sept. 2026 – Présent · Programme d'infrastructure Meta · Columbus, OH">Sep 2026 – Present · Meta infrastructure program · Columbus, OH</div></div>
           <div class="etg">+</div>
         </div>
         <div class="eb">
           <div class="edv"></div>
           <ul class="ebl" id="ebl-0">
+            <li data-en="Contracted through Astreya, which Meta engaged to staff project coordinators for this program. The site is a shared hyperscale data center campus, so every access request crosses two organizations running separate access management systems." data-fr="Mission via Astreya, prestataire retenu par Meta pour fournir les coordinateurs de projet de ce programme. Le site est un campus de centres de données à grande échelle partagé : chaque demande d'accès traverse deux organisations aux systèmes de gestion des accès distincts.">Contracted through Astreya, which Meta engaged to staff project coordinators for this program. The site is a shared hyperscale data center campus, so every access request crosses two organizations running separate access management systems.</li>
+            <li data-en="Coordinate technician site access across both organizations so scheduled infrastructure work starts on time." data-fr="Coordonner les accès des techniciens entre les deux organisations afin que les interventions planifiées démarrent à l'heure.">Coordinate technician site access across both organizations so scheduled infrastructure work starts on time.</li>
+            <li data-en="Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched." data-fr="Identifié les formats de noms incohérents entre les deux systèmes comme cause principale d'échecs de vérification, et proposé un contrôle en amont avant l'envoi des techniciens.">Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched.</li>
+            <li data-en="Verify technician and vendor identity details against multiple systems of record before access is approved, reconciling conflicts between the two organizations' records." data-fr="Vérifier l'identité des techniciens et des prestataires dans plusieurs systèmes de référence avant l'octroi des accès, en réconciliant les conflits entre les enregistrements des deux organisations.">Verify technician and vendor identity details against multiple systems of record before access is approved, reconciling conflicts between the two organizations' records.</li>
+            <li data-en="Resolve access discrepancies directly with the record-owning team instead of returning requests to the requester, removing a round trip from every exception." data-fr="Résoudre les écarts d'accès directement avec l'équipe propriétaire de l'enregistrement plutôt qu'en renvoyant la demande au demandeur, supprimant un aller-retour sur chaque exception.">Resolve access discrepancies directly with the record-owning team instead of returning requests to the requester, removing a round trip from every exception.</li>
+            <li data-en="Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review, and escalate time-sensitive access failures through a defined path." data-fr="Consigner incidents, résolutions, risques et blocages dans un suivi quotidien partagé entre les sites, et escalader les échecs d'accès urgents selon un circuit défini.">Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review, and escalate time-sensitive access failures through a defined path.</li>
+          </ul>
+          <div class="esk"><span class="est" data-en="Access Coordination" data-fr="Coordination des Accès">Access Coordination</span><span class="est" data-en="Systems of Record" data-fr="Systèmes de Référence">Systems of Record</span><span class="est" data-en="Data Quality" data-fr="Qualité des Données">Data Quality</span><span class="est" data-en="Stakeholder Coordination" data-fr="Coordination des Parties Prenantes">Stakeholder Coordination</span><span class="est" data-en="Escalation" data-fr="Escalade">Escalation</span></div>
+        </div>
+      </div>
+
+<!-- Prince Tech LLC -->
+      <div class="ec" id="exp-1">
+        <div class="eh" onclick="tog('exp-1')">
+          <div><div class="ecmp" style="color:#5E2E3F">Prince Tech LLC</div><div class="etl" data-en="CEO &amp; Founder" data-fr="PDG &amp; Fondateur">CEO &amp; Founder</div><div class="em" data-en="2025 – Present · Columbus, OH" data-fr="2025 – Présent · Columbus, OH">2025 – Present · Columbus, OH</div></div>
+          <div class="etg">+</div>
+        </div>
+        <div class="eb">
+          <div class="edv"></div>
+          <ul class="ebl" id="ebl-1">
             <li data-en="Work with clients to understand operational challenges, recurring support issues, and workflow bottlenecks, then translate those needs into practical technical solutions." data-fr="Travailler avec les clients pour comprendre les défis opérationnels et traduire ces besoins en solutions techniques pratiques.">Work with clients to understand operational challenges, recurring support issues, and workflow bottlenecks, then translate those needs into practical technical solutions.</li>
             <li data-en="Design and build AI-powered web applications, LLM agents, internal tools, and automated workflows that simplify business, support, reporting, and data-management processes." data-fr="Concevoir et construire des applications web avec IA, des agents LLM, des outils internes et des workflows automatisés.">Design and build AI-powered web applications, LLM agents, internal tools, and automated workflows that simplify business, support, reporting, and data-management processes.</li>
             <li data-en="Develop end-to-end website solutions that give users accessible tools for completing tasks, capturing information, and managing repeatable workflows." data-fr="Développer des solutions web de bout en bout offrant aux utilisateurs des outils accessibles pour accomplir des tâches et gérer des workflows répétables.">Develop end-to-end website solutions that give users accessible tools for completing tasks, capturing information, and managing repeatable workflows.</li>
@@ -502,19 +525,19 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
             <li data-en="Currently developing Atlas, a local-first AI work-assistant prototype designed around a coordinated three-agent model for knowledge capture, work planning, and quality review." data-fr="Développe actuellement Atlas, un prototype d'assistant de travail IA local conçu autour d'un modèle coordonné à trois agents.">Currently developing Atlas, a local-first AI work-assistant prototype designed around a coordinated three-agent model for knowledge capture, work planning, and quality review.</li>
             <li data-en="Built AICO Ticket Sales System and AICO Membership Portal — two real production apps used by a community of 80+ members, built with Firebase and Supabase (PostgreSQL)." data-fr="Construit le Système de Vente de Billets AICO et le Portail des Membres AICO — deux applications de production réelles utilisées par une communauté de plus de 80 membres.">Built AICO Ticket Sales System and AICO Membership Portal — two real production apps used by a community of 80+ members, built with Firebase and Supabase (PostgreSQL).</li>
           </ul>
-          <div class="esk"><span class="est" style="background:#F3EAEC;border-color:#D9C3CA;color:#5E2E3F">Prince Tech LLC</span><span class="est">Next.js</span><span class="est">HTML / CSS / JS</span><span class="est">Firebase</span><span class="est">Supabase</span><span class="est">AI Agents</span><span class="est">PWA</span><span class="est">SaaS</span><span class="est">Bilingual</span></div>
+          <div class="esk"><span class="est" style="background:#F3EAEC;border-color:#D9C3CA;color:#5E2E3F">Prince Tech LLC</span><span class="est">Next.js</span><span class="est">HTML / CSS / JS</span><span class="est">Firebase</span><span class="est">Supabase</span><span class="est">AI Agents</span><span class="est">PWA</span><span class="est">SaaS</span><span class="est" data-en="Bilingual" data-fr="Bilingue">Bilingual</span></div>
         </div>
       </div>
 
       <!-- Lumen -->
-      <div class="ec" id="exp-1">
-        <div class="eh" onclick="tog('exp-1')">
+      <div class="ec" id="exp-2">
+        <div class="eh" onclick="tog('exp-2')">
           <div><div class="ecmp">Lumen Technologies</div><div class="etl" data-en="Sr. Business Analyst / BI Developer" data-fr="Analyste Métier Senior / Développeur BI">Sr. Business Analyst / BI Developer</div><div class="em" data-en="2022 – Sep 2025 · Enterprise Reporting &amp; Operational Systems" data-fr="2022 – Sep 2025 · Reporting d'Entreprise &amp; Systèmes Opérationnels">2022 – Sep 2025 · Enterprise Reporting &amp; Operational Systems</div></div>
           <div class="etg">+</div>
         </div>
         <div class="eb">
           <div class="edv"></div>
-          <ul class="ebl" id="ebl-1">
+          <ul class="ebl" id="ebl-2">
             <li data-en="Analyzed business processes and operational data using SQL and Python to identify performance gaps, data-quality issues, and improvement opportunities." data-fr="Analysé les processus métier et les données opérationnelles avec SQL et Python pour identifier les écarts de performance et les problèmes de qualité des données.">Analyzed business processes and operational data using SQL and Python to identify performance gaps, data-quality issues, and improvement opportunities.</li>
             <li data-en="Collaborated with marketing stakeholders to analyze web, campaign, ecommerce, and SEO performance and translate business needs into reporting solutions and actionable recommendations." data-fr="Collaboré avec les parties prenantes marketing pour analyser les performances web, campagnes, ecommerce et SEO et traduire les besoins en solutions de reporting.">Collaborated with marketing stakeholders to analyze web, campaign, ecommerce, and SEO performance and translate business needs into reporting solutions and actionable recommendations.</li>
             <li data-en="Designed and maintained Power BI and Tableau dashboards that provided leaders with clear operational, marketing, and business-performance insights." data-fr="Conçu et maintenu des tableaux de bord Power BI et Tableau fournissant aux dirigeants des informations claires sur les performances opérationnelles et marketing.">Designed and maintained Power BI and Tableau dashboards that provided leaders with clear operational, marketing, and business-performance insights.</li>
@@ -524,19 +547,19 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
             <li data-en="Presented research-based findings and established documentation and reporting standards to support consistent decision-making." data-fr="Présenté des résultats de recherche et établi des standards de documentation et de reporting pour soutenir une prise de décision cohérente.">Presented research-based findings and established documentation and reporting standards to support consistent decision-making.</li>
             <li><em data-en="Role eliminated in a company-wide reduction in force in September 2025 — not performance related." data-fr="Poste supprimé lors d'une réduction des effectifs en septembre 2025 — sans lien avec la performance.">Role eliminated in a company-wide reduction in force in September 2025 — not performance related.</em></li>
           </ul>
-          <div class="esk"><span class="est">SQL</span><span class="est">Splunk</span><span class="est">Power BI</span><span class="est">Data Validation</span><span class="est">Reporting Automation</span><span class="est">Operational Analytics</span></div>
+          <div class="esk"><span class="est">SQL</span><span class="est">Splunk</span><span class="est">Power BI</span><span class="est" data-en="Data Validation" data-fr="Validation des Données">Data Validation</span><span class="est" data-en="Reporting Automation" data-fr="Automatisation Reporting">Reporting Automation</span><span class="est" data-en="Operational Analytics" data-fr="Analytique Opérationnelle">Operational Analytics</span></div>
         </div>
       </div>
 
       <!-- JPMC Lead -->
-      <div class="ec" id="exp-2">
-        <div class="eh" onclick="tog('exp-2')">
+      <div class="ec" id="exp-3">
+        <div class="eh" onclick="tog('exp-3')">
           <div><div class="ecmp">JPMorgan Chase · 6 yrs 1 mo</div><div class="etl" data-en="Application Support Team Lead (AMG/IMCC)" data-fr="Chef d'Équipe Support Applicatif (AMG/IMCC)">Application Support Team Lead (AMG/IMCC)</div><div class="em" data-en="Jan 2019 – Jan 2022 · Columbus, OH · Hybrid" data-fr="Jan 2019 – Jan 2022 · Columbus, OH · Hybride">Jan 2019 – Jan 2022 · Columbus, OH · Hybrid</div></div>
           <div class="etg">+</div>
         </div>
         <div class="eb">
           <div class="edv"></div>
-          <ul class="ebl" id="ebl-2">
+          <ul class="ebl" id="ebl-3">
             <li data-en="Led day-to-day issue and incident management for banking applications, coordinating technical investigation, escalation, and service restoration across support teams." data-fr="Dirigé la gestion quotidienne des problèmes et incidents pour les applications bancaires.">Led day-to-day issue and incident management for banking applications, coordinating technical investigation, escalation, and service restoration across support teams.</li>
             <li data-en="Managed a support workload of more than 200 tickets per month while maintaining 98% SLA adherence." data-fr="Géré une charge de plus de 200 tickets par mois en maintenant 98% de respect des SLA.">Managed a support workload of more than 200 tickets per month while maintaining 98% SLA adherence.</li>
             <li data-en="Coordinated the response to major incidents, communicated status to stakeholders, and ensured issues were assigned to the appropriate technical teams." data-fr="Coordonné la réponse aux incidents majeurs, communiqué le statut aux parties prenantes et assuré l'attribution aux équipes techniques appropriées.">Coordinated the response to major incidents, communicated status to stakeholders, and ensured issues were assigned to the appropriate technical teams.</li>
@@ -545,19 +568,19 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
             <li data-en="Developed runbooks, knowledge documentation, and technology-health reporting to improve consistency and accelerate troubleshooting." data-fr="Développé des runbooks, de la documentation et des rapports de santé technologique pour améliorer la cohérence et accélérer le dépannage.">Developed runbooks, knowledge documentation, and technology-health reporting to improve consistency and accelerate troubleshooting.</li>
             <li data-en="Guided junior analysts on incident handling, documentation standards, escalation procedures, and effective problem resolution." data-fr="Guidé les analystes juniors sur la gestion des incidents, les standards de documentation et les procédures d'escalade.">Guided junior analysts on incident handling, documentation standards, escalation procedures, and effective problem resolution.</li>
           </ul>
-          <div class="esk"><span class="est">Incident Management</span><span class="est">Root Cause Analysis</span><span class="est">Application Support</span><span class="est">Java (basics)</span><span class="est">Team Leadership</span><span class="est">SLA Management</span></div>
+          <div class="esk"><span class="est" data-en="Incident Management" data-fr="Gestion des Incidents">Incident Management</span><span class="est" data-en="Root Cause Analysis" data-fr="Analyse Causes Racines">Root Cause Analysis</span><span class="est" data-en="Application Support" data-fr="Support Applicatif">Application Support</span><span class="est">Java (basics)</span><span class="est" data-en="Team Leadership" data-fr="Encadrement d'Équipe">Team Leadership</span><span class="est" data-en="SLA Management" data-fr="Gestion des SLA">SLA Management</span></div>
         </div>
       </div>
 
       <!-- JPMC ATM -->
-      <div class="ec" id="exp-3">
-        <div class="eh" onclick="tog('exp-3')">
+      <div class="ec" id="exp-4">
+        <div class="eh" onclick="tog('exp-4')">
           <div><div class="ecmp">JPMorgan Chase</div><div class="etl" data-en="ATM Monitoring / Application Support Analyst (AMG/IMCC)" data-fr="Surveillance ATM / Analyste Support Applicatif (AMG/IMCC)">ATM Monitoring / Application Support Analyst (AMG/IMCC)</div><div class="em" data-en="Jan 2016 – Jan 2019 · Columbus, OH · On-site" data-fr="Jan 2016 – Jan 2019 · Columbus, OH · Sur site">Jan 2016 – Jan 2019 · Columbus, OH · On-site</div></div>
           <div class="etg">+</div>
         </div>
         <div class="eb">
           <div class="edv"></div>
-          <ul class="ebl" id="ebl-3">
+          <ul class="ebl" id="ebl-4">
             <li data-en="Monitored ATM devices across a large banking environment, identifying availability problems, device alerts, service interruptions, and other operational issues." data-fr="Surveillé les appareils ATM dans un large environnement bancaire, identifiant les problèmes de disponibilité et les interruptions de service.">Monitored ATM devices across a large banking environment, identifying availability problems, device alerts, service interruptions, and other operational issues.</li>
             <li data-en="Served as the first line of support for ATM-related incidents, performing initial triage, assessing impact, and determining the appropriate resolution or escalation path." data-fr="Servi comme première ligne de support pour les incidents ATM, effectuant le triage initial et déterminant le chemin de résolution ou d'escalade approprié.">Served as the first line of support for ATM-related incidents, performing initial triage, assessing impact, and determining the appropriate resolution or escalation path.</li>
             <li data-en="Tracked ATM issues through investigation and coordinated with application, infrastructure, operations, or technical support teams to restore service." data-fr="Suivi les problèmes ATM par l'investigation et coordonné avec les équipes d'application, d'infrastructure et de support technique pour restaurer le service.">Tracked ATM issues through investigation and coordinated with application, infrastructure, operations, or technical support teams to restore service.</li>
@@ -566,19 +589,19 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
             <li data-en="Analyzed ATM and application incident patterns to identify recurring issues and opportunities for improving monitoring and support processes." data-fr="Analysé les patterns d'incidents ATM pour identifier les problèmes récurrents et les opportunités d'amélioration.">Analyzed ATM and application incident patterns to identify recurring issues and opportunities for improving monitoring and support processes.</li>
             <li data-en="Produced trend and technology-health reports that improved visibility into device availability, system performance, and operational risk." data-fr="Produit des rapports de tendances et de santé technologique améliorant la visibilité sur la disponibilité des appareils et les risques opérationnels.">Produced trend and technology-health reports that improved visibility into device availability, system performance, and operational risk.</li>
           </ul>
-          <div class="esk"><span class="est">Splunk</span><span class="est">Real-Time Monitoring</span><span class="est">IT Troubleshooting</span><span class="est">Transaction Validation</span><span class="est">ServiceNow</span><span class="est">Production Support</span></div>
+          <div class="esk"><span class="est">Splunk</span><span class="est" data-en="Real-Time Monitoring" data-fr="Supervision Temps Réel">Real-Time Monitoring</span><span class="est" data-en="IT Troubleshooting" data-fr="Dépannage IT">IT Troubleshooting</span><span class="est" data-en="Transaction Validation" data-fr="Validation des Transactions">Transaction Validation</span><span class="est">ServiceNow</span><span class="est" data-en="Production Support" data-fr="Support Production">Production Support</span></div>
         </div>
       </div>
 
       <!-- NCH -->
-      <div class="ec" id="exp-4">
-        <div class="eh" onclick="tog('exp-4')">
+      <div class="ec" id="exp-5">
+        <div class="eh" onclick="tog('exp-5')">
           <div><div class="ecmp">Nationwide Children's Hospital</div><div class="etl" data-en="Systems Analyst Intern" data-fr="Stagiaire Analyste Systèmes">Systems Analyst Intern</div><div class="em" data-en="2015 – 2016 · IT Systems &amp; Process Support" data-fr="2015 – 2016 · Support Systèmes &amp; Processus">2015 – 2016 · IT Systems &amp; Process Support</div></div>
           <div class="etg">+</div>
         </div>
         <div class="eb">
           <div class="edv"></div>
-          <ul class="ebl" id="ebl-4">
+          <ul class="ebl" id="ebl-5">
             <li data-en="Supported the analysis of clinical application data within a hospital environment." data-fr="Soutenu l'analyse des données d'applications cliniques dans un environnement hospitalier.">Supported the analysis of clinical application data within a hospital environment.</li>
             <li data-en="Used SQL and Excel to extract, review, reconcile, and validate data used for operational reporting." data-fr="Utilisé SQL et Excel pour extraire, examiner, rapprocher et valider les données utilisées pour le reporting opérationnel.">Used SQL and Excel to extract, review, reconcile, and validate data used for operational reporting.</li>
             <li data-en="Investigated data inconsistencies and documented findings to help improve reporting accuracy and reliability." data-fr="Investigué les incohérences de données et documenté les résultats pour améliorer la précision des rapports.">Investigated data inconsistencies and documented findings to help improve reporting accuracy and reliability.</li>
@@ -586,7 +609,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
             <li data-en="Used Visio to document data flows, reporting processes, and application-related workflows." data-fr="Utilisé Visio pour documenter les flux de données, les processus de reporting et les workflows liés aux applications.">Used Visio to document data flows, reporting processes, and application-related workflows.</li>
             <li data-en="Maintained and shared reports, process documentation, and supporting materials through SharePoint." data-fr="Maintenu et partagé les rapports, la documentation de processus et les supports via SharePoint.">Maintained and shared reports, process documentation, and supporting materials through SharePoint.</li>
           </ul>
-          <div class="esk"><span class="est">System Testing</span><span class="est">Documentation</span><span class="est">Issue Tracking</span><span class="est">Technical Analysis</span><span class="est">Process Support</span></div>
+          <div class="esk"><span class="est" data-en="System Testing" data-fr="Tests Système">System Testing</span><span class="est">Documentation</span><span class="est" data-en="Issue Tracking" data-fr="Suivi des Anomalies">Issue Tracking</span><span class="est" data-en="Technical Analysis" data-fr="Analyse Technique">Technical Analysis</span><span class="est" data-en="Process Support" data-fr="Support des Processus">Process Support</span></div>
         </div>
       </div>
 
@@ -614,7 +637,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="edu-card">
         <div class="edu-left">
           <div class="edu-degree" data-en="Master of Science — Marketing Communication" data-fr="Master — Communication Marketing">Master of Science — Marketing Communication</div>
-          <div class="edu-school"><a href="https://www.estem.ma" target="_blank" rel="noopener noreferrer">ESTEM</a> · Casablanca, Morocco</div>
+          <div class="edu-school"><a href="https://www.estem.ma" target="_blank" rel="noopener noreferrer">ESTEM</a> <span data-en="· Casablanca, Morocco" data-fr="· Casablanca, Maroc">· Casablanca, Morocco</span></div>
           <div class="edu-note" data-en="Marketing strategy, communication, and business development" data-fr="Stratégie marketing, communication et développement commercial">Marketing strategy, communication, and business development</div>
         </div>
         <div class="edu-year">2006</div>
@@ -655,19 +678,11 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
           <li data-en="Accelerate data analysis and pattern identification using OpenAI, Gemini, and Claude" data-fr="Accélérer l'analyse de données avec OpenAI, Gemini et Claude">Accelerate data analysis and pattern identification using OpenAI, Gemini, and Claude</li>
           <li data-en="Generate and improve technical documentation, runbooks, and incident write-ups faster" data-fr="Générer et améliorer la documentation technique, les runbooks et les rapports d'incidents plus rapidement">Generate and improve technical documentation, runbooks, and incident write-ups faster</li>
           <li data-en="Use AI alongside Splunk and Java to speed up log analysis and troubleshooting research" data-fr="Utiliser l'IA avec Splunk et Java pour accélérer l'analyse des logs et la recherche de dépannage">Use AI alongside Splunk and Java to speed up log analysis and troubleshooting research</li>
-          <li data-en="Use Claude Cowork to manage and triage my personal Gmail — flagging priority emails, drafting responses, and keeping my inbox organized automatically" data-fr="Utiliser Claude Cowork pour gérer mon Gmail — signaler les emails prioritaires et rédiger des réponses automatiquement">Use Claude Cowork to manage and triage my personal Gmail — flagging priority emails, drafting responses, and keeping my inbox organized automatically</li>
+          
           <li data-en="Use AI as a coding assistant when building web apps at Prince Tech LLC — helping ship faster without sacrificing quality" data-fr="Utiliser l'IA comme assistant de codage pour construire des applications web chez Prince Tech LLC">Use AI as a coding assistant when building web apps at Prince Tech LLC — helping ship faster without sacrificing quality</li>
         </ul>
       </div>
-      <div class="aic">
-        <div class="ait"><span class="dot"></span><span data-en="Business Impact" data-fr="Impact Métier">Business Impact</span></div>
-        <ul class="ail" id="ail-2">
-          <li data-en="Faster documentation cycles for incident reports, support runbooks, and client deliverables" data-fr="Cycles de documentation plus rapides pour les rapports d'incidents, runbooks et livrables clients">Faster documentation cycles for incident reports, support runbooks, and client deliverables</li>
-          <li data-en="Reduced time spent on manual research during root cause analysis" data-fr="Réduction du temps de recherche manuelle lors de l'analyse des causes racines">Reduced time spent on manual research during root cause analysis</li>
-          <li data-en="More consistent technical writing across enterprise deliverables and Prince Tech client work" data-fr="Rédaction technique plus cohérente dans les livrables d'entreprise et le travail client Prince Tech">More consistent technical writing across enterprise deliverables and Prince Tech client work</li>
-          <li data-en="Able to build and ship web applications faster at Prince Tech LLC without compromising on code quality or reliability" data-fr="Capacité à construire et livrer des applications web plus rapidement chez Prince Tech LLC sans compromettre la qualité">Able to build and ship web applications faster at Prince Tech LLC without compromising on code quality or reliability</li>
-        </ul>
-      </div>
+      
     </div>
   </div>
   <div class="btr-wrap"><button class="btr" onclick="goTop()" data-en="Back to top" data-fr="Haut de page">Back to top</button></div>
@@ -709,7 +724,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="pj-card" data-lens="builder">
         <div class="pj-top"><div class="pj-icon">📄</div><div class="pj-meta"><div class="pj-tool">Next.js · AI · Paid Product</div><div class="pj-type" data-en="Commercial Product · Prince Tech LLC" data-fr="Produit Commercial · Prince Tech LLC">Commercial Product · Prince Tech LLC</div></div></div>
         <div class="pj-title" data-en="Prince IQ — AI Resume Optimizer" data-fr="Prince IQ — Optimiseur de CV par IA">Prince IQ — AI Resume Optimizer</div>
-        <div class="pj-desc" data-en="Built and launched a paid AI-powered resume optimization tool — invitation-only access, starting at $5.99. Features ATS scoring, recruiter analysis, strategic resume rewrite, and cover letter generation. Includes access code system, bilingual EN/FR support, and a full pricing and consultation flow." data-fr="Construit et lancé un outil payant d'optimisation de CV par IA — accès sur invitation, à partir de 9,99$. Comprend le scoring ATS, l'analyse recruteur, la réécriture stratégique du CV et la génération de lettre de motivation. Bilingue EN/FR.">Built and launched a paid AI-powered resume optimization tool — invitation-only access, starting at $9.99. Features ATS scoring, recruiter analysis, strategic resume rewrite, and cover letter generation. Includes access code system, bilingual EN/FR support, and a full pricing and consultation flow.</div>
+        <div class="pj-desc" data-en="Built and launched a paid AI-powered resume optimization tool — invitation-only access. Features ATS scoring, recruiter analysis, strategic resume rewrite, and cover letter generation. Includes access code system, bilingual EN/FR support, and a full pricing and consultation flow." data-fr="Construit et lancé un outil payant d'optimisation de CV par IA — accès sur invitation. Comprend le scoring ATS, l'analyse recruteur, la réécriture stratégique du CV et la génération de lettre de motivation. Bilingue EN/FR.">Built and launched a paid AI-powered resume optimization tool — invitation-only access. Features ATS scoring, recruiter analysis, strategic resume rewrite, and cover letter generation. Includes access code system, bilingual EN/FR support, and a full pricing and consultation flow.</div>
         <div class="pj-tags"><span class="pj-tag">AI</span><span class="pj-tag">Next.js</span><span class="pj-tag">Paid Product</span><span class="pj-tag">ATS</span><span class="pj-tag">Bilingual</span></div>
         <div class="pj-link-row"><span class="pj-url">iq.princetechllc.com</span><button class="pj-copy" onclick="cpText('https://iq.princetechllc.com',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
@@ -757,7 +772,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
       <div class="pj-card" data-lens="builder">
 <div class="pj-top"><div class="pj-icon">◈</div><div class="pj-meta"><div class="pj-tool">JavaScript · Keyword Routing</div><div class="pj-type" data-en="Conversational Assistant" data-fr="Assistant Conversationnel">Conversational Assistant</div></div></div>
 <div class="pj-title" data-en="Resume AI Assistant" data-fr="Assistant IA du CV">Resume AI Assistant</div>
-<div class="pj-desc" data-en="The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 24-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget." data-fr="L’assistant intégré à cette page. Il répond aux questions des recruteurs sur l’expérience, les outils, les certifications et les projets à partir d’une base bilingüe de 24 sujets, avec un score par mots-clés pondéré et des jetons décisifs pour les noms propres. Il fonctionne entièrement dans le navigateur : aucune clé d’API exposée, aucun coût par message, et aucune invention possible puisque chaque réponse est rédigée à l’avance. Tout passe par une fonction de routage unique, ce qui permet d’ajouter un modèle en direct derrière un point d’accès serveur sans réécrire le composant.">The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 24-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget.</div>
+<div class="pj-desc" data-en="The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 57-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget." data-fr="L’assistant intégré à cette page. Il répond aux questions des recruteurs sur l’expérience, les outils, les certifications et les projets à partir d’une base bilingue de 57 sujets, avec un score par mots-clés pondéré et des jetons décisifs pour les noms propres. Il fonctionne entièrement dans le navigateur : aucune clé d’API exposée, aucun coût par message, et aucune invention possible puisque chaque réponse est rédigée à l’avance. Tout passe par une fonction de routage unique, ce qui permet d’ajouter un modèle en direct derrière un point d’accès serveur sans réécrire le composant.">The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 57-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget.</div>
 <div class="pj-tags"><span class="pj-tag">JavaScript</span><span class="pj-tag" data-en="Zero API Key Exposure" data-fr="Aucune Clé API Exposée">Zero API Key Exposure</span><span class="pj-tag">Bilingual</span><span class="pj-tag" data-en="Client-Side" data-fr="Côté Client">Client-Side</span></div>
 <div class="pj-link-row"><span class="pj-url">yebouef.github.io/resume</span><button class="pj-copy" onclick="cpText('https://yebouef.github.io/resume',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
 </div>
@@ -794,7 +809,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
   </div>
 </section>
 
-<footer id="footer-text">© 2025 Franck Yeboue · Prince Tech LLC · System Analyst · Data Analyst · Web Developer</footer>
+<footer id="footer-text">© 2026 Franck Yeboue · Prince Tech LLC</footer>
 
 
 <!-- CHAT ASSISTANT -->
@@ -842,8 +857,8 @@ function toggleLang(){
     if(val!==null){el.innerHTML=val;}
   });
   document.getElementById('footer-text').textContent=lang==='fr'
-    ?'© 2025 Franck Yeboue · Prince Tech LLC · Analyste Systèmes · Analyste de Données · Développeur Web'
-    :'© 2025 Franck Yeboue · Prince Tech LLC · System Analyst · Data Analyst · Web Developer';
+    ?'© 2026 Franck Yeboue · Prince Tech LLC'
+    :'© 2026 Franck Yeboue · Prince Tech LLC';
 }
 if('IntersectionObserver' in window){
   var ob=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.07});
@@ -867,23 +882,29 @@ var LENS_DATA = {
 /* ───────────────────────── FULL PROFILE ───────────────────────── */
 all: {
 en: {
-sub: "Systems &amp; Data Analyst · Developer · CEO &amp; Founder",
-strong: "Business Analysis · Data &amp; Reporting · Application Support · Web &amp; AI Development",
-desc: "Nine-plus years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital — and now building them end to end through Prince Tech LLC. Equally comfortable in the requirements conversation, the SQL query, and the deployment.",
+sub: "Business Systems Analyst and BI Developer",
+strong: "Requirements, reporting, and production support for enterprise systems",
+desc: "Ten years turning business problems into working systems across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital — and now building them end to end through Prince Tech LLC. Equally comfortable in the requirements conversation, the SQL query, and the deployment.",
 about: [
-"Technical professional with nine-plus years of experience in application support, enterprise monitoring, incident management, and operational analytics across JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital. Proven in high-availability production environments where data accuracy, system reliability, and fast resolution directly affect business performance.",
-"In September 2025, my position at Lumen was eliminated in a company-wide reduction in force. Rather than simply searching for the next corporate role, I acted on something I had been building toward for years — I founded Prince Tech LLC, a technology consulting and web development company, and started building real products for real clients.",
-"I remain open to returning to a strong enterprise environment as a systems, data, or business analyst — and I bring everything I built in the meantime: AWS and Terraform certifications, Splunk expertise, SQL and Power BI depth, and a sharper set of skills from actually shipping software."],
+"Business systems analyst and BI developer with ten years in production enterprise environments: financial services at JPMorgan Chase, telecom at Lumen Technologies, and healthcare at Nationwide Children's Hospital. My work is requirements gathering, SQL reporting, Power BI dashboards, Splunk monitoring, and incident management, in environments where a wrong number or a late data feed has consequences the business notices the same day.",
+"Since 2025 I have run Prince Tech LLC, a consulting and web development practice in Columbus. Building and supporting production applications end to end sharpened the technical side of my analysis: I design the data model, write the queries, ship the interface, and own it when something breaks.",
+"I am looking for a permanent business systems analyst, BI analyst, or application support role in an enterprise environment, in Columbus or remote. I bring AWS and Terraform certifications, Splunk and SQL depth, and Power BI delivery experience. My current contract is short term and I am interviewing now."],
 eye: {about:"Professional Summary", skills:"Core Competencies", experience:"Professional History", tools:"Technical Toolkit", ai:"Modern Productivity", projects:"Work Samples · Prince Tech LLC"},
 story: {eye:"Building", title:"What I Build", p:[
-"I've spent nine years inside systems other people designed — supporting them, reporting on them, fixing them when they broke. Prince Tech LLC is where I design them myself.",
-"When my role at Lumen was eliminated in September 2025, I didn't wait for the next posting. I founded Prince Tech LLC and started shipping: a real-time ticketing platform for a live community event, a membership portal on Supabase serving 80+ members, AI automation products, and a French-learning app for kids.",
-"These aren't demos. They have real users, real databases, authentication, and the failure modes that come with production software. Nine years in regulated enterprise environments is why I document them, monitor them, and plan for what happens when they break."]},
+"I've spent ten years inside systems other people designed — supporting them, reporting on them, fixing them when they broke. Prince Tech LLC is where I design them myself.",
+"Since 2025 I have shipped: a real-time ticketing platform for a live community event, a membership portal on Supabase serving 80+ members, AI automation products, and a French-learning app for kids.",
+"These aren't demos. They have real users, real databases, authentication, and the failure modes that come with production software. Ten years in regulated enterprise environments is why I document them, monitor them, and plan for what happens when they break."]},
 cta: "Looking for the right enterprise role in business analysis, data and reporting, or application support.",
 exp: [
-["Founded Prince Tech LLC following a company-wide RIF at Lumen Technologies in September 2025 — turning a difficult moment into an opportunity to build what I had always wanted to create.",
+["Contracted through Astreya, which Meta engaged to staff project coordinators for this program. The site is a shared hyperscale data center campus, so every access request crosses two organizations running separate access management systems.",
+ "Coordinate technician site access across both organizations so scheduled infrastructure work starts on time.",
+ "Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched.",
+ "Verify technician and vendor identity details against multiple systems of record before access is approved, reconciling conflicts between the two organizations' records.",
+ "Resolve access discrepancies directly with the record-owning team instead of returning requests to the requester, removing a round trip from every exception.",
+ "Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review, and escalate time-sensitive access failures through a defined path."],
+["Founded Prince Tech LLC in 2025, a consulting and web development practice delivering production applications and automation for small organizations.",
  "Built and launched Operai — a live AI automation SaaS product that deploys AI agents to handle repetitive business workflows (email triage, invoice processing, lead qualification, scheduling).",
- "Built and launched Prince IQ — a paid AI resume optimizer (from $9.99) with ATS scoring, recruiter analysis, strategic rewrite, and cover letter generation. Invitation-only access system.",
+ "Built and launched Prince IQ — a paid AI resume optimizer with ATS scoring, recruiter analysis, strategic rewrite, and cover letter generation.",
  "Built French Quest Arena — a gamified French-learning PWA for kids ages 6–14, with soccer and basketball game mechanics, offline support, and a real classroom curriculum.",
  "Designed and built the full Prince Tech LLC company site in Next.js — bilingual EN/FR, SEO-optimized, multiple product pages, and a consistent design system across all sub-products.",
  "Built AICO Ticket Sales System and AICO Membership Portal — two real production apps used by a community of 80+ members, built with Firebase and Supabase (PostgreSQL)."],
@@ -901,29 +922,35 @@ exp: [
 ["Used Splunk to monitor ATM network health in real time — built SPL queries and saved searches to detect devices going offline, flag missing deposit windows, and catch transaction processing gaps.",
  "Validated transaction data daily, catching processing errors and routing exceptions to the correct resolution team within SLA.",
  "Handled first-line troubleshooting for application alerts and degraded performance, resolving or escalating based on severity.",
- "Logged all incidents in ServiceNow, building a knowledge base that reduced average resolution time over 18 months."],
+ "Logged all incidents in ServiceNow and built the knowledge base articles the team used for repeat issues, shortening average resolution time over 18 months."],
 ["Supported testing and validation of clinical and administrative systems in a HIPAA-regulated environment.",
  "Documented test cases, tracked defects, and worked with analysts to confirm fixes before go-live.",
  "Assisted with system monitoring and helped write process documentation for the internal IT knowledge base."]]
 },
 fr: {
-sub: "Analyste Systèmes &amp; Données · Développeur · PDG &amp; Fondateur",
-strong: "Analyse Métier · Données &amp; Reporting · Support Applicatif · Développement Web &amp; IA",
-desc: "Plus de neuf ans à transformer des problèmes métier en systèmes opérationnels chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital — et aujourd'hui à les construire de bout en bout via Prince Tech LLC. À l'aise autant dans le recueil des besoins que dans la requête SQL et le déploiement.",
+sub: "Analyste de Systèmes Métier &amp; Développeur BI",
+strong: "Recueil des besoins, reporting et support des systèmes en production",
+desc: "Dix ans à transformer des problèmes métier en systèmes opérationnels chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital — et aujourd'hui à les construire de bout en bout via Prince Tech LLC. À l'aise autant dans le recueil des besoins que dans la requête SQL et le déploiement.",
 about: [
-"Professionnel technique avec plus de neuf ans d'expérience en support applicatif, supervision d'entreprise, gestion des incidents et analytique opérationnelle — chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital. Éprouvé dans des environnements de production à haute disponibilité, où l'exactitude des données, la fiabilité des systèmes et la rapidité de résolution ont un impact direct sur la performance de l'entreprise.",
-"En septembre 2025, mon poste chez Lumen a été supprimé lors d'un plan de réduction d'effectifs à l'échelle de l'entreprise. Plutôt que de simplement chercher le poste suivant, j'ai concrétisé un projet que je préparais depuis des années : j'ai fondé Prince Tech LLC, société de conseil technologique et de développement web, et j'ai commencé à livrer de vrais produits à de vrais clients.",
-"Je reste ouvert à un retour dans un environnement d'entreprise solide comme analyste systèmes, analyste de données ou analyste métier — en apportant tout ce que j'ai construit entre-temps : certifications AWS et Terraform, expertise Splunk, maîtrise de SQL et Power BI, et des compétences affûtées par la livraison réelle de logiciels."],
+"Analyste de systèmes métier et développeur BI, dix ans en environnements d'entreprise en production : services financiers chez JPMorgan Chase, télécoms chez Lumen Technologies et santé chez Nationwide Children's Hospital. Mon travail : recueil des besoins, reporting SQL, tableaux de bord Power BI, supervision Splunk et gestion des incidents, dans des contextes où un chiffre faux ou un flux en retard se voit le jour même.",
+"Depuis 2025, je dirige Prince Tech LLC, cabinet de conseil et de développement web à Columbus. Construire et maintenir des applications en production a renforcé le côté technique de mon analyse : je conçois le modèle de données, j'écris les requêtes, je livre l'interface et j'en assume le support.",
+"Je recherche un poste permanent d'analyste de systèmes métier, d'analyste BI ou de support applicatif en entreprise, à Columbus ou à distance. J'apporte les certifications AWS et Terraform, une maîtrise de Splunk et SQL, et une expérience de livraison Power BI. Ma mission actuelle est de courte durée et je suis en entretiens."],
 eye: {about:"Résumé Professionnel", skills:"Compétences Clés", experience:"Parcours Professionnel", tools:"Boîte à Outils Technique", ai:"Productivité Moderne", projects:"Réalisations · Prince Tech LLC"},
 story: {eye:"Construire", title:"Ce Que Je Construis", p:[
-"J'ai passé neuf ans à l'intérieur de systèmes conçus par d'autres — à les supporter, à en rendre compte, à les réparer quand ils tombaient. Prince Tech LLC, c'est là où je les conçois moi-même.",
-"Quand mon poste chez Lumen a été supprimé en septembre 2025, je n'ai pas attendu l'offre suivante. J'ai fondé Prince Tech LLC et j'ai commencé à livrer : une plateforme de billetterie en temps réel pour un événement communautaire, un portail d'adhésion sur Supabase pour plus de 80 membres, des produits d'automatisation par IA, et une application d'apprentissage du français pour enfants.",
-"Ce ne sont pas des démonstrations. Il y a de vrais utilisateurs, de vraies bases de données, de l'authentification, et tous les modes de défaillance du logiciel en production. Neuf ans en environnements d'entreprise réglementés expliquent pourquoi je les documente, je les supervise, et j'anticipe leurs pannes."]},
+"J'ai passé dix ans à l'intérieur de systèmes conçus par d'autres — à les supporter, à en rendre compte, à les réparer quand ils tombaient. Prince Tech LLC, c'est là où je les conçois moi-même.",
+"Depuis 2025, j'ai livré : une plateforme de billetterie en temps réel pour un événement communautaire, un portail d'adhésion sur Supabase pour plus de 80 membres, des produits d'automatisation par IA, et une application d'apprentissage du français pour enfants.",
+"Ce ne sont pas des démonstrations. Il y a de vrais utilisateurs, de vraies bases de données, de l'authentification, et tous les modes de défaillance du logiciel en production. Dix ans en environnements d'entreprise réglementés expliquent pourquoi je les documente, je les supervise, et j'anticipe leurs pannes."]},
 cta: "À la recherche du bon poste en entreprise : analyse métier, données et reporting, ou support applicatif.",
 exp: [
-["Fondé Prince Tech LLC à la suite d'un plan de réduction d'effectifs chez Lumen Technologies en septembre 2025 — transformant un moment difficile en opportunité de construire ce que j'avais toujours voulu créer.",
+["Mission via Astreya, prestataire retenu par Meta pour fournir les coordinateurs de projet de ce programme. Le site est un campus de centres de données à grande échelle partagé : chaque demande d'accès traverse deux organisations aux systèmes de gestion des accès distincts.",
+ "Coordonner les accès des techniciens entre les deux organisations afin que les interventions planifiées démarrent à l'heure.",
+ "Identifié les formats de noms incohérents entre les deux systèmes comme cause principale d'échecs de vérification, et proposé un contrôle en amont avant l'envoi des techniciens.",
+ "Vérifier l'identité des techniciens et des prestataires dans plusieurs systèmes de référence avant l'octroi des accès, en réconciliant les conflits entre les enregistrements des deux organisations.",
+ "Résoudre les écarts d'accès directement avec l'équipe propriétaire de l'enregistrement plutôt qu'en renvoyant la demande au demandeur, supprimant un aller-retour sur chaque exception.",
+ "Consigner incidents, résolutions, risques et blocages dans un suivi quotidien partagé entre les sites, et escalader les échecs d'accès urgents selon un circuit défini."],
+["Fondé Prince Tech LLC en 2025, cabinet de conseil et de développement web livrant des applications en production et de l'automatisation pour de petites organisations.",
  "Conçu et lancé Operai — un produit SaaS d'automatisation par IA qui déploie des agents pour traiter les processus métier répétitifs (tri des e-mails, traitement des factures, qualification des prospects, planification).",
- "Conçu et lancé Prince IQ — un optimiseur de CV par IA payant (à partir de 9,99 $) avec score ATS, analyse recruteur, réécriture stratégique et génération de lettres de motivation. Accès sur invitation.",
+ "Conçu et lancé Prince IQ — un optimiseur de CV par IA payant avec score ATS, analyse recruteur, réécriture stratégique et génération de lettres de motivation.",
  "Développé French Quest Arena — une application web progressive (PWA) ludique d'apprentissage du français pour les 6–14 ans, avec mécaniques de jeu football et basketball, mode hors ligne et un véritable programme scolaire.",
  "Conçu et développé l'intégralité du site de Prince Tech LLC en Next.js — bilingue FR/EN, optimisé SEO, plusieurs pages produits et un système de design cohérent sur tous les sous-produits.",
  "Développé AICO Ticket Sales System et AICO Membership Portal — deux applications en production utilisées par une communauté de plus de 80 membres, sur Firebase et Supabase (PostgreSQL)."],
@@ -952,18 +979,24 @@ data: {
 en: {
 sub: "Data &amp; Business Intelligence Analyst",
 strong: "Power BI · SQL · Reporting Automation · Data Integration",
-desc: "Nine-plus years building reporting that decision-makers actually use — SQL pipelines, Power BI dashboards, and automated reporting across enterprise environments at Lumen Technologies, JPMorgan Chase, and Nationwide Children's Hospital. Strong on data quality, stakeholder requirements, and turning messy sources into a single trusted view.",
+desc: "Ten years building reporting that decision-makers actually use — SQL pipelines, Power BI dashboards, and automated reporting across enterprise environments at Lumen Technologies, JPMorgan Chase, and Nationwide Children's Hospital. Strong on data quality, stakeholder requirements, and turning messy sources into a single trusted view.",
 about: [
-"Data and BI professional with nine-plus years turning enterprise data into reporting people act on — SQL pipelines, Power BI dashboards, and operational analytics at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital. Most of that work happened in high-availability production environments, where a wrong number in a report has consequences.",
+"Data and BI professional with ten years turning enterprise data into reporting people act on — SQL pipelines, Power BI dashboards, and operational analytics at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital. Most of that work happened in high-availability production environments, where a wrong number in a report has consequences.",
 "In 2025 I founded Prince Tech LLC and began working with data from the other side — designing database schemas, building data models, and shipping the products that depend on them.",
 "I'm looking to return to an enterprise environment in a BI, data, or HR analytics role, bringing SQL and Power BI depth, Splunk experience, AWS and Terraform certifications, and the perspective of someone who has built the systems that generate the data, not only the reports that read it."],
 eye: {about:"Analytics Profile", skills:"Analytical Capabilities", experience:"Reporting &amp; Analytics History", tools:"Analytics Toolkit", ai:"AI in Analytics", projects:"Analytics &amp; Data Work"},
 story: {eye:"Building", title:"What I Build", p:[
-"Nine years of reporting taught me that the hardest part is rarely the dashboard — it's the data underneath it, and whether anyone trusts it.",
+"Ten years of reporting taught me that the hardest part is rarely the dashboard — it's the data underneath it, and whether anyone trusts it.",
 "Prince Tech LLC is where I work on that end directly. The AICO Membership Portal runs on PostgreSQL with a schema covering 80+ members, monthly dues, expense records, and a full audit trail. Prince IQ turns unstructured resume text into scored, comparable output.",
 "Building the systems that generate data changed how I report on it. I know what a clean source looks like because I've had to design one."]},
 cta: "Looking for the right enterprise role in business intelligence, data analytics, or HR analytics.",
 exp: [
+["Contracted through Astreya, which Meta engaged to staff project coordinators for this program. The site is a shared hyperscale data center campus, so every access request crosses two organizations running separate access management systems.",
+ "Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched.",
+ "Verify technician and vendor identity details against multiple systems of record before access is approved, reconciling conflicts between the two organizations' records.",
+ "Coordinate technician site access across both organizations so scheduled infrastructure work starts on time.",
+ "Resolve access discrepancies directly with the record-owning team instead of returning requests to the requester, removing a round trip from every exception.",
+ "Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review, and escalate time-sensitive access failures through a defined path."],
 ["Built the AICO Membership Portal on Supabase (PostgreSQL) — data model covering 80+ members, monthly dues tracking, expense records, and a full audit log, with role-based access by admin, finance, and member.",
  "Built and launched Prince IQ — a paid AI resume optimizer with ATS scoring and recruiter-style analysis, turning unstructured resume text into scored, comparable output.",
  "Built and launched Operai — an AI automation product that processes recurring business workflows including invoice processing and lead qualification.",
@@ -983,7 +1016,7 @@ exp: [
  "Applied basic Java knowledge to follow application error logs and stack traces when narrowing issue scope."],
 ["Validated transaction data daily, catching processing errors and routing exceptions to the correct resolution team within SLA.",
  "Used Splunk to monitor ATM network health in real time — writing SPL queries and saved searches to detect devices going offline, flag missing deposit windows, and catch transaction processing gaps.",
- "Logged all incidents in ServiceNow, building a knowledge base that reduced average resolution time over 18 months.",
+ "Logged all incidents in ServiceNow and built the knowledge base articles the team used for repeat issues, shortening average resolution time over 18 months.",
  "Handled first-line troubleshooting for application alerts and degraded performance."],
 ["Supported testing and validation of clinical and administrative systems in a HIPAA-regulated environment.",
  "Documented test cases, tracked defects, and worked with analysts to confirm fixes before go-live.",
@@ -992,18 +1025,24 @@ exp: [
 fr: {
 sub: "Analyste Données &amp; Business Intelligence",
 strong: "Power BI · SQL · Automatisation du Reporting · Intégration de Données",
-desc: "Plus de neuf ans à construire des rapports réellement utilisés par les décideurs — pipelines SQL, tableaux de bord Power BI et reporting automatisé en environnement d'entreprise chez Lumen Technologies, JPMorgan Chase et Nationwide Children's Hospital.",
+desc: "Dix ans à construire des rapports réellement utilisés par les décideurs — pipelines SQL, tableaux de bord Power BI et reporting automatisé en environnement d'entreprise chez Lumen Technologies, JPMorgan Chase et Nationwide Children's Hospital.",
 about: [
-"Professionnel de la donnée et de la BI avec plus de neuf ans passés à transformer les données d'entreprise en reporting exploitable — pipelines SQL, tableaux de bord Power BI et analytique opérationnelle chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital. L'essentiel de ce travail s'est déroulé en production à haute disponibilité, où un chiffre erroné dans un rapport a des conséquences.",
+"Professionnel de la donnée et de la BI avec dix ans passés à transformer les données d'entreprise en reporting exploitable — pipelines SQL, tableaux de bord Power BI et analytique opérationnelle chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital. L'essentiel de ce travail s'est déroulé en production à haute disponibilité, où un chiffre erroné dans un rapport a des conséquences.",
 "En 2025, j'ai fondé Prince Tech LLC et j'ai commencé à travailler la donnée depuis l'autre côté — conception de schémas de bases de données, modélisation, et livraison des produits qui en dépendent.",
 "Je souhaite revenir en environnement d'entreprise sur un poste BI, données ou analytique RH, en apportant ma maîtrise de SQL et Power BI, mon expérience Splunk, mes certifications AWS et Terraform, et le regard de quelqu'un qui a construit les systèmes produisant la donnée, pas seulement les rapports qui la lisent."],
 eye: {about:"Profil Analytique", skills:"Compétences Analytiques", experience:"Parcours Reporting &amp; Analytique", tools:"Boîte à Outils Analytique", ai:"L'IA au Service de l'Analyse", projects:"Travaux Données &amp; Analytique"},
 story: {eye:"Construire", title:"Ce Que Je Construis", p:[
-"Neuf ans de reporting m'ont appris que le plus difficile n'est presque jamais le tableau de bord — c'est la donnée en dessous, et la confiance qu'on lui accorde.",
+"Dix ans de reporting m'ont appris que le plus difficile n'est presque jamais le tableau de bord — c'est la donnée en dessous, et la confiance qu'on lui accorde.",
 "Prince Tech LLC, c'est là où je travaille directement à ce niveau. Le portail d'adhésion AICO fonctionne sur PostgreSQL, avec un schéma couvrant plus de 80 membres, les cotisations mensuelles, les dépenses et un journal d'audit complet. Prince IQ transforme un texte de CV non structuré en résultats notés et comparables.",
 "Construire les systèmes qui produisent la donnée a changé ma façon d'en rendre compte. Je sais à quoi ressemble une source propre parce que j'ai dû en concevoir une."]},
 cta: "À la recherche du bon poste en entreprise : business intelligence, analytique de données ou analytique RH.",
 exp: [
+["Mission via Astreya, prestataire retenu par Meta pour fournir les coordinateurs de projet de ce programme. Le site est un campus de centres de données à grande échelle partagé : chaque demande d'accès traverse deux organisations aux systèmes de gestion des accès distincts.",
+ "Identifié les formats de noms incohérents entre les deux systèmes comme cause principale d'échecs de vérification, et proposé un contrôle en amont avant l'envoi des techniciens.",
+ "Vérifier l'identité des techniciens et des prestataires dans plusieurs systèmes de référence avant l'octroi des accès, en réconciliant les conflits entre les enregistrements des deux organisations.",
+ "Coordonner les accès des techniciens entre les deux organisations afin que les interventions planifiées démarrent à l'heure.",
+ "Résoudre les écarts d'accès directement avec l'équipe propriétaire de l'enregistrement plutôt qu'en renvoyant la demande au demandeur, supprimant un aller-retour sur chaque exception.",
+ "Consigner incidents, résolutions, risques et blocages dans un suivi quotidien partagé entre les sites, et escalader les échecs d'accès urgents selon un circuit défini."],
 ["Développé le portail d'adhésion AICO sur Supabase (PostgreSQL) — modèle de données couvrant plus de 80 membres, suivi des cotisations mensuelles, enregistrement des dépenses et journal d'audit complet, avec accès par rôle (administrateur, finance, membre).",
  "Conçu et lancé Prince IQ — un optimiseur de CV par IA payant avec score ATS et analyse de type recruteur, transformant un texte non structuré en résultats notés et comparables.",
  "Conçu et lancé Operai — un produit d'automatisation par IA qui traite des processus métier récurrents, dont le traitement des factures et la qualification des prospects.",
@@ -1035,18 +1074,24 @@ systems: {
 en: {
 sub: "Business &amp; Systems Analyst",
 strong: "Requirements Gathering · Process Analysis · Application Support · Incident Management",
-desc: "Nine-plus years translating between business teams and technical systems — gathering requirements, documenting processes, supporting enterprise applications, and driving incidents to resolution across banking, telecom, and healthcare. The person who makes sure what gets built is what was actually needed.",
+desc: "Ten years translating between business teams and technical systems — gathering requirements, documenting processes, supporting enterprise applications, and driving incidents to resolution across banking, telecom, and healthcare. The person who makes sure what gets built is what was actually needed.",
 about: [
-"Business and systems analyst with nine-plus years working between business teams and the systems they depend on — requirements, process analysis, application support, and incident management at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital, including HIPAA-regulated and banking environments.",
+"Business and systems analyst with ten years working between business teams and the systems they depend on — requirements, process analysis, application support, and incident management at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital, including HIPAA-regulated and banking environments.",
 "In 2025 I founded Prince Tech LLC, which meant running the full cycle myself: scoping requirements with clients, defining delivery phases, building, and supporting what I shipped.",
 "I'm looking to return to an enterprise environment as a business systems, HRIS, or process analyst, bringing incident and problem management experience, requirements and documentation discipline, SQL and Power BI depth, and AWS and Terraform certifications."],
 eye: {about:"Business Analysis Profile", skills:"Analysis &amp; Delivery Capabilities", experience:"Systems &amp; Support History", tools:"Systems Toolkit", ai:"AI in Process Work", projects:"Delivered Systems"},
 story: {eye:"Building", title:"What I Build", p:[
-"Nine years between business teams and technical systems taught me that most failures aren't technical — they're a gap between what was asked for and what was understood.",
+"Ten years between business teams and technical systems taught me that most failures aren't technical — they're a gap between what was asked for and what was understood.",
 "Prince Tech LLC is where I own that gap end to end: scoping requirements with clients, defining delivery phases, building, then supporting what I shipped — including the AICO Membership Portal, with role-based access, dues tracking, event cost-sharing, and a full audit log for 80+ members.",
 "Supporting your own build is a fast education in requirements. You find out immediately which questions you failed to ask."]},
 cta: "Looking for the right enterprise role in business systems analysis, HRIS, or process and application support.",
 exp: [
+["Contracted through Astreya, which Meta engaged to staff project coordinators for this program. The site is a shared hyperscale data center campus, so every access request crosses two organizations running separate access management systems.",
+ "Coordinate technician site access across both organizations so scheduled infrastructure work starts on time.",
+ "Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched.",
+ "Resolve access discrepancies directly with the record-owning team instead of returning requests to the requester, removing a round trip from every exception.",
+ "Verify technician and vendor identity details against multiple systems of record before access is approved, reconciling conflicts between the two organizations' records.",
+ "Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review, and escalate time-sensitive access failures through a defined path."],
 ["Founded Prince Tech LLC in 2025 — scoping client requirements, defining delivery phases, and shipping systems for small businesses, nonprofits, and community organizations.",
  "Built the AICO Membership Portal — gathered requirements from association leadership and delivered role-based access (admin, finance, member), dues tracking, event cost-sharing logic, and a full audit log for 80+ members.",
  "Built the AICO Ticket Sales System — a real-time ticketing platform supporting a live community event.",
@@ -1066,7 +1111,7 @@ exp: [
  "Applied basic Java knowledge to follow application error logs and stack traces, narrowing issue scope before escalating to engineering."],
 ["Handled first-line troubleshooting for application alerts and degraded performance, resolving or escalating based on severity.",
  "Used Splunk to monitor ATM network health in real time — SPL queries and saved searches detecting offline devices, missing deposit windows, and transaction processing gaps.",
- "Logged all incidents in ServiceNow, building a knowledge base that reduced average resolution time over 18 months.",
+ "Logged all incidents in ServiceNow and built the knowledge base articles the team used for repeat issues, shortening average resolution time over 18 months.",
  "Validated transaction data daily, catching processing errors and routing exceptions to the correct resolution team within SLA."],
 ["Documented test cases, tracked defects, and worked with analysts to confirm fixes before go-live.",
  "Supported testing and validation of clinical and administrative systems in a HIPAA-regulated environment.",
@@ -1075,18 +1120,24 @@ exp: [
 fr: {
 sub: "Analyste Métier &amp; Systèmes",
 strong: "Recueil des Besoins · Analyse de Processus · Support Applicatif · Gestion des Incidents",
-desc: "Plus de neuf ans à faire le lien entre les équipes métier et les systèmes techniques — recueil des besoins, documentation des processus, support applicatif et résolution d'incidents dans la banque, les télécoms et la santé.",
+desc: "Dix ans à faire le lien entre les équipes métier et les systèmes techniques — recueil des besoins, documentation des processus, support applicatif et résolution d'incidents dans la banque, les télécoms et la santé.",
 about: [
-"Analyste métier et systèmes avec plus de neuf ans à faire le lien entre les équipes métier et les systèmes dont elles dépendent — recueil des besoins, analyse de processus, support applicatif et gestion des incidents chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital, y compris en environnements réglementés HIPAA et bancaire.",
+"Analyste métier et systèmes avec dix ans à faire le lien entre les équipes métier et les systèmes dont elles dépendent — recueil des besoins, analyse de processus, support applicatif et gestion des incidents chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital, y compris en environnements réglementés HIPAA et bancaire.",
 "En 2025, j'ai fondé Prince Tech LLC, ce qui m'a conduit à assurer le cycle complet moi-même : cadrage des besoins avec les clients, définition des phases de livraison, développement, et support de ce que j'ai mis en production.",
 "Je souhaite revenir en environnement d'entreprise comme analyste de systèmes métier, HRIS ou processus, en apportant mon expérience en gestion des incidents et des problèmes, ma rigueur en recueil des besoins et en documentation, ma maîtrise de SQL et Power BI, et mes certifications AWS et Terraform."],
 eye: {about:"Profil Analyse Métier", skills:"Compétences d'Analyse &amp; de Livraison", experience:"Parcours Systèmes &amp; Support", tools:"Boîte à Outils Systèmes", ai:"L'IA dans les Processus", projects:"Systèmes Livrés"},
 story: {eye:"Construire", title:"Ce Que Je Construis", p:[
-"Neuf ans entre les équipes métier et les systèmes techniques m'ont appris que la plupart des échecs ne sont pas techniques — ils viennent de l'écart entre ce qui a été demandé et ce qui a été compris.",
+"Dix ans entre les équipes métier et les systèmes techniques m'ont appris que la plupart des échecs ne sont pas techniques — ils viennent de l'écart entre ce qui a été demandé et ce qui a été compris.",
 "Prince Tech LLC, c'est là où j'assume cet écart de bout en bout : cadrage des besoins avec les clients, définition des phases de livraison, développement, puis support de ce que j'ai livré — dont le portail d'adhésion AICO, avec accès par rôle, suivi des cotisations, partage des coûts d'événements et journal d'audit complet pour plus de 80 membres.",
 "Assurer le support de ce qu'on a soi-même construit est une leçon rapide en recueil des besoins. On découvre immédiatement quelles questions on a oublié de poser."]},
 cta: "À la recherche du bon poste en entreprise : analyse de systèmes métier, HRIS, ou support des processus et applications.",
 exp: [
+["Mission via Astreya, prestataire retenu par Meta pour fournir les coordinateurs de projet de ce programme. Le site est un campus de centres de données à grande échelle partagé : chaque demande d'accès traverse deux organisations aux systèmes de gestion des accès distincts.",
+ "Coordonner les accès des techniciens entre les deux organisations afin que les interventions planifiées démarrent à l'heure.",
+ "Identifié les formats de noms incohérents entre les deux systèmes comme cause principale d'échecs de vérification, et proposé un contrôle en amont avant l'envoi des techniciens.",
+ "Résoudre les écarts d'accès directement avec l'équipe propriétaire de l'enregistrement plutôt qu'en renvoyant la demande au demandeur, supprimant un aller-retour sur chaque exception.",
+ "Vérifier l'identité des techniciens et des prestataires dans plusieurs systèmes de référence avant l'octroi des accès, en réconciliant les conflits entre les enregistrements des deux organisations.",
+ "Consigner incidents, résolutions, risques et blocages dans un suivi quotidien partagé entre les sites, et escalader les échecs d'accès urgents selon un circuit défini."],
 ["Fondé Prince Tech LLC en 2025 — cadrage des besoins clients, définition des phases de livraison et mise en production de systèmes pour PME, associations et organisations communautaires.",
  "Développé le portail d'adhésion AICO — recueil des besoins auprès de la direction de l'association, puis livraison d'un accès par rôle (administrateur, finance, membre), du suivi des cotisations, de la logique de partage des coûts des événements et d'un journal d'audit complet pour plus de 80 membres.",
  "Développé AICO Ticket Sales System — une plateforme de billetterie en temps réel pour un événement communautaire.",
@@ -1116,22 +1167,28 @@ exp: [
 /* ───────────────────────── DEVELOPER & AI ───────────────────────── */
 builder: {
 en: {
-sub: "Developer · AI &amp; Automation · CEO &amp; Founder",
+sub: "CEO and Founder, Prince Tech LLC",
 strong: "Next.js · Supabase · Firebase · AWS · Terraform · AI Workflow Automation",
-desc: "CEO and Founder of Prince Tech LLC, shipping production web applications with real databases, authentication, and live data — plus AI-powered tools built on Claude, OpenAI, and Gemini. Nine-plus years of enterprise discipline behind every build, not weekend-project code.",
+desc: "CEO and Founder of Prince Tech LLC, shipping production web applications with real databases, authentication, and live data — plus AI-powered tools built on Claude, OpenAI, and Gemini. Ten years of enterprise discipline behind every build, not weekend-project code.",
 about: [
-"Developer and founder with nine-plus years of enterprise technology behind the code — application support, monitoring, and BI at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital, before building products full time at Prince Tech LLC.",
+"Developer and founder with ten years of enterprise technology behind the code — application support, monitoring, and BI at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital, before building products full time at Prince Tech LLC.",
 "In September 2025, my position at Lumen was eliminated in a company-wide reduction in force. I founded Prince Tech LLC and started shipping: AI automation products, a paid resume optimizer, a gamified learning PWA, and two production apps serving a community of 80+ members.",
-"I build with Next.js, Firebase, Supabase (PostgreSQL), AWS, and Terraform, and work with Claude, OpenAI, and Gemini for AI automation. Nine years in regulated enterprise environments means I document, monitor, and plan for failure — habits that don't come from tutorials."],
+"I build with Next.js, Firebase, Supabase (PostgreSQL), AWS, and Terraform, and work with Claude, OpenAI, and Gemini for AI automation. Ten years in regulated enterprise environments means I document, monitor, and plan for failure — habits that don't come from tutorials."],
 eye: {about:"Builder Profile", skills:"Engineering Capabilities", experience:"Product &amp; Delivery History", tools:"Development Toolkit", ai:"AI Engineering", projects:"Shipped Products"},
 story: {eye:"Building", title:"What I Build", p:[
 "In September 2025 my role at Lumen was eliminated in a company-wide reduction in force. I'd been building on the side for years. That was the moment to stop doing it on the side.",
 "Prince Tech LLC has shipped since then: Operai, an AI automation product deploying agents against repetitive business workflows. Prince IQ, a paid resume optimizer with ATS scoring. French Quest Arena, a gamified learning PWA. Two production apps for an 80+ member community, on Firebase and Supabase.",
-"Nine years of enterprise support is the part that doesn't show in a repository. I document, I monitor, and I plan for failure — because I spent a decade being the person who got paged when someone else didn't."]},
+"Ten years of enterprise support is the part that doesn't show in a repository. I document, I monitor, and I plan for failure — because I spent a decade being the person who got paged when someone else didn't."]},
 cta: "Available for consulting and development work through Prince Tech LLC — and open to the right in-house engineering role.",
 exp: [
+["Contracted through Astreya, which Meta engaged to staff project coordinators for this program. The site is a shared hyperscale data center campus, so every access request crosses two organizations running separate access management systems.",
+ "Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched.",
+ "Coordinate technician site access across both organizations so scheduled infrastructure work starts on time.",
+ "Verify technician and vendor identity details against multiple systems of record before access is approved, reconciling conflicts between the two organizations' records.",
+ "Resolve access discrepancies directly with the record-owning team instead of returning requests to the requester, removing a round trip from every exception.",
+ "Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review, and escalate time-sensitive access failures through a defined path."],
 ["Built and launched Operai — a live AI automation SaaS that deploys AI agents to handle repetitive business workflows (email triage, invoice processing, lead qualification, scheduling).",
- "Built and launched Prince IQ — a paid AI resume optimizer (from $9.99) with ATS scoring, recruiter analysis, strategic rewrite, and cover letter generation, behind an invitation-only access system.",
+ "Built and launched Prince IQ — a paid AI resume optimizer with ATS scoring, recruiter analysis, strategic rewrite, and cover letter generation, with a controlled access model.",
  "Built the AICO Ticket Sales System and AICO Membership Portal — two production apps serving 80+ members, on Firebase and Supabase (PostgreSQL).",
  "Designed and built the full Prince Tech LLC site in Next.js — bilingual EN/FR, SEO-optimized, multiple product pages, consistent design system.",
  "Built French Quest Arena — a gamified French-learning PWA for kids ages 6–14, with soccer and basketball game mechanics, offline support, and a real classroom curriculum.",
@@ -1149,29 +1206,35 @@ exp: [
  "Managed a team of 6 analysts across ticket queue, SLA tracking, escalation routing, and runbook maintenance."],
 ["Used Splunk to monitor ATM network health in real time — writing SPL queries and saved searches to detect devices going offline, flag missing deposit windows, and catch transaction processing gaps.",
  "Validated transaction data daily, catching processing errors and routing exceptions within SLA.",
- "Logged all incidents in ServiceNow, building a knowledge base that reduced average resolution time over 18 months.",
+ "Logged all incidents in ServiceNow and built the knowledge base articles the team used for repeat issues, shortening average resolution time over 18 months.",
  "Handled first-line troubleshooting for application alerts and degraded performance."],
 ["Supported testing and validation of clinical and administrative systems in a HIPAA-regulated environment.",
  "Documented test cases, tracked defects, and worked with analysts to confirm fixes before go-live.",
  "Assisted with system monitoring and helped write process documentation for the internal IT knowledge base."]]
 },
 fr: {
-sub: "Développeur · IA &amp; Automatisation · PDG &amp; Fondateur",
+sub: "PDG et Fondateur, Prince Tech LLC",
 strong: "Next.js · Supabase · Firebase · AWS · Terraform · Automatisation IA",
 desc: "PDG et Fondateur de Prince Tech LLC, je livre des applications web en production avec bases de données réelles, authentification et données en direct — ainsi que des outils IA basés sur Claude, OpenAI et Gemini.",
 about: [
-"Développeur et fondateur avec plus de neuf ans de technologie d'entreprise derrière le code — support applicatif, supervision et BI chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital, avant de construire des produits à plein temps chez Prince Tech LLC.",
+"Développeur et fondateur avec dix ans de technologie d'entreprise derrière le code — support applicatif, supervision et BI chez JPMorgan Chase, Lumen Technologies et Nationwide Children's Hospital, avant de construire des produits à plein temps chez Prince Tech LLC.",
 "En septembre 2025, mon poste chez Lumen a été supprimé lors d'un plan de réduction d'effectifs. J'ai fondé Prince Tech LLC et j'ai commencé à livrer : produits d'automatisation par IA, optimiseur de CV payant, PWA d'apprentissage ludique, et deux applications en production au service d'une communauté de plus de 80 membres.",
-"Je développe avec Next.js, Firebase, Supabase (PostgreSQL), AWS et Terraform, et je travaille avec Claude, OpenAI et Gemini pour l'automatisation par IA. Neuf ans en environnements d'entreprise réglementés signifient documentation, supervision et anticipation des pannes — des réflexes qui ne s'acquièrent pas dans des tutoriels."],
+"Je développe avec Next.js, Firebase, Supabase (PostgreSQL), AWS et Terraform, et je travaille avec Claude, OpenAI et Gemini pour l'automatisation par IA. Dix ans en environnements d'entreprise réglementés signifient documentation, supervision et anticipation des pannes — des réflexes qui ne s'acquièrent pas dans des tutoriels."],
 eye: {about:"Profil Développeur", skills:"Compétences Techniques", experience:"Parcours Produit &amp; Livraison", tools:"Boîte à Outils de Développement", ai:"Ingénierie IA", projects:"Produits Livrés"},
 story: {eye:"Construire", title:"Ce Que Je Construis", p:[
 "En septembre 2025, mon poste chez Lumen a été supprimé lors d'un plan de réduction d'effectifs. Je construisais en parallèle depuis des années. C'était le moment d'arrêter de le faire en parallèle.",
 "Prince Tech LLC a livré depuis : Operai, un produit d'automatisation par IA déployant des agents sur les processus métier répétitifs. Prince IQ, un optimiseur de CV payant avec score ATS. French Quest Arena, une PWA d'apprentissage ludique. Deux applications en production pour une communauté de plus de 80 membres, sur Firebase et Supabase.",
-"Neuf ans de support en entreprise, c'est la partie qui n'apparaît pas dans un dépôt de code. Je documente, je supervise et j'anticipe les pannes — parce que j'ai passé une décennie à être celui qu'on appelait quand quelqu'un d'autre ne l'avait pas fait."]},
+"Dix ans de support en entreprise, c'est la partie qui n'apparaît pas dans un dépôt de code. Je documente, je supervise et j'anticipe les pannes — parce que j'ai passé une décennie à être celui qu'on appelait quand quelqu'un d'autre ne l'avait pas fait."]},
 cta: "Disponible pour des missions de conseil et de développement via Prince Tech LLC — et ouvert au bon poste d’ingénierie en interne.",
 exp: [
+["Mission via Astreya, prestataire retenu par Meta pour fournir les coordinateurs de projet de ce programme. Le site est un campus de centres de données à grande échelle partagé : chaque demande d'accès traverse deux organisations aux systèmes de gestion des accès distincts.",
+ "Identifié les formats de noms incohérents entre les deux systèmes comme cause principale d'échecs de vérification, et proposé un contrôle en amont avant l'envoi des techniciens.",
+ "Coordonner les accès des techniciens entre les deux organisations afin que les interventions planifiées démarrent à l'heure.",
+ "Vérifier l'identité des techniciens et des prestataires dans plusieurs systèmes de référence avant l'octroi des accès, en réconciliant les conflits entre les enregistrements des deux organisations.",
+ "Résoudre les écarts d'accès directement avec l'équipe propriétaire de l'enregistrement plutôt qu'en renvoyant la demande au demandeur, supprimant un aller-retour sur chaque exception.",
+ "Consigner incidents, résolutions, risques et blocages dans un suivi quotidien partagé entre les sites, et escalader les échecs d'accès urgents selon un circuit défini."],
 ["Conçu et lancé Operai — un SaaS d'automatisation par IA qui déploie des agents pour traiter les processus métier répétitifs (tri des e-mails, traitement des factures, qualification des prospects, planification).",
- "Conçu et lancé Prince IQ — un optimiseur de CV par IA payant (à partir de 9,99 $) avec score ATS, analyse recruteur, réécriture stratégique et génération de lettres de motivation, derrière un système d'accès sur invitation.",
+ "Conçu et lancé Prince IQ — un optimiseur de CV par IA payant avec score ATS, analyse recruteur, réécriture stratégique et génération de lettres de motivation, avec un accès contrôlé.",
  "Développé AICO Ticket Sales System et AICO Membership Portal — deux applications en production au service de plus de 80 membres, sur Firebase et Supabase (PostgreSQL).",
  "Conçu et développé l'intégralité du site Prince Tech LLC en Next.js — bilingue FR/EN, optimisé SEO, plusieurs pages produits, système de design cohérent.",
  "Développé French Quest Arena — une PWA ludique d'apprentissage du français pour les 6–14 ans, avec mécaniques football et basketball, mode hors ligne et un véritable programme scolaire.",
@@ -1204,10 +1267,10 @@ exp: [
    ai1/ai2: bullets in the two AI cards
    ─────────────────────────────────────────────────────────────── */
 var LENS_ORDER = {
-  all:     {skills:[0,1,2,3,4,5], tools:[0,1,2,3], ai1:[0,1,2,3,4], ai2:[0,1,2,3]},
-  data:    {skills:[3,0,1,2,5,4], tools:[0,3,2,1], ai1:[0,4,2,1,3], ai2:[3,1,0,2]},
-  systems: {skills:[0,2,1,3,5,4], tools:[3,0,2,1], ai1:[1,2,4,0,3], ai2:[0,1,2,3]},
-  builder: {skills:[4,5,3,1,0,2], tools:[1,2,3,0], ai1:[4,3,0,2,1], ai2:[3,2,1,0]}
+  all:     {skills:[0,1,2,3,4,5], tools:[0,1,2,3], ai1:[0,1,2,3,4]},
+  data:    {skills:[3,0,1,2,5,4], tools:[0,3,2,1], ai1:[0,4,2,1,3]},
+  systems: {skills:[0,2,1,3,5,4], tools:[3,0,2,1], ai1:[1,2,4,0,3]},
+  builder: {skills:[4,5,3,1,0,2], tools:[1,2,3,0], ai1:[4,3,0,2,1]}
 };
 
 
@@ -1254,6 +1317,37 @@ function lensReorder(id, idx){
   }
 }
 
+
+/* Accessible names, page title and the document language follow the
+   language toggle. Leaving these in English made the French view only
+   half translated for screen readers and search engines. */
+var A11Y = {
+  en: {bar:"Choose profile focus", fab:"Open assistant", panel:"Resume assistant",
+       close:"Close", send:"Send", langbtn:"Switch to French", share:"Copy a link to this view",
+       expand:"Expand or collapse all roles", copy:"Copy to clipboard",
+       title:"Franck Yeboue \u00b7 Business Systems Analyst & BI Developer",
+       meta:"Franck Yeboue, business systems analyst and BI developer in Columbus, Ohio. Ten years across banking, telecom and healthcare."},
+  fr: {bar:"Choisir le profil \u00e0 afficher", fab:"Ouvrir l'assistant", panel:"Assistant CV",
+       close:"Fermer", send:"Envoyer", langbtn:"Passer \u00e0 l'anglais", share:"Copier un lien vers cette vue",
+       expand:"D\u00e9plier ou replier tous les postes", copy:"Copier dans le presse-papiers",
+       title:"Franck Yeboue \u00b7 Analyste de Syst\u00e8mes M\u00e9tier & D\u00e9veloppeur BI",
+       meta:"Franck Yeboue, analyste de syst\u00e8mes m\u00e9tier et d\u00e9veloppeur BI \u00e0 Columbus, Ohio. Dix ans dans la banque, les t\u00e9l\u00e9coms et la sant\u00e9."}
+};
+function applyA11y(){
+  var t = A11Y[lang] || A11Y.en;
+  var set = function(sel, val){ var el = document.querySelector(sel); if(el) el.setAttribute('aria-label', val); };
+  set('.lens-bar', t.bar); set('#cbFab', t.fab); set('#cbPanel', t.panel);
+  set('.cb-x', t.close); set('.cb-send', t.send); set('#langBtn', t.langbtn);
+  set('#lensShare', t.share); set('#expAll', t.expand);
+  document.querySelectorAll('.cpb, .pj-copy').forEach(function(b){ b.setAttribute('aria-label', t.copy); });
+  try{
+    document.title = t.title;
+    document.documentElement.setAttribute('lang', lang);
+    var md = document.querySelector('meta[name="description"]');
+    if(md) md.setAttribute('content', t.meta);
+  }catch(e){}
+}
+
 function applyLens(){
   var D = (LENS_DATA[curLens] && LENS_DATA[curLens][lang]) || LENS_DATA[curLens].en || LENS_DATA.all.en;
   var O = LENS_ORDER[curLens] || LENS_ORDER.all;
@@ -1285,7 +1379,8 @@ function applyLens(){
   lensReorder('skillGrid', O.skills);
   lensReorder('toolGrid',  O.tools);
   lensReorder('ail-1',     O.ai1);
-  lensReorder('ail-2',     O.ai2);
+
+  applyA11y();
 
   var lb = LENS_LABELS[lang] || LENS_LABELS.en;
   var ll = document.getElementById('lensLab');   if(ll) ll.innerHTML = lb.lab;
@@ -1378,13 +1473,13 @@ var CB_KB = [
 
 {tags:['who is','tell me about him','tell me about franck','about franck','summary','overview','profile','qui est'],
  strong:['bio'],
- en:'<strong>Franck Yeboue</strong> is a Columbus, Ohio–based analyst and developer with 9+ years of enterprise technology experience. He has worked across banking (JPMorgan Chase), telecom (Lumen Technologies), and healthcare (Nationwide Children\'s Hospital), covering business analysis, BI and reporting, and application support. In 2025 he founded <strong>Prince Tech LLC</strong>, a technology consulting firm building web applications and AI workflow automation.',
- fr:'<strong>Franck Yeboue</strong> est analyste et développeur basé à Columbus, Ohio, avec plus de 9 ans d\'expérience en technologie d\'entreprise — chez JPMorgan Chase, Lumen Technologies et Nationwide Children\'s Hospital. En 2025, il a fondé <strong>Prince Tech LLC</strong>, société de conseil technologique spécialisée en applications web et automatisation IA.'},
+ en:'<strong>Franck Yeboue</strong> is a Columbus, Ohio–based analyst and developer with ten years of enterprise technology experience. He has worked across banking (JPMorgan Chase), telecom (Lumen Technologies), and healthcare (Nationwide Children\'s Hospital), covering business analysis, BI and reporting, and application support. In 2025 he founded <strong>Prince Tech LLC</strong>, a technology consulting firm building web applications and AI workflow automation.',
+ fr:'<strong>Franck Yeboue</strong> est analyste et développeur basé à Columbus, Ohio, avec dix ans d\'expérience en technologie d\'entreprise — chez JPMorgan Chase, Lumen Technologies et Nationwide Children\'s Hospital. En 2025, il a fondé <strong>Prince Tech LLC</strong>, société de conseil technologique spécialisée en applications web et automatisation IA.'},
 
 {tags:['how many years','years of experience','experience level','how long','senior','combien annees','experience'],
  strong:['tenure'],
-  en:'Nine-plus years in enterprise technology. That spans three large, regulated environments — a global bank, a national telecom carrier, and a pediatric hospital system — plus two years running his own consulting firm. The through-line is the same in all of them: understand the business need, get to the right data, and make the system do what it should.',
- fr:'Plus de neuf ans en technologie d\'entreprise, répartis sur trois environnements réglementés — une banque mondiale, un opérateur télécom national et un système hospitalier pédiatrique — en plus de sa propre société de conseil.'},
+  en:'Ten years in enterprise technology. That spans three large, regulated environments — a global bank, a national telecom carrier, and a pediatric hospital system — plus two years running his own consulting firm. The through-line is the same in all of them: understand the business need, get to the right data, and make the system do what it should.',
+ fr:'Dix ans en technologie d\'entreprise, répartis sur trois environnements réglementés — une banque mondiale, un opérateur télécom national et un système hospitalier pédiatrique — en plus de sa propre société de conseil.'},
 
 {tags:['jpmorgan','jp morgan','chase','bank','banking','banque'],
  strong:['jpmorgan','chase'],
@@ -1403,8 +1498,8 @@ var CB_KB = [
 
 {tags:['power bi','powerbi','dashboard','dashboards','reporting','reports','tableau de bord','bi','visualization'],
  strong:['powerbi','dashboard','dashboards'],
-  en:'Power BI is one of Franck\'s core tools — roughly nine years of building dashboards and reporting. His work at Lumen involved enterprise reporting used daily by finance and operations, plus the SQL pipelines feeding it. He focuses less on making charts look good and more on making sure the numbers are trustworthy and the report answers the question someone actually asked.',
- fr:'Power BI est l\'un des outils principaux de Franck — environ neuf ans de création de tableaux de bord et de reporting, notamment chez Lumen pour les équipes finance et opérations, avec les pipelines SQL associés.'},
+  en:'Power BI is one of Franck\'s core tools — roughly ten years of building dashboards and reporting. His work at Lumen involved enterprise reporting used daily by finance and operations, plus the SQL pipelines feeding it. He focuses less on making charts look good and more on making sure the numbers are trustworthy and the report answers the question someone actually asked.',
+ fr:'Power BI est l\'un des outils principaux de Franck — environ dix ans de création de tableaux de bord et de reporting, notamment chez Lumen pour les équipes finance et opérations, avec les pipelines SQL associés.'},
 
 {tags:['sql','database','databases','queries','query','postgres','oracle','base de donnees'],
  strong:['sql','postgres','oracle'],
@@ -1413,8 +1508,8 @@ var CB_KB = [
 
 {tags:['hr analytics','hris','human resources','ukg','workday','people analytics','hr','payroll','rh'],
  strong:['ukg','hris','workday','payroll'],
-  en:'Franck is actively targeting HR analytics and HRIS analyst roles, and here\'s the honest picture: he brings 9+ years of business analysis, Power BI reporting, SQL, and enterprise application support — the analytical core of an HRIS role — plus experience producing leadership-ready workforce reporting such as absence-impact analysis. What he has <em>not</em> done is direct administration of UKG as a system owner. He learns platforms quickly and would rather tell you that up front than discover it in week two.',
- fr:'Franck vise activement des postes en analytique RH et HRIS. Honnêtement : il apporte plus de 9 ans d\'analyse métier, de reporting Power BI, de SQL et de support applicatif — le cœur analytique d\'un poste HRIS — mais il n\'a pas administré UKG directement en tant que propriétaire système. Il préfère le dire clairement dès le départ.'},
+  en:'Franck is actively targeting HR analytics and HRIS analyst roles, and here\'s the honest picture: he brings ten years of business analysis, Power BI reporting, SQL, and enterprise application support — the analytical core of an HRIS role — plus experience producing leadership-ready workforce reporting such as absence-impact analysis. What he has <em>not</em> done is direct administration of UKG as a system owner. He learns platforms quickly and would rather tell you that up front than discover it in week two.',
+ fr:'Franck vise activement des postes en analytique RH et HRIS. Honnêtement : il apporte dix ans d\'analyse métier, de reporting Power BI, de SQL et de support applicatif — le cœur analytique d\'un poste HRIS — mais il n\'a pas administré UKG directement en tant que propriétaire système. Il préfère le dire clairement dès le départ.'},
 
 {tags:['certification','certifications','certified','aws','terraform','cloud','hashicorp','certifie'],
  strong:['aws','terraform','hashicorp'],
@@ -1480,8 +1575,8 @@ var CB_KB = [
  fr:'En septembre 2025, Lumen Technologies a annoncé un plan de réduction d\'effectifs et le poste de Franck a été supprimé parmi des centaines d\'autres — une décision d\'entreprise, non liée à la performance. Il en a fait un point de départ en fondant Prince Tech LLC. Voir la section « Mon Parcours ».'},
 
 {tags:['strength','strengths','why hire','what makes him','different','stand out','best at','good at','atout','forces'],
- en:'The useful thing about Franck is range with depth. Most analysts can gather requirements or build a dashboard; most developers can ship an app. He does both — which means he can sit with a business team, understand what they actually need, and then go build it without a translation layer in between. Nine years in regulated industries also means he documents his work and thinks about what happens when things break.',
- fr:'La force de Franck est l\'étendue combinée à la profondeur : il recueille les besoins, construit le reporting et développe l\'application — sans couche de traduction intermédiaire. Neuf ans en industries réglementées signifient aussi documentation rigoureuse et anticipation des pannes.'},
+ en:'The useful thing about Franck is range with depth. Most analysts can gather requirements or build a dashboard; most developers can ship an app. He does both — which means he can sit with a business team, understand what they actually need, and then go build it without a translation layer in between. Ten years in regulated industries also means he documents his work and thinks about what happens when things break.',
+ fr:'La force de Franck est l\'étendue combinée à la profondeur : il recueille les besoins, construit le reporting et développe l\'application — sans couche de traduction intermédiaire. Dix ans en industries réglementées signifient aussi documentation rigoureuse et anticipation des pannes.'},
 
 {tags:['this site','this website','this page','how was this built','built this','chatbot','how does this work','ce site'],
  en:'Franck built this page himself — hand-written HTML, CSS, and JavaScript, no framework. That includes the EN/FR toggle, the expandable experience cards, the lens switcher at the top, and this assistant. The assistant runs entirely in your browser from an answer bank he wrote, which is why it responds instantly and can\'t invent facts about him.',
@@ -1512,8 +1607,8 @@ var CB_KB = [
  fr:"Python ne fait pas partie des points forts documentés de Franck — il préfère le dire plutôt que de le surestimer. Ses langages de travail sont <strong>SQL</strong> (dont Oracle SQL), <strong>JavaScript</strong> sur ses applications en production, <strong>HCL</strong> pour Terraform, et des bases de <strong>Java</strong> pour lire les journaux d'erreurs."},
 
 {tags:["tableau", "qlik", "looker", "bi tool", "visualization tool"], strong:["tableau", "qlik", "looker"],
- en:"Franck's BI platform is <strong>Power BI</strong>, with roughly nine years of building dashboards and reporting on it, plus <strong>Microsoft Fabric</strong> at Lumen. Tableau isn't on his resume. The underlying skills — data modelling, defining measures, and building reports people actually trust — carry across tools, but he won't claim Tableau experience he doesn't have.",
- fr:"La plateforme BI de Franck est <strong>Power BI</strong>, avec environ neuf ans de tableaux de bord et de reporting, ainsi que <strong>Microsoft Fabric</strong> chez Lumen. Tableau ne figure pas sur son CV. Les compétences de fond se transposent, mais il ne revendiquera pas une expérience qu'il n'a pas."},
+ en:"Franck's BI platform is <strong>Power BI</strong>, with roughly ten years of building dashboards and reporting on it, plus <strong>Microsoft Fabric</strong> at Lumen. Tableau isn't on his resume. The underlying skills — data modelling, defining measures, and building reports people actually trust — carry across tools, but he won't claim Tableau experience he doesn't have.",
+ fr:"La plateforme BI de Franck est <strong>Power BI</strong>, avec environ dix ans de tableaux de bord et de reporting, ainsi que <strong>Microsoft Fabric</strong> chez Lumen. Tableau ne figure pas sur son CV. Les compétences de fond se transposent, mais il ne revendiquera pas une expérience qu'il n'a pas."},
 
 {tags:["excel", "spreadsheet", "pivot", "vlookup", "xlsx"], strong:["excel", "spreadsheet", "pivot"],
  en:"Advanced Excel is a core tool. At Lumen he automated recurring Excel and SQL reports, removing <strong>6+ hours per week</strong> of manual analyst work. His Coffee Sales Dashboard is an interactive Excel model with slicers and auto-refresh, letting category managers slice KPIs by product, region, and channel on demand.",
@@ -1548,7 +1643,7 @@ var CB_KB = [
  fr:"Le recueil des besoins traverse les postes d'analyste de Franck et son activité de conseil. Chez Lumen, il recueillait les besoins des équipes opérations et finance. Chez Prince Tech LLC, il cadre les besoins clients, définit les phases, développe, puis assure le support de ce qu'il a livré."},
 
 {tags:["documentation", "document", "runbook", "runbooks", "sop", "process documentation", "knowledge base", "write ups"], strong:["documentation", "runbook", "runbooks", "sop"],
- en:"Documentation is a habit from nine years in regulated environments. Franck built a ServiceNow knowledge base at JPMorgan that reduced average resolution time over 18 months, maintained runbooks for a team of 6, wrote process documentation and test cases at Nationwide Children's Hospital, and produces root cause analysis reports for senior management. He also uses AI to speed up documentation cycles without losing consistency.",
+ en:"Documentation is a habit from ten years in regulated environments. Franck built a ServiceNow knowledge base at JPMorgan that reduced average resolution time over 18 months, maintained runbooks for a team of 6, wrote process documentation and test cases at Nationwide Children's Hospital, and produces root cause analysis reports for senior management. He also uses AI to speed up documentation cycles without losing consistency.",
  fr:"La documentation est une habitude prise en environnements réglementés. Franck a constitué une base de connaissances ServiceNow chez JPMorgan, maintenu les runbooks d'une équipe de 6, rédigé documentation de processus et cas de test chez Nationwide Children's Hospital."},
 
 {tags:["testing", "qa", "quality assurance", "test cases", "uat", "defects", "validation before release", "go live"], strong:["qa", "uat", "defects"],
@@ -1568,12 +1663,12 @@ var CB_KB = [
  fr:"Cela dépend du poste, et cette question mérite d'être posée directement à Franck. En résumé : il souhaite revenir en environnement d'entreprise où l'analyse opère à grande échelle, en rapportant ce qu'il a appris en construisant des systèmes de bout en bout."},
 
 {tags:["agile", "scrum", "kanban", "sprint", "waterfall", "methodology", "sdlc", "ceremonies"], strong:["agile", "scrum", "kanban", "sprint", "sdlc"],
- en:"Franck's resume doesn't claim a specific methodology certification, and he won't overstate one. What he has done is work inside enterprise delivery and change processes for nine years — structured incident and problem management, coordinated releases, and phased delivery with his own consulting clients. For specifics on how a particular team works, ask him directly.",
- fr:"Le CV de Franck ne revendique pas de certification méthodologique spécifique, et il ne le surévaluera pas. Ce qu'il a fait : neuf ans au sein de processus de livraison et de gestion du changement en entreprise, avec une livraison par phases chez ses clients."},
+ en:"Franck's resume doesn't claim a specific methodology certification, and he won't overstate one. What he has done is work inside enterprise delivery and change processes for ten years — structured incident and problem management, coordinated releases, and phased delivery with his own consulting clients. For specifics on how a particular team works, ask him directly.",
+ fr:"Le CV de Franck ne revendique pas de certification méthodologique spécifique, et il ne le surévaluera pas. Ce qu'il a fait : dix ans au sein de processus de livraison et de gestion du changement en entreprise, avec une livraison par phases chez ses clients."},
 
 {tags:["prince iq", "resume optimizer", "ats scoring", "cv tool"], strong:["princeiq"],
- en:"<strong>Prince IQ</strong> is a paid AI resume optimizer Franck built and launched under Prince Tech LLC, starting at $9.99. It provides ATS scoring, recruiter-style analysis, strategic rewriting, and cover letter generation, behind an invitation-only access system — turning unstructured resume text into scored, comparable output.",
- fr:"<strong>Prince IQ</strong> est un optimiseur de CV par IA payant lancé par Franck chez Prince Tech LLC, à partir de 9,99 $ : score ATS, analyse de type recruteur, réécriture stratégique et génération de lettres de motivation, avec accès sur invitation."},
+ en:"<strong>Prince IQ</strong> is a paid AI resume optimizer Franck built and launched under Prince Tech LLC. It provides ATS scoring, recruiter-style analysis, strategic rewriting, and cover letter generation, with a controlled access model — turning unstructured resume text into scored, comparable output.",
+ fr:"<strong>Prince IQ</strong> est un optimiseur de CV par IA payant lancé par Franck chez Prince Tech LLC : score ATS, analyse de type recruteur, réécriture stratégique et génération de lettres de motivation, avec accès sur invitation."},
 
 {tags:["operai", "automation product", "ai agents", "workflow automation product"], strong:["operai"],
  en:"<strong>Operai</strong> is a live AI automation SaaS product Franck built under Prince Tech LLC. It deploys AI agents to handle repetitive business workflows — email triage, invoice processing, lead qualification, and scheduling — aimed at small businesses that can't justify a dedicated operations hire.",
@@ -1613,7 +1708,11 @@ var CB_KB = [
 
 {tags:["skydiving", "skydive", "parachute", "fun fact", "adventurous", "surprising", "bucket list", "risk taker"], strong:["skydiving", "skydive", "parachute", "adventurous"],
  en:"He has been <strong>skydiving twice</strong>. He also flies drones, shoots photography, and has travelled to 15 countries across 3 continents — and in 2025 he responded to a layoff by founding a company and shipping six products, which tells you something about the same instinct in a professional setting.",
- fr:"Il a fait du <strong>parachutisme à deux reprises</strong>. Il pilote aussi des drones, pratique la photographie et a visité 15 pays sur 3 continents — et en 2025, il a répondu à un licenciement en fondant une entreprise et en livrant six produits, ce qui traduit le même état d'esprit sur le plan professionnel."}
+ fr:"Il a fait du <strong>parachutisme à deux reprises</strong>. Il pilote aussi des drones, pratique la photographie et a visité 15 pays sur 3 continents — et en 2025, il a répondu à un licenciement en fondant une entreprise et en livrant six produits, ce qui traduit le même état d'esprit sur le plan professionnel."},
+
+{tags:["current role", "currently", "right now", "what is he doing now", "astreya", "data center", "project coordinator", "current job", "present role", "today"], strong:["astreya", "coordinator", "datacenter"],
+ en:"Since September 2026 Franck has been a <strong>Project Coordinator 2</strong> on a short-term contract through Astreya, supporting a Meta infrastructure program near Columbus. Two organizations share the campus and each runs its own access management system, so his job is the reconciliation point between them: verifying technician and vendor identity against multiple systems of record, resolving conflicts with the record-owning team, and keeping scheduled infrastructure work on schedule. He also identified inconsistent name formatting between the two systems as a leading cause of failed verifications and proposed a pre-screening check. He continues to run Prince Tech LLC alongside it.",
+ fr:"Depuis septembre 2026, Franck est <strong>Project Coordinator 2</strong> en mission courte via Astreya, en appui d'un programme d'infrastructure Meta près de Columbus. Deux organisations partagent le campus, chacune avec son propre système de gestion des accès : son rôle est le point de réconciliation entre les deux — vérification de l'identité des techniciens dans plusieurs systèmes de référence, résolution des conflits avec l'équipe propriétaire, et respect du calendrier des interventions. Il a aussi identifié les formats de noms incohérents comme cause principale d'échecs de vérification et proposé un contrôle en amont. Il poursuit Prince Tech LLC en parallèle."}
 ];
 
 var CB_FALLBACK = {
@@ -1805,7 +1904,7 @@ function fyBoot(){
   var saved = null;
   try{ saved = localStorage.getItem('fy_lens'); }catch(e){}
   curLens = LENS_DATA[fromUrl] ? fromUrl : (LENS_DATA[saved] ? saved : 'all');
-  ['skillGrid','toolGrid','ail-1','ail-2','pjGrid'].forEach(lensSnapshot);
+  ['skillGrid','toolGrid','ail-1','pjGrid'].forEach(lensSnapshot);
   applyLens();
   cbApplyLang();
 
