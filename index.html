@@ -152,6 +152,24 @@ hr.div{border:none;border-top:1px solid var(--bd);max-width:960px;margin:0 auto}
 .pj-desc{font-size:13.5px;color:var(--ts);line-height:1.7;flex:1}
 .pj-tags{display:flex;flex-wrap:wrap;gap:5px}
 .pj-tag{font-size:11px;padding:3px 9px;border-radius:20px;background:#fff;border:1px solid var(--bd);color:var(--ts);font-weight:500}
+/* PROJECT SCREENSHOTS — built by buildShots() from the PJ_SHOTS list in
+   the script block. A slot with no file on disk is removed, so a card
+   without a screenshot looks exactly as it did before. */
+.pj-shots{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 0}
+.pj-shot{margin:0;flex:1 1 150px;min-width:140px}
+.pj-shot button{display:block;width:100%;padding:0;border:1px solid var(--bd);background:#fff;border-radius:7px;overflow:hidden;cursor:zoom-in;font-family:inherit;transition:border-color .2s,box-shadow .2s}
+.pj-shot button:hover,.pj-shot button:focus-visible{border-color:var(--ac);box-shadow:0 3px 10px rgba(122,62,82,.12)}
+.pj-shot button:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.pj-shot img{display:block;width:100%;height:112px;object-fit:cover;object-position:top left;background:var(--tn)}
+.pj-cap{font-size:11.5px;line-height:1.45;color:var(--mu);margin-top:5px}
+.lb{position:fixed;inset:0;z-index:9000;background:rgba(31,26,23,.88);display:none;align-items:center;justify-content:center;padding:28px}
+.lb.open{display:flex}
+.lb-inner{max-width:1200px;max-height:100%;display:flex;flex-direction:column;gap:12px}
+.lb img{max-width:100%;max-height:78vh;object-fit:contain;border-radius:8px;background:#fff;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.lb-cap{color:#F8F5F1;font-size:13.5px;line-height:1.6;text-align:center;max-width:760px;margin:0 auto}
+.lb-x{position:absolute;top:18px;right:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer}
+.lb-x:hover{background:rgba(255,255,255,.22)}
+.lb-x:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .pj-link-row{display:flex;align-items:center;gap:10px;padding-top:10px;border-top:1px solid var(--bd);margin-top:auto}
 .pj-url{font-size:12px;color:var(--ac);font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pj-copy{background:none;border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--mu);cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap}
@@ -323,8 +341,12 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
 
 @media print{
-  nav,.lens-bar,.cb-fab,.cb-panel,.btr-wrap,.exp-tools,.hcta,#ctrig{display:none!important}
+  nav,.lens-bar,.cb-fab,.cb-panel,.btr-wrap,.exp-tools,.hcta,#ctrig,.lb{display:none!important}
   .eb{display:block!important}
+  .pj-shot{break-inside:avoid;page-break-inside:avoid}
+  .pj-shot button{border:1px solid #999!important;box-shadow:none!important}
+  .pj-shot img{height:auto!important;max-height:60mm;object-fit:contain!important}
+  .pj-cap{color:#000!important;font-size:9pt}
   .ec{break-inside:avoid;border:1px solid #ccc;page-break-inside:avoid}
   #hero{background:#fff!important;color:#000!important;padding:24px 0!important}
   #hero .hn,#hero .hsub,#hero .hd,#hero .hl{color:#000!important}
@@ -720,15 +742,15 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
     <h2 class="st" data-en="Projects &amp; Portfolio" data-fr="Projets &amp; Portfolio">Projects &amp; Portfolio</h2>
     <div class="pj-grid" id="pjGrid">
 
-      <div class="pj-card" data-lens="systems,builder,data">
-        <div class="pj-top"><div class="pj-icon">▦</div><div class="pj-meta"><div class="pj-tool">Next.js · Supabase · PostgreSQL</div><div class="pj-type" data-en="Regulated Client Platform" data-fr="Plateforme Client Réglementée">Regulated Client Platform</div></div></div>
+      <div class="pj-card" data-lens="systems,builder,data" data-pj="field-trial">
+        <div class="pj-top"><div class="pj-icon">▦</div><div class="pj-meta"><div class="pj-tool">Next.js · Supabase · PostgreSQL</div><div class="pj-type" data-en="Client Platform · In Development" data-fr="Plateforme Client · En Développement">Client Platform · In Development</div></div></div>
         <div class="pj-title" data-en="Agricultural Field-Trial Platform" data-fr="Plateforme d'Essais Agronomiques">Agricultural Field-Trial Platform</div>
-        <div class="pj-desc" data-en="A Prince Tech LLC client build for I.A.S.CO International, an agrochemical consultancy running pesticide efficacy trials for government homologation in Côte d'Ivoire. I gathered requirements directly from the trial scientist, which changed the design more than once: the statistical test turned out to vary by analysis rather than being fixed, so tests and significance thresholds became selectable per run. The app computes ANOVA on randomized blocks, Abbott efficacy, and four mean-comparison tests, validated against the figures in a real 2015 trial report. It generates the Ministry-imposed Feuillet C form and the pre-trial protocol as Word documents, versioned and downloadable. Technicians enter readings offline on plantations with no signal and the data syncs when a connection returns. Role-based access separates the scientist, field technicians, and the clients and Ministry staff who follow the trials. Bilingual EN/FR, 274 tests." data-fr="Un projet client de Prince Tech LLC pour I.A.S.CO International, cabinet agrochimique réalisant des essais d'efficacité de pesticides en vue de l'homologation en Côte d'Ivoire. J'ai recueilli les besoins directement auprès du responsable d'essais, ce qui a modifié la conception à plusieurs reprises : le test statistique varie selon l'analyse plutôt que d'être fixe, les tests et seuils de signification sont donc sélectionnables à chaque exécution. L'application calcule l'ANOVA en blocs randomisés, l'efficacité d'Abbott et quatre tests de comparaison de moyennes, validés sur les chiffres d'un rapport d'essai réel de 2015. Elle génère le formulaire Feuillet C imposé par le Ministère et le protocole pré-essai au format Word, versionnés et téléchargeables. Les techniciens saisissent leurs relevés hors ligne sur des plantations sans réseau, avec synchronisation au retour de la connexion. Accès par rôle distinguant le scientifique, les techniciens de terrain, et les clients et agents du Ministère qui suivent les essais. Bilingue FR/EN, 274 tests.">A Prince Tech LLC client build for I.A.S.CO International, an agrochemical consultancy running pesticide efficacy trials for government homologation in Côte d'Ivoire. I gathered requirements directly from the trial scientist, which changed the design more than once: the statistical test turned out to vary by analysis rather than being fixed, so tests and significance thresholds became selectable per run. The app computes ANOVA on randomized blocks, Abbott efficacy, and four mean-comparison tests, validated against the figures in a real 2015 trial report. It generates the Ministry-imposed Feuillet C form and the pre-trial protocol as Word documents, versioned and downloadable. Technicians enter readings offline on plantations with no signal and the data syncs when a connection returns. Role-based access separates the scientist, field technicians, and the clients and Ministry staff who follow the trials. Bilingual EN/FR, 274 tests.</div>
-        <div class="pj-tags"><span class="pj-tag" data-en="Requirements Elicitation" data-fr="Recueil des Besoins">Requirements Elicitation</span><span class="pj-tag">PostgreSQL</span><span class="pj-tag">Row-Level Security</span><span class="pj-tag" data-en="Offline-First" data-fr="Hors Ligne d'Abord">Offline-First</span><span class="pj-tag" data-en="Statistical Analysis" data-fr="Analyse Statistique">Statistical Analysis</span><span class="pj-tag" data-en="Document Generation" data-fr="Génération de Documents">Document Generation</span></div>
+        <div class="pj-desc" data-en="A Prince Tech LLC build for I.A.S.CO International, an agrochemical consultancy whose pesticide trials need Ivorian government approval. I elicited requirements from the trial scientist, and one answer changed the design: the statistical test varies by analysis rather than being fixed, so tests and thresholds became selectable per run. It computes ANOVA on randomized blocks, Abbott efficacy, and four mean-comparison tests, reproducing the figures in a real 2015 trial report, and fills the committee's exact Feuillet C template as a versioned Word document. Readings entered offline sync on reconnect. Bilingual EN/FR, over 250 automated tests." data-fr="Un projet Prince Tech LLC pour I.A.S.CO International, cabinet agrochimique dont les essais de pesticides doivent obtenir l'agrément du gouvernement ivoirien. J'ai recueilli les besoins auprès du responsable d'essais, et une réponse a changé la conception : le test statistique varie selon l'analyse plutôt que d'être fixe, les tests et les seuils sont donc sélectionnables à chaque exécution. L'application calcule l'ANOVA en blocs randomisés, l'efficacité d'Abbott et quatre tests de comparaison de moyennes, en reproduisant les chiffres d'un rapport d'essai réel de 2015, et remplit le modèle exact du Feuillet C imposé par le comité sous forme de document Word versionné. Les relevés saisis hors ligne se synchronisent au retour de la connexion. Bilingue FR/EN, plus de 250 tests automatisés.">A Prince Tech LLC build for I.A.S.CO International, an agrochemical consultancy whose pesticide trials need Ivorian government approval. I elicited requirements from the trial scientist, and one answer changed the design: the statistical test varies by analysis rather than being fixed, so tests and thresholds became selectable per run. It computes ANOVA on randomized blocks, Abbott efficacy, and four mean-comparison tests, reproducing the figures in a real 2015 trial report, and fills the committee's exact Feuillet C template as a versioned Word document. Readings entered offline sync on reconnect. Bilingual EN/FR, over 250 automated tests.</div>
+        <div class="pj-tags"><span class="pj-tag" data-en="Requirements Elicitation" data-fr="Recueil des Besoins">Requirements Elicitation</span><span class="pj-tag">Row-Level Security</span><span class="pj-tag" data-en="Offline-First" data-fr="Hors Ligne d'Abord">Offline-First</span><span class="pj-tag" data-en="Statistical Analysis" data-fr="Analyse Statistique">Statistical Analysis</span><span class="pj-tag" data-en="Document Generation" data-fr="Génération de Documents">Document Generation</span></div>
         
       </div>
 
-      <div class="pj-card" data-lens="systems,data">
+      <div class="pj-card" data-lens="systems,data" data-pj="servicenow">
         <div class="pj-top"><div class="pj-icon">▦</div><div class="pj-meta"><div class="pj-tool">ServiceNow · ITSM</div><div class="pj-type" data-en="Platform Configuration" data-fr="Configuration de Plateforme">Platform Configuration</div></div></div>
         <div class="pj-title" data-en="ServiceNow Service Desk Build" data-fr="Service Desk ServiceNow">ServiceNow Service Desk Build</div>
         <div class="pj-desc" data-en="Configured a ServiceNow instance end to end to model the ATM and application support desk I led at JPMorgan Chase: incident tables, priority and category schemes, assignment groups, SLA definitions, and a reporting dashboard covering SLA compliance, MTTR trend, incident volume by category, and volume by resolver group. Built to turn platform knowledge I had used as an end user into configuration I could demonstrate, after a recruiter flagged the gap. The dashboard is an interactive front end over the configured structure, with representative rather than production data." data-fr="Configuration complète d'une instance ServiceNow reproduisant le service desk GAB et applicatif que j'encadrais chez JPMorgan Chase : tables d'incidents, schémas de priorité et de catégorie, groupes d'affectation, définitions de SLA et tableau de bord couvrant le respect des SLA, l'évolution du MTTR, le volume d'incidents par catégorie et par groupe de résolution. Construit pour transformer une connaissance de la plateforme acquise en tant qu'utilisateur en configuration démontrable, après qu'un recruteur a relevé cet écart. Le tableau de bord est une interface interactive sur la structure configurée, avec des données représentatives et non de production.">Configured a ServiceNow instance end to end to model the ATM and application support desk I led at JPMorgan Chase: incident tables, priority and category schemes, assignment groups, SLA definitions, and a reporting dashboard covering SLA compliance, MTTR trend, incident volume by category, and volume by resolver group. Built to turn platform knowledge I had used as an end user into configuration I could demonstrate, after a recruiter flagged the gap. The dashboard is an interactive front end over the configured structure, with representative rather than production data.</div>
@@ -736,7 +758,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
         <div class="pj-link-row"><span class="pj-url">yebouef.github.io/atm-dashboard</span><button class="pj-copy" onclick="cpText('https://yebouef.github.io/atm-dashboard/',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card" data-lens="systems,builder">
+      <div class="pj-card" data-lens="systems,builder" data-pj="storyforge">
         <div class="pj-top"><div class="pj-icon">▦</div><div class="pj-meta"><div class="pj-tool">JavaScript · AI</div><div class="pj-type" data-en="Business Analysis Tool" data-fr="Outil d'Analyse Métier">Business Analysis Tool</div></div></div>
         <div class="pj-title" data-en="StoryForge — User Story Generator" data-fr="StoryForge — Générateur de User Stories">StoryForge — User Story Generator</div>
         <div class="pj-desc" data-en="Takes a feature description, a persona, and a product area, and returns development-ready user stories with acceptance criteria written against INVEST criteria. Built for branch banking product work, with personas from branch employee through regional director and product areas from teller operations to digital banking. The point is the rules it encodes: what separates a story that a team can estimate and test from one that stalls in refinement." data-fr="À partir d'une description de fonctionnalité, d'un persona et d'un domaine produit, génère des user stories prêtes au développement avec critères d'acceptation, rédigées selon les critères INVEST. Conçu pour le produit bancaire en agence, avec des personas allant de l'employé d'agence au directeur régional. L'essentiel tient aux règles encodées : ce qui distingue une story estimable et testable d'une story qui s'enlise en affinage.">Takes a feature description, a persona, and a product area, and returns development-ready user stories with acceptance criteria written against INVEST criteria. Built for branch banking product work, with personas from branch employee through regional director and product areas from teller operations to digital banking. The point is the rules it encodes: what separates a story that a team can estimate and test from one that stalls in refinement.</div>
@@ -744,7 +766,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
         <div class="pj-link-row"><span class="pj-url">yebouef.github.io/storyforge</span><button class="pj-copy" onclick="cpText('https://yebouef.github.io/storyforge/',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card" data-lens="builder,systems">
+      <div class="pj-card" data-lens="builder,systems" data-pj="aico-portal">
         <div class="pj-top"><div class="pj-icon">👥</div><div class="pj-meta"><div class="pj-tool">JavaScript · Supabase · PostgreSQL</div><div class="pj-type" data-en="Full-Stack Member Management System" data-fr="Système de Gestion des Membres">Full-Stack Member Management System</div></div></div>
         <div class="pj-title" data-en="AICO Membership Portal" data-fr="Portail des Membres AICO">AICO Membership Portal</div>
         <div class="pj-desc" data-en="Full-stack community membership portal backed by Supabase (PostgreSQL). Manages 80+ members, monthly dues tracking with month-by-month coverage visualization, special events with cost-sharing logic, expense tracking, non-member contacts pipeline, full audit log, and role-based access (admin, finance, member) with real-time sync and bilingual EN/FR support." data-fr="Portail de gestion des membres propulsé par Supabase (PostgreSQL). Gère plus de 80 membres, cotisations mensuelles, événements spéciaux avec partage des coûts, dépenses, journal d'audit complet et accès par rôle avec synchronisation en temps réel.">Full-stack community membership portal backed by Supabase (PostgreSQL). Manages 80+ members, monthly dues tracking with month-by-month coverage visualization, special events with cost-sharing logic, expense tracking, non-member contacts pipeline, full audit log, and role-based access (admin, finance, member) with real-time sync and bilingual EN/FR support.</div>
@@ -752,7 +774,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
         <div class="pj-link-row"><span class="pj-url">github.com/yebouef</span><button class="pj-copy" onclick="cpText('https://github.com/yebouef',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card" data-lens="builder">
+      <div class="pj-card" data-lens="builder" data-pj="operai">
         <div class="pj-top"><div class="pj-icon">🤖</div><div class="pj-meta"><div class="pj-tool">Next.js · AI Agents · Automation</div><div class="pj-type" data-en="SaaS Product · Prince Tech LLC" data-fr="Produit SaaS · Prince Tech LLC">SaaS Product · Prince Tech LLC</div></div></div>
         <div class="pj-title" data-en="Operai — AI Automation for Small Businesses" data-fr="Operai — Automatisation IA pour PME">Operai — AI Automation for Small Businesses</div>
         <div class="pj-desc" data-en="Built and launched a live AI automation product that identifies repetitive business workflows and deploys AI agents to handle them — email triage, invoice processing, meeting scheduling, lead qualification, document organization, and follow-up sequences. Full marketing site, contact flow, and discovery process. Live at operai.princetechllc.com." data-fr="Construit et lancé un produit d'automatisation IA qui identifie les workflows répétitifs et déploie des agents IA pour les traiter — triage d'emails, traitement de factures, planification de réunions, qualification de leads. Site marketing complet et processus de découverte. En ligne sur operai.princetechllc.com.">Built and launched a live AI automation product that identifies repetitive business workflows and deploys AI agents to handle them — email triage, invoice processing, meeting scheduling, lead qualification, document organization, and follow-up sequences. Full marketing site, contact flow, and discovery process. Live at operai.princetechllc.com.</div>
@@ -766,7 +788,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 
       
 
-      <div class="pj-card" data-lens="data">
+      <div class="pj-card" data-lens="data" data-pj="coffee">
         <div class="pj-top"><div class="pj-icon">📊</div><div class="pj-meta"><div class="pj-tool">Excel</div><div class="pj-type" data-en="Interactive Dashboard" data-fr="Tableau de Bord Interactif">Interactive Dashboard</div></div></div>
         <div class="pj-title" data-en="Coffee Sales Dashboard" data-fr="Tableau de Bord Ventes de Café">Coffee Sales Dashboard</div>
         <div class="pj-desc" data-en="Interactive Excel model with slicers and auto-refresh to slice KPIs by product, region, and channel. Enabled rapid what-if views for category managers to compare mix and margin on demand." data-fr="Modèle Excel interactif avec segments et actualisation automatique pour analyser les KPIs par produit, région et canal.">Interactive Excel model with slicers and auto-refresh to slice KPIs by product, region, and channel. Enabled rapid what-if views for category managers to compare mix and margin on demand.</div>
@@ -774,7 +796,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
         <div class="pj-link-row"><span class="pj-url">bit.ly/3I3K6Us</span><button class="pj-copy" onclick="cpText('https://bit.ly/3I3K6Us',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card" data-lens="data,systems">
+      <div class="pj-card" data-lens="data,systems" data-pj="united">
         <div class="pj-top"><div class="pj-icon">✈️</div><div class="pj-meta"><div class="pj-tool">Tableau</div><div class="pj-type" data-en="Executive Dashboard" data-fr="Tableau de Bord Exécutif">Executive Dashboard</div></div></div>
         <div class="pj-title" data-en="United Airways Performance Review" data-fr="Analyse de Performance United Airways">United Airways Performance Review</div>
         <div class="pj-desc" data-en="Exec-level Tableau dashboard with drilldowns for route performance, on-time rate, and sentiment analysis. Simple filters designed for quick operational decision support." data-fr="Tableau de bord Tableau de niveau exécutif avec des analyses détaillées pour la performance des routes, le taux de ponctualité et l'analyse de sentiment.">Exec-level Tableau dashboard with drilldowns for route performance, on-time rate, and sentiment analysis. Simple filters designed for quick operational decision support.</div>
@@ -782,7 +804,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
         <div class="pj-link-row"><span class="pj-url">bit.ly/46xZt0D</span><button class="pj-copy" onclick="cpText('https://bit.ly/46xZt0D',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
       </div>
 
-      <div class="pj-card" data-lens="builder,systems">
+      <div class="pj-card" data-lens="builder,systems" data-pj="resume-site">
 <div class="pj-top"><div class="pj-icon">▦</div><div class="pj-meta"><div class="pj-tool">HTML · CSS · Vanilla JS</div><div class="pj-type" data-en="Adaptive Web Application" data-fr="Application Web Adaptative">Adaptive Web Application</div></div></div>
 <div class="pj-title" data-en="Interactive Resume Platform" data-fr="Plateforme CV Interactive">Interactive Resume Platform</div>
 <div class="pj-desc" data-en="This site. One page that re-frames itself for four audiences — data, systems, developer, or full profile — rewriting the headline, summary, experience bullets and section order for each. The chosen view writes to the URL, so a targeted link goes out with every application. Bilingual EN/FR throughout, WCAG AA contrast on every element, and no colour used as the only carrier of meaning. No frameworks." data-fr="Ce site. Une page qui se recadre pour quatre publics — données, systèmes, développement ou profil complet — en réécrivant le titre, le résumé, les points d’expérience et l’ordre des sections. La vue choisie s’inscrit dans l’URL, permettant d’envoyer un lien ciblé avec chaque candidature. Bilingue FR/EN, contraste WCAG AA partout, aucune information portée par la couleur seule. Sans framework.">This site. One page that re-frames itself for four audiences — data, systems, developer, or full profile — rewriting the headline, summary, experience bullets and section order for each. The chosen view writes to the URL, so a targeted link goes out with every application. Bilingual EN/FR throughout, WCAG AA contrast on every element, and no colour used as the only carrier of meaning. No frameworks.</div>
@@ -790,7 +812,7 @@ body{font-size:15.5px;line-height:1.72;letter-spacing:.001em}
 <div class="pj-link-row"><span class="pj-url">yebouef.github.io/resume</span><button class="pj-copy" onclick="cpText('https://yebouef.github.io/resume',this)" data-en="Copy Link" data-fr="Copier">Copy Link</button></div>
 </div>
 
-      <div class="pj-card" data-lens="builder">
+      <div class="pj-card" data-lens="builder" data-pj="resume-bot">
 <div class="pj-top"><div class="pj-icon">◈</div><div class="pj-meta"><div class="pj-tool">JavaScript · Keyword Routing</div><div class="pj-type" data-en="Conversational Assistant" data-fr="Assistant Conversationnel">Conversational Assistant</div></div></div>
 <div class="pj-title" data-en="Resume AI Assistant" data-fr="Assistant IA du CV">Resume AI Assistant</div>
 <div class="pj-desc" data-en="The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 62-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget." data-fr="L’assistant intégré à cette page. Il répond aux questions des recruteurs sur l’expérience, les outils, les certifications et les projets à partir d’une base bilingue de 62 sujets, avec un score par mots-clés pondéré et des jetons décisifs pour les noms propres. Il fonctionne entièrement dans le navigateur : aucune clé d’API exposée, aucun coût par message, et aucune invention possible puisque chaque réponse est rédigée à l’avance. Tout passe par une fonction de routage unique, ce qui permet d’ajouter un modèle en direct derrière un point d’accès serveur sans réécrire le composant.">The chat assistant built into this page. It answers recruiter questions on experience, tools, certifications and projects from a 62-topic bilingual answer bank, matched by weighted keyword scoring with decisive tokens for proper nouns. It runs entirely in the browser: no API key is exposed in client code, there is no per-message cost, and it cannot invent facts, because every answer is written in advance. All messages pass through a single routing function, so a live model can be added behind a server-side endpoint without rewriting the widget.</div>
@@ -891,6 +913,7 @@ function toggleLang(){
   document.getElementById('footer-text').textContent=lang==='fr'
     ?'© 2026 Franck Yeboue · Prince Tech LLC'
     :'© 2026 Franck Yeboue · Prince Tech LLC';
+  if(typeof syncShotAlts==='function') syncShotAlts();
 }
 if('IntersectionObserver' in window){
   var ob=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.07});
@@ -1983,8 +2006,255 @@ function fyBoot(){
     var p = document.getElementById('cbPanel');
     if(e.key === 'Escape' && p && p.classList.contains('open')) cbClose();
   });
+
+  try{ buildShots(); }catch(e){}
 }
 
+
+
+/* ═════════════════════════════════════════════════════════════
+   PROJECT SCREENSHOTS
+
+   HOW TO ADD ONE:
+     1. Save the image into the  shots/  folder of this repo.
+        PNG or JPG. Keep each one under about 400 KB so the page
+        stays fast. Crop out anything confidential before saving.
+     2. Find the project below and add one line inside its [ ]:
+          {f:"shots/my-file.png", en:"English caption", fr:"Légende"},
+        Keep the commas. The caption is the part a recruiter reads,
+        so say what the image proves, not what it is.
+     3. Commit and push. Nothing else to change.
+
+   The slots below are already named. Drop a file with the matching
+   name into shots/ and it appears. Until the file exists the slot
+   removes itself, so the card looks exactly as it does today.
+   ═════════════════════════════════════════════════════════════ */
+var PJ_SHOTS = {
+
+"field-trial": [
+  {f:"shots/field-trial-feuillet-c.png",
+   en:"The Feuillet C the app generates, beside the committee template it has to reproduce exactly",
+   fr:"Le Feuillet C généré par l'application, à côté du modèle imposé par le comité qu'il doit reproduire exactement"},
+  {f:"shots/field-trial-analysis.png",
+   en:"Test and threshold chosen per run, not fixed per trial — the change the requirements review produced",
+   fr:"Test et seuil choisis à chaque exécution, non figés par essai — le changement issu du recueil des besoins"},
+  {f:"shots/field-trial-offline.png",
+   en:"Technician view with no signal: readings queue on the phone and sync when a connection returns",
+   fr:"Vue technicien sans réseau : les relevés sont mis en file sur le téléphone et synchronisés au retour de la connexion"}
+],
+
+"servicenow": [
+  {f:"shots/servicenow-dashboard.png",
+   en:"The measures I would have wanted running the desk at Chase: SLA compliance, MTTR trend, volume by group",
+   fr:"Les indicateurs que j'aurais voulus en pilotant le desk chez Chase : respect des SLA, MTTR, volume par groupe"},
+  {f:"shots/servicenow-sla.png",
+   en:"SLAs and assignment groups I configured myself — platform knowledge as build, not just as an end user",
+   fr:"SLA et groupes d'affectation que j'ai configurés moi-même — la plateforme côté paramétrage, pas seulement côté utilisateur"}
+],
+
+"storyforge": [
+  {f:"shots/storyforge-output.png",
+   en:"The INVEST rules in action: every generated criterion is testable as written, not a restated wish",
+   fr:"Les critères INVEST à l'œuvre : chaque critère généré est testable tel qu'écrit, pas un souhait reformulé"}
+],
+
+"aico-portal": [
+  {f:"shots/aico-dues.png",
+   en:"Month-by-month dues coverage across the membership, with role-based access behind it",
+   fr:"Couverture des cotisations mois par mois pour l'ensemble des membres, avec accès par rôle en arrière-plan"}
+],
+
+"operai": [
+  {f:"shots/operai-home.png",
+   en:"Operai, live at operai.princetechllc.com",
+   fr:"Operai, en ligne sur operai.princetechllc.com"}
+],
+
+"coffee": [
+  {f:"shots/coffee-dashboard.png",
+   en:"Slicers driving KPI views by product, region, and channel",
+   fr:"Segments pilotant les vues KPI par produit, région et canal"}
+],
+
+"united": [
+  {f:"shots/united-dashboard.png",
+   en:"Executive view built in Tableau",
+   fr:"Vue exécutive construite dans Tableau"}
+],
+
+"resume-site": [],
+
+"resume-bot": []
+
+};
+
+/* Current-language caption for one screenshot entry. */
+function shotCap(s){
+  if(!s) return '';
+  var t = (lang === 'fr') ? (s.fr || s.en) : (s.en || s.fr);
+  return t || '';
+}
+
+/* Build one figure. Hidden until the file is confirmed to exist, so a
+   slot whose image has not been added yet never shows an empty box. */
+function makeShot(s){
+  var fig = document.createElement('figure');
+  fig.className = 'pj-shot';
+  fig.style.display = 'none';
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  var img = document.createElement('img');
+  img.alt = '';
+  img.setAttribute('decoding','async');
+  btn.appendChild(img);
+  btn.setAttribute('aria-label', (lang === 'fr' ? 'Agrandir : ' : 'Enlarge: ') + shotCap(s));
+  btn.onclick = function(){ lbOpen(s.f, shotCap(s)); };
+  var cap = document.createElement('figcaption');
+  cap.className = 'pj-cap';
+  if(s.en) cap.setAttribute('data-en', s.en);
+  if(s.fr) cap.setAttribute('data-fr', s.fr);
+  cap.innerHTML = shotCap(s);
+  fig.appendChild(btn);
+  fig.appendChild(cap);
+  fig._shot = s;
+
+  /* Probe the file off-DOM. The browser caches the result, so setting
+     img.src afterwards costs nothing extra. Started by buildShots once
+     the figure is in the DOM, so the callbacks always find their strip. */
+  fig._probe = function(){
+    var probe = new Image();
+    probe.onload = function(){
+      img.src = s.f;
+      fig.style.display = '';
+      var strip = fig.parentNode;
+      if(strip) strip.style.display = '';
+    };
+    probe.onerror = function(){
+      var strip = fig.parentNode;
+      if(strip) strip.removeChild(fig);
+      shotStripSweep();
+    };
+    probe.src = s.f;
+  };
+  return fig;
+}
+
+/* Remove any strip left with nothing in it. */
+function shotStripSweep(){
+  var strips = document.querySelectorAll('.pj-shots');
+  for(var i = 0; i < strips.length; i++){
+    if(!strips[i].querySelector('.pj-shot') && strips[i].parentNode){
+      strips[i].parentNode.removeChild(strips[i]);
+    }
+  }
+}
+
+function buildShots(){
+  var cards = document.querySelectorAll('.pj-card[data-pj]');
+  for(var i = 0; i < cards.length; i++){
+    var card = cards[i];
+    var list = PJ_SHOTS[card.getAttribute('data-pj')];
+    if(!list || !list.length) continue;
+    if(card.querySelector('.pj-shots')) continue;
+    var strip = document.createElement('div');
+    strip.className = 'pj-shots';
+    strip.style.display = 'none';
+    var desc = card.querySelector('.pj-desc');
+    if(desc && desc.nextSibling) card.insertBefore(strip, desc.nextSibling);
+    else if(desc) card.appendChild(strip);
+    else card.insertBefore(strip, card.firstChild);
+    for(var j = 0; j < list.length; j++){
+      if(list[j] && list[j].f) strip.appendChild(makeShot(list[j]));
+    }
+    var figs = strip.querySelectorAll('.pj-shot');
+    for(var k = 0; k < figs.length; k++){
+      if(figs[k]._probe) figs[k]._probe();
+    }
+  }
+  shotStripSweep();
+}
+
+/* figcaption text follows the language toggle on its own because it
+   carries data-en / data-fr. alt text and aria-label do not, so they
+   are refreshed here. */
+function syncShotAlts(){
+  var figs = document.querySelectorAll('.pj-shot');
+  for(var i = 0; i < figs.length; i++){
+    var s = figs[i]._shot;
+    if(!s) continue;
+    var t = shotCap(s);
+    var img = figs[i].querySelector('img');
+    if(img) img.alt = t;
+    var btn = figs[i].querySelector('button');
+    if(btn) btn.setAttribute('aria-label', (lang === 'fr' ? 'Agrandir : ' : 'Enlarge: ') + t);
+  }
+}
+
+/* Full-size viewer. Created on first use so it costs nothing until
+   someone clicks a screenshot. */
+var lbPrevFocus = null;
+function lbEl(){
+  var el = document.getElementById('lb');
+  if(el) return el;
+  el = document.createElement('div');
+  el.id = 'lb';
+  el.className = 'lb';
+  el.setAttribute('role','dialog');
+  el.setAttribute('aria-modal','true');
+  el.setAttribute('aria-label', (lang === 'fr') ? "Capture d'écran" : 'Screenshot');
+  el.innerHTML = '<button class="lb-x" type="button" id="lbX">Close</button>' +
+                 '<div class="lb-inner"><img id="lbImg" alt=""><div class="lb-cap" id="lbCap"></div></div>';
+  document.body.appendChild(el);
+  el.addEventListener('click', function(e){
+    if(e.target === el || e.target.id === 'lbX') lbClose();
+  });
+  return el;
+}
+function lbOpen(src, cap){
+  lbPrevFocus = document.activeElement;
+  var el = lbEl();
+  el.setAttribute('aria-label', (lang === 'fr') ? "Capture d'écran" : 'Screenshot');
+  var img = document.getElementById('lbImg');
+  img.src = src;
+  img.alt = cap || '';
+  document.getElementById('lbCap').innerHTML = cap || '';
+  document.getElementById('lbX').textContent = (lang === 'fr') ? 'Fermer' : 'Close';
+  el.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  try{ document.getElementById('lbX').focus(); }catch(e){}
+}
+function lbClose(){
+  var el = document.getElementById('lb');
+  if(!el) return;
+  el.classList.remove('open');
+  var img = document.getElementById('lbImg');
+  if(img) img.removeAttribute('src');
+  document.body.style.overflow = '';
+  /* Send focus back where it came from, or a keyboard user lands on
+     <body> and has to tab through the whole page again. */
+  try{ if(lbPrevFocus && lbPrevFocus.focus) lbPrevFocus.focus(); }catch(e){}
+  lbPrevFocus = null;
+}
+if(document.addEventListener){
+  document.addEventListener('keydown', function(e){
+    var el = document.getElementById('lb');
+    if(!el || !el.classList.contains('open')) return;
+    if(e.key === 'Escape'){
+      lbClose();
+      /* Stop here, or the chat panel's own Escape handler closes that
+         too and the visitor loses a panel they never asked to close. */
+      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+      return;
+    }
+    /* Close is the only control in the overlay, so holding focus on it
+       keeps Tab from reaching the page hidden underneath. */
+    if(e.key === 'Tab'){
+      e.preventDefault();
+      var x = document.getElementById('lbX');
+      if(x) x.focus();
+    }
+  });
+}
 
 /* Email and phone are assembled by showC() to keep them away from
    scrapers. Printing reveals the contact panel, so fill it first or
