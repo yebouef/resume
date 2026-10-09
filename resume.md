@@ -9,7 +9,7 @@ LinkedIn: linkedin.com/in/franck-y · Credly: credly.com/users/franck-yeboue/bad
 
 ## Professional Summary
 
-Business analyst, BI developer, and founder of Prince Tech LLC with ten years of enterprise experience at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital, sitting between operations teams, data teams, and end users. I gather requirements, write the SQL behind the dashboards stakeholders actually open, and stay on the line when production breaks — then turn each incident into a documented fix. I now apply the same instinct for messy data and unclear requirements to AI and automation work, shipping production websites, internal tools, AI workflows, and data integrations for small businesses through Prince Tech.
+Business analyst, BI developer, and independent technology consultant through Prince Tech LLC, with ten years of enterprise experience at JPMorgan Chase, Lumen Technologies, and Nationwide Children's Hospital, sitting between operations teams, data teams, and end users. I gather requirements, write the SQL behind the dashboards stakeholders actually open, and stay on the line when production breaks — then turn each incident into a documented fix. I now apply the same instinct for messy data and unclear requirements to AI and automation work, shipping production websites, internal tools, AI workflows, and data integrations for small businesses through Prince Tech.
 
 ---
 
@@ -30,7 +30,7 @@ Business analyst, BI developer, and founder of Prince Tech LLC with ten years of
 - Built and maintained Power BI dashboards at Lumen that operations leaders open weekly to track reporting health, refresh failures, and data freshness.
 - Wrote optimized SQL queries with joins, CTEs, and window functions to clean reporting data and validate outputs against source-of-truth systems.
 - Fixed upstream data feed discrepancies at the root cause rather than patching the report, working directly with engineering owners.
-- Automated recurring Excel reports into refreshable Power BI views, cutting about 8 hours per week of manual prep and giving stakeholders fresher numbers.
+- Automated recurring Excel reports into refreshable Power BI views, cutting 6+ hours per week of manual prep and giving stakeholders fresher numbers.
 - Designed the data model and validation logic for the AICO Membership Portal (Association des Ivoiriens à Columbus, Ohio) on Supabase/PostgreSQL, covering 80+ member records, monthly dues, and event cost-sharing.
 - Built executive Tableau and Excel dashboards covering route performance, on-time rate, sentiment analysis, and KPI breakdowns by product, region, and channel.
 - Wrote DAX measures and Power BI data models that let non-technical stakeholders slice the same dataset across product, time, and geography without asking for one-off reports.
@@ -48,7 +48,7 @@ Business analyst, BI developer, and founder of Prince Tech LLC with ten years of
 
 ### Quantified Impact
 
-- Cut the weekly reporting cycle by roughly 8 hours at Lumen by automating recurring SQL pulls and Power BI refreshes that previously ran manually.
+- Cut the weekly reporting cycle by 6+ hours at Lumen by automating recurring SQL pulls and Power BI refreshes that previously ran manually.
 - Reduced mean time to resolution by about 30% on the JPMorgan ATM support team through runbook standardization and Splunk-based proactive monitoring.
 - Maintained 98% SLA adherence across 200+ incident tickets per month while leading the application support team.
 - Saved an estimated 20 hours per month across documentation, log analysis, and stakeholder write-ups by adding AI assistance to the support workflow.
@@ -60,10 +60,19 @@ Business analyst, BI developer, and founder of Prince Tech LLC with ten years of
 
 ## Experience
 
-**Founder & Principal** — Prince Tech LLC
+**Project Coordinator 2 (Contract)** — Astreya
+*September 2026 – Present · Columbus, OH · Meta infrastructure program*
+
+- Coordinate technician site access between Meta and the company that operates the shared hyperscale data center campus, each running its own access management system.
+- Verify technician and vendor identity details against both companies' systems of record before access is approved, reconciling conflicts between the two.
+- Identified inconsistent name formatting between the two systems as a leading cause of failed verifications, and proposed a pre-screening check to catch mismatches before technicians are dispatched.
+- Resolve access discrepancies directly with whichever company owns the record rather than returning requests to the requester, removing a round trip.
+- Log issues, resolutions, risks, and blockers in a shared daily operations tracker used across sites for trend review.
+
+**Independent Technology Consultant** — Prince Tech LLC
 *September 2025 – Present · Ohio, USA · princetechllc.com (LLC formalized 2026)*
 
-- Founded Prince Tech LLC to build websites, internal tools, AI workflows, and data integrations for small businesses — small scope, real ship dates, no agency overhead.
+- Run Prince Tech LLC, building websites, internal tools, AI workflows, and data integrations for small businesses — small scope, real ship dates, no agency overhead.
 - Designed and launched the company at princetechllc.com (Next.js, bilingual EN/FR) around four service lanes: websites and digital presence, AI workflow automation, internal tools and dashboards, and data reporting integrations.
 - Shipped La Passion Kolorée, a production catering website on Cloudflare Pages with a Supabase backend (Auth, Postgres, edge functions) and Resend transactional email — multi-cart checkout, customer order tracking, and a browser-based admin UI built so the non-technical operator runs the business without a developer.
 - Built the AICO production stack across three subdomains (landing site, member portal, ticket sales system) on Cloudflare Pages and GitHub Pages, serving 80+ active members with a Supabase backend covering RLS policies, audit logging, multi-beneficiary payments, recurring dues, and Resend email notifications.
@@ -131,7 +140,8 @@ Business analyst, BI developer, and founder of Prince Tech LLC with ten years of
 
 ## Selected Projects
 
-- **Prince Tech LLC** — Founded an Ohio LLC building websites, internal tools, AI workflows, and data integrations for small businesses; designed and shipped princetechllc.com (Next.js, bilingual EN/FR) positioning four service lanes with a 24-hour response SLA and project-or-retainer engagements.
+- **Prince Tech LLC** — Ohio consulting practice building websites, internal tools, AI workflows, and data integrations for small businesses; designed and shipped princetechllc.com (Next.js, bilingual EN/FR) positioning four service lanes with a 24-hour response SLA and project-or-retainer engagements.
+- **Agricultural Field-Trial Platform (I.A.S.CO International)** — Next.js/Supabase platform for an agrochemical consultancy whose pesticide trials require government approval. Computes ANOVA on randomized blocks, Abbott efficacy, and four mean-comparison tests selectable per run, and generates the committee's mandated reporting form as a versioned Word document. Field technicians enter readings offline and the data syncs on reconnect; role-based access separates the trial scientist, technicians, and read-only reviewers. In development, validated against the figures in a real 2015 trial report.
 - **La Passion Kolorée** — Production catering website at lapassionkoloree.com built end-to-end on Cloudflare Pages with a Supabase backend (Auth, Postgres, edge functions) and Resend transactional email; includes multi-cart checkout, customer order tracking by name and email, and a browser-based admin UI so the non-technical operator runs the business without a developer.
 - **Hub E-Pharma Editorial Studio** — Next.js content-automation MVP built for an e-pharmacy initiative in Côte d'Ivoire that generates a full content pack — article, LinkedIn long, Facebook short, newsletter, carousel outline, e-pharmacy variant, and email draft — from a date plus lead-time rules, with OpenAI Responses API generation, Google Calendar integration, a custom 2026–2030 editorial calendar, Sentry instrumentation, and Playwright tests.
 - **Hub E-Pharma Content & Strategy** — Wrote editorial process docs, LinkedIn publication frameworks, monthly content plans, and reusable templates for HEP, including infographic and carousel briefs covering connected health and pharmacist prequalification topics.
